@@ -62,7 +62,7 @@ class Application
 
         if (empty($options['skipSession'])) {
             if (session_id() == '' && !headers_sent()) { //if session hasn't been started yet
-                session_name(ipConfig()->get('sessionName', 'impresspages'));
+                session_name(ipConfig()->get('sessionName', 'construct'));
                 if (!ipConfig()->get('disableHttpOnlySetting')) {
                     ini_set('session.cookie_httponly', 1);
                 }

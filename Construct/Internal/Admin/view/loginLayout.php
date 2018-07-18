@@ -10,7 +10,7 @@
 <body>
 
 
-<a href="http://www.impresspages.org/" class="logo" target="_blank"><img src="<?php echo ipFileUrl('Construct/Internal/Admin/assets/img/logo.png'); ?>"></a>
+<a href="http://construct.uws.al/" class="logo" target="_blank"><img src="<?php echo ipFileUrl('Construct/Internal/Admin/assets/img/logo.png'); ?>"></a>
 <div class="ip languageSelect">
     <?php echo $languageSelectForm->render(); ?>
 </div>
@@ -18,7 +18,7 @@
 <div class="login">
     <?php echo $content; ?>
 </div>
-<div class="loginFooter">Copyright 2009-<?php echo date("Y"); ?> by <a href="http://www.impresspages.org/">construct, UAB</a></div>
+<div class="loginFooter">Copyright 2009-<?php echo date("Y"); ?> by <a href="http://construct.uws.al/">construct, UAB</a></div>
 
 <?php echo ipJs(); ?>
 </body>

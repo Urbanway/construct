@@ -1,6 +1,6 @@
 /**
  * TinyMCE configuration for public form fields. The ones that can be accessed by visitors of your website.
- * https://www.impresspages.org/docs/tinymce
+ * https://construct.uws.al/docs/tinymce
  */
 
 ipTinyMceConfigPublic = function () {

@@ -33,7 +33,7 @@
                 </div>
                 <div class="modal-body" style="max-height: 270px; overflow: auto;">
                     <h2>Legal</h2>
-                    <p>Copyright <?php echo date("Y"); ?> by <a href="http://www.impresspages.org">construct, UAB</a></p>
+                    <p>Copyright <?php echo date("Y"); ?> by <a href="http://construct.uws.al">construct, UAB</a></p>
                     <p>This program is free software: you can re-distribute it and/or modify it under the terms of the <a href="<?php echo ipFileUrl('license.html') ?>">GNU General Public License or MIT License</a>.</p>
                     <p>This program is distributed hoping it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
                     <p>You are required to keep these "Appropriate Legal Notices" intact as specified in GPL3 section 5(d) and 7(b) and MIT.</p>

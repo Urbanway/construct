@@ -296,7 +296,7 @@ function ipBlock($block)
 
 /**
  * Generate slot HTML
- * http://www.impresspages.org/docs/slots
+ * http://construct.uws.al/docs/slots
  *
  * @param string $slot Slot name.
  * @param array|null $params Slot parameters.

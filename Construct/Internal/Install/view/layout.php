@@ -45,13 +45,13 @@
                     </div>
                 </div>
                 <div class="page-footer">
-                    <?php printf(__('This software is brought to you by <a target="_blank" href="%s">construct team</a>', 'Install', false), 'http://www.impresspages.org/about-us/'); ?>
+                    <?php printf(__('This software is brought to you by <a target="_blank" href="%s">construct team</a>', 'Install', false), 'http://construct.uws.al/about-us/'); ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<iframe style="width:0;height:0;border:none;" border="0" src="http://www.impresspages.org/installationscript2/?step=<?php echo !empty($_GET['step']) && $_GET['step'] >=\Construct\Internal\Install\Helper::$firstStep ? (int)$_GET['step'] : \Construct\Internal\Install\Helper::$firstStep; ?>"></iframe>
+<iframe style="width:0;height:0;border:none;" border="0" src="http://construct.uws.al/installationscript2/?step=<?php echo !empty($_GET['step']) && $_GET['step'] >=\Construct\Internal\Install\Helper::$firstStep ? (int)$_GET['step'] : \Construct\Internal\Install\Helper::$firstStep; ?>"></iframe>
 
 <script type="text/javascript" src="<?php echo ipFileUrl('Construct/Internal/Install/assets/js/jquery.js') ?>"></script>
 <script type="text/javascript" src="<?php echo ipFileUrl('Construct/Internal/Install/assets/js/bootstrap.js') ?>"></script>

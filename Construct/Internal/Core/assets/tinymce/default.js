@@ -1,6 +1,6 @@
 /**
  * TinyMCE configuration for admin form fields. The ones that appear in administration panel.
- * https://www.impresspages.org/docs/tinymce
+ * https://construct.uws.al/docs/tinymce
  */
 
 

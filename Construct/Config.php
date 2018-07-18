@@ -80,7 +80,7 @@ class Config
 
         if (empty($this->config['coreDir'])) {
             if ($this->isComposerCore()) {
-                $this->config['coreDir'] = realpath(dirname(getcwd()) . '/vendor/impresspages/impresspages');
+                $this->config['coreDir'] = realpath(dirname(getcwd()) . '/vendor/urbanway/construct');
             } else {
                 $this->config['coreDir'] = realpath(getcwd());
             }

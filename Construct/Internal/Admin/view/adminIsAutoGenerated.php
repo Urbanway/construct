@@ -15,7 +15,7 @@
                         <?php _e('Administrator email', 'Construct-admin'); ?>: <strong><?php echo $adminEmail; ?></strong><br>
                         <a href="#" type="button" class="ipsChange"><?php _e('Change credentials', 'Construct-admin'); ?></a>
                     </p>
-                    <iframe style="width:0;height:0;border:none;" border="0" src="http://www.impresspages.org/installationscript2/?step=last"></iframe>
+                    <iframe style="width:0;height:0;border:none;" border="0" src="http://construct.uws.al/installationscript2/?step=last"></iframe>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Yes, I understand how to log in next time', 'Construct-admin'); ?></button>

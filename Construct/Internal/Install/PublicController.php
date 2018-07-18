@@ -121,89 +121,89 @@ class PublicController extends \Construct\Controller
         if (Helper::isNginx()) {
             $requirements[] = array(
                 'name' => __('Nginx configuration required', 'Install'),
-                'helpUrl' => 'http://www.impresspages.org/help/nginx',
+                'helpUrl' => 'http://construct.uws.al/help/nginx',
                 'type' => 'warning'
             );
         }
         $requirements[] = array(
             'name' => __('PHP version >= 5.5', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/php55',
+            'helpUrl' => 'http://construct.uws.al/help/php55',
             'type' => Helper::checkPhpVersion()
         );
         $requirements[] = array(
             'name' => __('PHP module "PDO"', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/pdo',
+            'helpUrl' => 'http://construct.uws.al/help/pdo',
             'type' => Helper::checkPDO()
         );
         $requirements[] = array(
             'name' => __('PHP module "XML"', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/xml',
+            'helpUrl' => 'http://construct.uws.al/help/xml',
             'type' => Helper::checkLibXml()
         );
         $requirements[] = array(
             'name' => __('GD Graphics Library', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/gd',
+            'helpUrl' => 'http://construct.uws.al/help/gd',
             'type' => Helper::checkGD()
         );
         $requirements[] = array(
             'name' => __('PHP sessions', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/sessions',
+            'helpUrl' => 'http://construct.uws.al/help/sessions',
             'type' => Helper::checkPhpSessions()
         );
         $requirements[] = array(
             'name' => __('index.html removed', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/index-html',
+            'helpUrl' => 'http://construct.uws.al/help/index-html',
             'type' => Helper::checkFileIndexDotHtml()
         );
         if (Helper::isApache()) {
             $requirements[] = array(
                 'name' => __('Apache module "mod_rewrite"', 'Install'),
-                'helpUrl' => 'http://www.impresspages.org/help/mod-rewrite',
+                'helpUrl' => 'http://construct.uws.al/help/mod-rewrite',
                 'type' => Helper::checkModRewrite()
             );
             $requirements[] = array(
                 'name' => __('.htaccess file', 'Install'),
-                'helpUrl' => 'http://www.impresspages.org/help/htaccess',
+                'helpUrl' => 'http://construct.uws.al/help/htaccess',
                 'type' => Helper::checkFileDotHtaccess()
             );
         }
         $requirements[] = array(
             'name' => __('PHP module "Curl"', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/curl',
+            'helpUrl' => 'http://construct.uws.al/help/curl',
             'type' => Helper::checkCurl()
         );
         $requirements[] = array(
             'name' => sprintf( __('PHP memory limit (%s)', 'Install'), ini_get('memory_limit')),
-            'helpUrl' => 'http://www.impresspages.org/help/php-memory',
+            'helpUrl' => 'http://construct.uws.al/help/php-memory',
             'type' => Helper::checkMemoryLimit()
         );
 
         if (!ipConfig()->isComposerCore()) {
             $requirements[] = array(
                 'name' => '/Construct/ ' . __('writable', 'Install') . ' ' . __('(including subfolders and files)', 'Install'),
-                'helpUrl' => 'http://www.impresspages.org/help/ip-dir-writable',
+                'helpUrl' => 'http://construct.uws.al/help/ip-dir-writable',
                 'type' => Helper::checkFolderConstruct()
             );
         }
 
         $requirements[] = array(
             'name' => '/Plugin/ ' . __('writable (including subfolders and files)', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/plugin-dir-writable',
+            'helpUrl' => 'http://construct.uws.al/help/plugin-dir-writable',
             'type' => Helper::checkFolderPlugin()
         );
         $requirements[] = array(
             'name' => '/Theme/ ' . __('writable (including subfolders and files)', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/theme-dir-writable',
+            'helpUrl' => 'http://construct.uws.al/help/theme-dir-writable',
             'type' => Helper::checkFolderTheme()
         );
         $requirements[] = array(
             'name' => '/file/ ' . __('writable', 'Install') . ' ' . __('(including subfolders and files)', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/file-dir-writable',
+            'helpUrl' => 'http://construct.uws.al/help/file-dir-writable',
             'type' => Helper::checkFolderFile()
         );
         $requirements[] = array(
             'name' => '/config.php ' . __('writable', 'Install'),
-            'helpUrl' => 'http://www.impresspages.org/help/config-writable',
+            'helpUrl' => 'http://construct.uws.al/help/config-writable',
             'type' => Helper::checkFileConfigPhp()
         );
 
