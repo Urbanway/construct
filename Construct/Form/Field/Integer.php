@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @package construct
+ *
+ */
+
+namespace Construct\Form\Field;
+
+use Construct\Form\Field;
+
+
+class Integer extends Field
+{
+
+    /**
+     * Render field
+     *
+     * @param string $doctype
+     * @param $environment
+     * @return string
+     */
+    public function render($doctype, $environment)
+    {
+        return '<input type="number" step="1" ' . $this->getAttributesStr($doctype) . ' class="form-control ' . implode(
+            ' ',
+            $this->getClasses()
+        ) . '" name="' . htmlspecialchars($this->getName()) . '" ' . $this->getValidationAttributesStr(
+            $doctype
+        ) . ' value="' . htmlspecialchars($this->getValue()) . '" />';
+    }
+
+
+    /**
+     * Check if field passes validation
+     *
+     * @param string $values
+     * @param string $valueKey
+     * @param string $environment \Construct\Form::ENVIRONMENT_ADMIN or \Construct\Form::ENVIRONMENT_PUBLIC
+     * @return bool
+     */
+    public function validate($values, $valueKey, $environment)
+    {
+        if (!empty($values[$valueKey]) && !preg_match('/^[-+]?[1-9]\d*$/', $values[$valueKey])) {
+            if ($environment == \Construct\Form::ENVIRONMENT_ADMIN) {
+                return __('Integer required', 'Construct-admin', false);
+            } else {
+                return __('Integer required', 'Construct', false);
+            }
+        }
+
+        return parent::validate($values, $valueKey, $environment);
+    }
+
+
+
+
+}

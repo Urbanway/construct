@@ -1,0 +1,7 @@
+/**
+ * Default construct installation theme
+ *
+ * @package construct
+ */
+
+@import '../../../../Construct/Internal/Core/assets/admin/admin.css'; /* loading core admin styles */
