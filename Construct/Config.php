@@ -233,7 +233,7 @@ class Config
 
     public function isComposerCore()
     {
-        return is_dir(dirname(getcwd()) . '/vendor/impresspages/impresspages');
+        return is_dir(dirname(getcwd()) . '/vendor/urbanway/construct');
     }
 
     /**
