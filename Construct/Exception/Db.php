@@ -26,12 +26,12 @@ class Db extends \PDOException
         $backtrace = debug_backtrace();
 
         // We need directory separator for Windows
-        $ipDbPath = 'Construct' . DIRECTORY_SEPARATOR . 'Db.php';
-        $pathLength = strlen($ipDbPath);
+        $constructQueryPath = 'Construct' . DIRECTORY_SEPARATOR . 'Db.php';
+        $pathLength = strlen($constructQueryPath);
 
         // We usually want exception to show error in the code that uses Db class
         foreach ($backtrace as $info) {
-            if (substr($info['file'], -$pathLength) != $ipDbPath) {
+            if (substr($info['file'], -$pathLength) != $constructQueryPath) {
                 $this->file = $info['file'];
                 $this->line = $info['line'];
                 break;

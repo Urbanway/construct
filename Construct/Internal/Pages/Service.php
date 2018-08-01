@@ -91,9 +91,9 @@ class Service
         }
 
         if (!isset($data['languageCode'])) {
-            $data['languageCode'] = ipDb()->selectValue('page', 'languageCode', array('id' => $parentId));
+            $data['languageCode'] = constructQuery()->selectValue('page', 'languageCode', array('id' => $parentId));
             if (empty($data['languageCode'])) {
-                $data['languageCode'] = ipDb()->selectValue('page', 'languageCode', array('alias' => $parentId));
+                $data['languageCode'] = constructQuery()->selectValue('page', 'languageCode', array('alias' => $parentId));
             }
             if (empty($data['languageCode'])) {
                 throw new \Construct\Exception('Page languageCode should be set if parent is absent');
@@ -156,7 +156,7 @@ class Service
     {
         $table = ipTable('page');
 
-        $pages = ipDb()->fetchAll(
+        $pages = constructQuery()->fetchAll(
             "SELECT `id` FROM $table WHERE `isDeleted` = 1 AND `deletedAt` < ?",
             array($timestamp)
         );

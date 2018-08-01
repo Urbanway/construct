@@ -51,7 +51,7 @@ class Language
 
     public static function getByCode($languageCode)
     {
-        $row = ipDb()->selectRow('language', '*', array('code' => $languageCode));
+        $row = constructQuery()->selectRow('language', '*', array('code' => $languageCode));
         if (!$row) {
             return null;
         }

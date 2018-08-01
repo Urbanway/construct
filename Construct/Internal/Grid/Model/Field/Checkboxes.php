@@ -109,7 +109,7 @@ class Checkboxes extends \Construct\Internal\Grid\Model\Field
     public function searchQuery($searchVariables)
     {
         if (isset($searchVariables[$this->field]) && $searchVariables[$this->field] !== '') {
-            return ' `' . $this->field . '` like ' . ipDb()->getConnection()->quote(
+            return ' `' . $this->field . '` like ' . constructQuery()->getConnection()->quote(
                 '%' . json_encode($searchVariables[$this->field]) . '%'
             ) . '';
         }

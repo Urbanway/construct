@@ -435,7 +435,7 @@ class Application
     {
         ipEvent('ipBeforeApplicationClosed');
         if (ipConfig()->database()) {
-            ipDb()->disconnect();
+            constructQuery()->disconnect();
         }
     }
 

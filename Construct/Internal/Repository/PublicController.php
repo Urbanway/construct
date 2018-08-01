@@ -70,7 +70,7 @@ class PublicController extends \Construct\Controller
             @fclose($file);
         }
         //TODO provide method to stop any output by construct
-        ipDb()->disconnect();
+        constructQuery()->disconnect();
         exit;
 
     }

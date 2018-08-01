@@ -501,7 +501,7 @@ class Db
             throw \Construct\Exception("Only 'MINUTE' or 'HOUR' are available as unit options.");
         }
 
-        if (ipDb()->isMySQL()) {
+        if (constructQuery()->isMySQL()) {
             $sql = "`".$fieldName."` < NOW() - INTERVAL " . ((int)$minAge) . " ".$unit;
         } else {
             $divider = 1;
@@ -534,7 +534,7 @@ class Db
         }
 
 //        SELECT DATE(NOW()-INTERVAL 15 DAY)
-        if (ipDb()->isMySQL()) {
+        if (constructQuery()->isMySQL()) {
             $sql = "`".$fieldName."` > NOW() - INTERVAL " . ((int)$maxAge) . " ".$unit;
         } else {
             switch($unit) {

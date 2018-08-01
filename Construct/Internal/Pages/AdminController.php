@@ -87,7 +87,7 @@ class AdminController extends \Construct\Controller
         }
         $menuName = $data['menuName'];
 
-        $parentId = ipDb()->selectValue(
+        $parentId = constructQuery()->selectValue(
             'page',
             'id',
             array('languageCode' => $languageCode, 'alias' => $menuName, 'isDeleted' => 0)

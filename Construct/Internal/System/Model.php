@@ -130,7 +130,7 @@ class Model
             $data['db'] = null;
             // todo: make a db type/version check stable to work during install and later on
 //            if (class_exists('PDO')) {
-//                $pdo = ipDb()->getConnection();
+//                $pdo = constructQuery()->getConnection();
 //                if ($pdo) {
 //                    $data['db'] = $pdo->getAttribute(\PDO::ATTR_SERVER_VERSION);
 //                }
@@ -212,7 +212,7 @@ class Model
                     GROUP BY
                         `languageCode`
                 ";
-                $result = ipDb()->fetchAll($sql);
+                $result = constructQuery()->fetchAll($sql);
             } catch (\Exception $e) {
                 // Do nothing.
             }

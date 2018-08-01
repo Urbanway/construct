@@ -375,7 +375,7 @@ function ipJob($eventName, $data = array())
  * Returns an object, which provides plugin developers with methods for connecting to database, executing SQL queries and fetching results.
  * @return \Construct\Db Database object.
  */
-function ipDb()
+function constructQuery()
 {
     return \Construct\ServiceLocator::db();
 }

@@ -107,7 +107,7 @@ class Dao
             'key' => $key,
         );
 
-        return ipDb()->selectValue('inline_value_page', 'value', $where);
+        return constructQuery()->selectValue('inline_value_page', 'value', $where);
     }
 
     /**
@@ -124,7 +124,7 @@ class Dao
         $scope->setLanguageId($languageId);
         $this->lastValueScope = $scope;
 
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
             SELECT
                 value
@@ -162,7 +162,7 @@ class Dao
         $scope->settype(Entity\Scope::SCOPE_GLOBAL);
         $this->lastValueScope = $scope;
 
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
             SELECT
                 value
@@ -214,7 +214,7 @@ class Dao
         $values = array(
             'value' => $value
         );
-        ipDb()->upsert('inline_value_page', $keys, $values);
+        constructQuery()->upsert('inline_value_page', $keys, $values);
     }
 
     /**
@@ -234,7 +234,7 @@ class Dao
         $values = array(
             'value' => $value
         );
-        ipDb()->upsert('inline_value_language', $keys, $values);
+        constructQuery()->upsert('inline_value_language', $keys, $values);
     }
 
     /**
@@ -252,7 +252,7 @@ class Dao
         $values = array(
             'value' => $value
         );
-        ipDb()->upsert('inline_value_global', $keys, $values);
+        constructQuery()->upsert('inline_value_global', $keys, $values);
     }
 
     /**
@@ -263,7 +263,7 @@ class Dao
      */
     public function deletePageValue($key, $pageId)
     {
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
             DELETE FROM
                 ' . ipTable('inline_value_page') . '
@@ -290,7 +290,7 @@ class Dao
      */
     public function deleteLanguageValue($key, $languageId)
     {
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
             DELETE FROM
                 ' . ipTable('inline_value_language') . '
@@ -316,7 +316,7 @@ class Dao
      */
     public function deleteGlobalValue($key)
     {
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
             DELETE FROM
                 ' . ipTable('inline_value_global') . '

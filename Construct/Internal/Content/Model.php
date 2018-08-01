@@ -188,7 +188,7 @@ class Model
      */
     private static function _getPriorities()
     {
-        $list = ipDb()->selectAll('widget_order', '*', [], 'ORDER BY `priority` ASC');
+        $list = constructQuery()->selectAll('widget_order', '*', [], 'ORDER BY `priority` ASC');
         $result = [];
         foreach ($list as $widgetOrder) {
             $result[$widgetOrder['widgetName']] = $widgetOrder['priority'];
@@ -349,7 +349,7 @@ class Model
             ORDER BY `position` ASC
         ';
 
-        $list = ipDb()->fetchAll(
+        $list = constructQuery()->fetchAll(
             $sql,
             array(
                 'blockName' => $blockName,
@@ -383,7 +383,7 @@ class Model
             ORDER BY `position` ASC
         ";
 
-        $widgets = ipDb()->fetchAll($sql, array($oldRevisionId));
+        $widgets = constructQuery()->fetchAll($sql, array($oldRevisionId));
 
         $widgetIdTransition = [];
         foreach ($widgets as $widget) {
@@ -393,7 +393,7 @@ class Model
             unset($widget['id']);
             $widget['revisionId'] = $newRevisionId;
 
-            $newWidgetId = ipDb()->insert('widget', $widget);
+            $newWidgetId = constructQuery()->insert('widget', $widget);
 
             if ($widgetObject) {
                 $decodedData = json_decode($widget['data'], true);
@@ -413,7 +413,7 @@ class Model
             WHERE
                 `revisionId` = :newRevisionId
             ";
-            ipDb()->execute($sql, array('newRevisionId' => $newRevisionId));
+            constructQuery()->execute($sql, array('newRevisionId' => $newRevisionId));
             ipEvent('ipWidgetDuplicated', array('oldWidgetId' => $oldId, 'newWidgetId' => $newId));
         }
 
@@ -456,7 +456,7 @@ class Model
      */
     public static function getWidgetRecord($widgetId)
     {
-        $rs = ipDb()->selectAll('widget', '*', array('id' => $widgetId));
+        $rs = constructQuery()->selectAll('widget', '*', array('id' => $widgetId));
 
         if ($rs) {
             $rs[0]['data'] = json_decode($rs[0]['data'], true);
@@ -472,7 +472,7 @@ class Model
      */
     public static function getRevisions($pageId)
     {
-        return ipDb()->selectAll('revision', '*', array('pageId' => $pageId));
+        return constructQuery()->selectAll('revision', '*', array('pageId' => $pageId));
     }
 
     /**
@@ -514,7 +514,7 @@ class Model
             'isDeleted' => 0,
         );
 
-        return ipDb()->insert('widget', $row);
+        return constructQuery()->insert('widget', $row);
     }
 
     /**
@@ -567,7 +567,7 @@ class Model
             $data['data'] = json_encode(\Construct\Internal\Text\Utf8::checkEncoding($data['data']));
         }
 
-        return ipDb()->update('widget', $data, array('id' => $widgetId));
+        return constructQuery()->update('widget', $data, array('id' => $widgetId));
     }
 
     /**
@@ -575,7 +575,7 @@ class Model
      */
     public static function removeRevisionWidgets($revisionId)
     {
-        $widgets = ipDb()->selectColumn('widget', 'id', array('revisionId' => $revisionId));
+        $widgets = constructQuery()->selectColumn('widget', 'id', array('revisionId' => $revisionId));
 
         foreach ($widgets as $widgetId) {
             static::removeWidget($widgetId);
@@ -611,7 +611,7 @@ class Model
      */
     public static function deleteWidget($widgetId)
     {
-        ipDb()->update('widget', array('deletedAt' => time(), 'isDeleted' => 1), array("id" => $widgetId));
+        constructQuery()->update('widget', array('deletedAt' => time(), 'isDeleted' => 1), array("id" => $widgetId));
     }
 
     /**
@@ -631,7 +631,7 @@ class Model
             $widgetObject->delete($widgetId, $widgetRecord['data']);
         }
 
-        ipDb()->delete('widget', array('id' => $widgetId));
+        constructQuery()->delete('widget', array('id' => $widgetId));
 
         ipEvent('ipAfterWidgetRemoved', $widgetRecord);
 
@@ -649,13 +649,13 @@ class Model
         $oldPart = $old['host'] . $old['path'];
         $newPart = $new['host'] . $new['path'];
 
-        $quotedPart = substr(ipDb()->getConnection()->quote('://' . $oldPart), 1, -1);
+        $quotedPart = substr(constructQuery()->getConnection()->quote('://' . $oldPart), 1, -1);
 
         $search = '%'. addslashes(substr(json_encode($quotedPart), 1, -1)) . '%';
 
         $table = ipTable('widget');
 
-        $records = ipDb()->fetchAll("SELECT `id`, `data` FROM $table WHERE `data` LIKE ?", array($search));
+        $records = constructQuery()->fetchAll("SELECT `id`, `data` FROM $table WHERE `data` LIKE ?", array($search));
 
         if (!$records) {
             return;
@@ -683,7 +683,7 @@ class Model
             $data = self::replaceUrl($search, $newPart, $data);
 
             if (json_encode($data) != $row['data']) {
-                ipDb()->update('widget', array('data' => json_encode($data)), array('id' => $row['id']));
+                constructQuery()->update('widget', array('data' => json_encode($data)), array('id' => $row['id']));
             }
         }
     }
@@ -765,7 +765,7 @@ class Model
             'revisionId' => $revisionId
         );
 
-        $widgetNames = ipDb()->fetchColumn($sql, $params);
+        $widgetNames = constructQuery()->fetchColumn($sql, $params);
 
         // compare revision content
         $sql = "
@@ -787,7 +787,7 @@ class Model
             'revisionId' => $revisionId
         );
 
-        $widgetData = ipDb()->fetchColumn($sql, $params);
+        $widgetData = constructQuery()->fetchColumn($sql, $params);
 
         $fingerprint = implode('***|***', $widgetNames) . '|||' . implode('***|***', $widgetData);
 

@@ -237,7 +237,7 @@ class AdminController extends \Construct\GridController
         }
 
         if ($updated['code'] != $this->beforeUpdate['code']) {
-            ipDb()->update(
+            constructQuery()->update(
                 'page',
                 array('languageCode' => $updated['code']),
                 array('languageCode' => $this->beforeUpdate['code'])

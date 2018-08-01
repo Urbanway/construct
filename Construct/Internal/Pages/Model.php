@@ -25,7 +25,7 @@ class Model
             }
         }
 
-        ipDb()->update(
+        constructQuery()->update(
             'page',
             array('isDeleted' => $deleteType, 'deletedAt' => date('Y-m-d H:i:s')),
             array('id' => $pageId)
@@ -102,7 +102,7 @@ class Model
      */
     public static function copySinglePage($nodeId, $newParentId, $newIndex)
     {
-        $copy = ipDb()->selectRow('page', '*', array('id' => $nodeId));
+        $copy = constructQuery()->selectRow('page', '*', array('id' => $nodeId));
         if (!$copy) {
             trigger_error('Element does not exist');
         }
@@ -120,9 +120,9 @@ class Model
         $copy['updatedAt'] = date('Y-m-d H:i:s');
 
 
-        $pageId = ipDb()->insert('page', $copy);
+        $pageId = constructQuery()->insert('page', $copy);
 
-        $eventInfo = ipDb()->selectRow('page', '*', array('id' => $pageId));
+        $eventInfo = constructQuery()->selectRow('page', '*', array('id' => $pageId));
         $eventInfo['sourceId'] = $nodeId;
 
         ipEvent('ipPageDuplicated', $eventInfo);
@@ -148,7 +148,7 @@ class Model
      */
     public static function getMenu($languageCode, $alias)
     {
-        return ipDb()->selectRow(
+        return constructQuery()->selectRow(
             'page',
             '*',
             array('languageCode' => $languageCode, 'alias' => $alias, 'isDeleted' => 0)
@@ -173,7 +173,7 @@ class Model
             $sqlEnd .= ', ' . (int)$limit;
         }
 
-        return ipDb()->selectAll('page', '*', array('parentId' => $parentId, 'isDeleted' => 0), $sqlEnd);
+        return constructQuery()->selectAll('page', '*', array('parentId' => $parentId, 'isDeleted' => 0), $sqlEnd);
     }
 
     public static function getDefaultMenuPagePosition($menuAlias, $whenPageIsSelected, $default)
@@ -207,7 +207,7 @@ class Model
             $where['languageCode'] = $languageCode;
         }
 
-        $list = ipDb()->selectAll('page', '*', $where, ' ORDER BY `pageOrder` ');
+        $list = constructQuery()->selectAll('page', '*', $where, ' ORDER BY `pageOrder` ');
 
 
         return $list;
@@ -221,7 +221,7 @@ class Model
      */
     public static function getPage($pageId)
     {
-        return ipDb()->selectRow('page', '*', array('id' => $pageId, 'isDeleted' => 0));
+        return constructQuery()->selectRow('page', '*', array('id' => $pageId, 'isDeleted' => 0));
     }
 
     /**
@@ -233,7 +233,7 @@ class Model
      */
     public static function getPageByUrl($languageCode, $urlPath)
     {
-        $page = ipDb()->selectRow(
+        $page = constructQuery()->selectRow(
             'page',
             '*',
             array('languageCode' => $languageCode, 'urlPath' => $urlPath, 'isDeleted' => 0)
@@ -250,7 +250,7 @@ class Model
             $urlPath .= '/';
         }
 
-        $page = ipDb()->selectRow(
+        $page = constructQuery()->selectRow(
             'page',
             '*',
             array('languageCode' => $languageCode, 'urlPath' => $urlPath, 'isDeleted' => 0)
@@ -267,7 +267,7 @@ class Model
      */
     public static function getPageByAlias($languageCode, $alias)
     {
-        return ipDb()->selectRow(
+        return constructQuery()->selectRow(
             'page',
             '*',
             array('languageCode' => $languageCode, 'alias' => $alias, 'isDeleted' => 0)
@@ -285,7 +285,7 @@ class Model
         if (empty($where['isDeleted'])) {
             $where['isDeleted'] = 0;
         }
-        $nextPageOrder = ipDb()->selectValue('page', 'MAX(`pageOrder`) + 1', $where);
+        $nextPageOrder = constructQuery()->selectValue('page', 'MAX(`pageOrder`) + 1', $where);
 
         return $nextPageOrder ? $nextPageOrder : 1;
     }
@@ -316,7 +316,7 @@ class Model
         }
 
         $allocatedPath = UrlAllocator::allocatePath($pageBeforeChange->getLanguageCode(), $newUrlPath);
-        ipDb()->update('page', array('urlPath' => $allocatedPath), array('id' => $pageId));
+        constructQuery()->update('page', array('urlPath' => $allocatedPath), array('id' => $pageId));
 
         $pageAfterChange = ipPage($pageId);
 
@@ -410,7 +410,7 @@ class Model
         }
 
         if (count($update) != 0) {
-            ipDb()->update('page', $update, array('id' => $pageId));
+            constructQuery()->update('page', $update, array('id' => $pageId));
         }
 
         if (!empty($properties['type'])) {
@@ -493,11 +493,11 @@ class Model
             'destinationPosition' => $destinationPosition
         );
         ipEvent('ipBeforePageMoved', $eventData);
-        ipDb()->update('page', $update, array('id' => $pageId));
+        constructQuery()->update('page', $update, array('id' => $pageId));
         $children = self::getChildren($pageId);
         if ($children) {
             foreach ($children as $child) {
-                ipDb()->update('page', array('languageCode' => $update['languageCode']), array('id' => $child['id']));
+                constructQuery()->update('page', array('languageCode' => $update['languageCode']), array('id' => $child['id']));
             }
         }
 
@@ -565,13 +565,13 @@ class Model
     {
         $condition = array('languageCode' => $languageCode, 'alias' => $alias, 'isDeleted' => 0);
 
-        $exists = ipDb()->selectValue('page', 'id', $condition);
+        $exists = constructQuery()->selectValue('page', 'id', $condition);
         if (!$exists) {
             return $alias;
         }
 
         $i = 2;
-        while (ipDb()->selectValue(
+        while (constructQuery()->selectValue(
             'page',
             'id',
             array('languageCode' => $languageCode, 'alias' => $alias . '-' . $i, 'isDeleted' => 0)
@@ -635,7 +635,7 @@ class Model
             $row['updatedAt'] = date('Y-m-d H:i:s');
         }
 
-        $pageId = ipDb()->insert('page', $row);
+        $pageId = constructQuery()->insert('page', $row);
 
         $row['id'] = $pageId;
 
@@ -667,7 +667,7 @@ class Model
             $newPriority = ($menus[$newIndex - 1]['pageOrder'] + $menus[$newIndex]['pageOrder']) / 2;
         }
 
-        ipDb()->update('page', array('pageOrder' => $newPriority), array('id' => $menuId));
+        constructQuery()->update('page', array('pageOrder' => $newPriority), array('id' => $menuId));
     }
 
     /**
@@ -704,12 +704,12 @@ class Model
             1
             ";
             foreach ($replaces as $search => $replace) {
-                ipDb()->execute($sql, array('search' => $search, 'replace' => $replace));
+                constructQuery()->execute($sql, array('search' => $search, 'replace' => $replace));
             }
         } else {
             //single page URL has changed
             foreach ($replaces as $search => $replace) {
-                ipDb()->update('page', array('redirectUrl' => $replace), array('redirectUrl' => $search));
+                constructQuery()->update('page', array('redirectUrl' => $replace), array('redirectUrl' => $search));
             }
 
         }
@@ -724,7 +724,7 @@ class Model
      */
     public static function removeDeletedPage($pageId)
     {
-        $canBeDeleted = ipDb()->selectValue('page', 'id', array('id' => $pageId, 'isDeleted' => 1));
+        $canBeDeleted = constructQuery()->selectValue('page', 'id', array('id' => $pageId, 'isDeleted' => 1));
         if (!$canBeDeleted) {
             return false;
         }
@@ -741,7 +741,7 @@ class Model
     protected static function _removeDeletedPage($pageId)
     {
         $deletedPageCount = 0;
-        $children = ipDb()->selectAll('page', array('id', 'isDeleted'), array('parentId' => $pageId));
+        $children = constructQuery()->selectAll('page', array('id', 'isDeleted'), array('parentId' => $pageId));
         foreach ($children as $child) {
             if ($child['isDeleted']) {
                 $deletedPageCount += static::_removeDeletedPage($child['id']);
@@ -751,12 +751,12 @@ class Model
                     'Page.pageHasDeletedParent: page {pageId}, parent set to null',
                     array('pageId' => $child['id'])
                 );
-                ipDb()->update('page', array('parentId' => null), array('id' => $child['id']));
+                constructQuery()->update('page', array('parentId' => null), array('id' => $child['id']));
             }
         }
 
         ipEvent('ipBeforePageRemoved', array('pageId' => $pageId));
-        $count = ipDb()->delete('page', array('id' => $pageId));
+        $count = constructQuery()->delete('page', array('id' => $pageId));
         ipPageStorage($pageId)->removeAll();
         ipEvent('ipPageRemoved', array('pageId' => $pageId));
 
@@ -773,12 +773,12 @@ class Model
      */
     public static function recoveryDeletedPage($pageId)
     {
-        $canBeRecovery = ipDb()->selectValue('page', 'id', array('id' => $pageId, 'isDeleted' => 1));
+        $canBeRecovery = constructQuery()->selectValue('page', 'id', array('id' => $pageId, 'isDeleted' => 1));
         if (!$canBeRecovery) {
             return false;
         }
 
-        ipDb()->update('page', array('isDeleted' => 0), array('id' => $pageId));
+        constructQuery()->update('page', array('isDeleted' => 0), array('id' => $pageId));
 
         return 1;
     }
@@ -795,7 +795,7 @@ class Model
                 FROM $table
                 WHERE `isDeleted` > 0";
 
-        return ipDb()->fetchValue($sql);
+        return constructQuery()->fetchValue($sql);
     }
 
 }

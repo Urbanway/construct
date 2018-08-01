@@ -14,7 +14,7 @@ class Logger extends \Psr\Log\AbstractLogger
      */
     public function log($level, $message, array $context = [])
     {
-        if (!ipDb()->isConnected()) { // do not log things if we have no database connection
+        if (!constructQuery()->isConnected()) { // do not log things if we have no database connection
             return;
         }
 
@@ -26,7 +26,7 @@ class Logger extends \Psr\Log\AbstractLogger
                 'context' => json_encode(array('args' => func_get_args())),
             );
 
-            ipDb()->insert('log', $row);
+            constructQuery()->insert('log', $row);
             return;
         }
 
@@ -36,6 +36,6 @@ class Logger extends \Psr\Log\AbstractLogger
             'context' => json_encode($context),
         );
 
-        ipDb()->insert('log', $row);
+        constructQuery()->insert('log', $row);
     }
 }

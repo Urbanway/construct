@@ -97,7 +97,7 @@ class AdminController extends \Construct\GridController
 
     public function clear()
     {
-        ipDb()->delete('log', []);
+        constructQuery()->delete('log', []);
         return new \Construct\Response\Json(array('status' => 'success'));
     }
 }

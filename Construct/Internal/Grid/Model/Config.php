@@ -441,7 +441,7 @@ class Config
 
         $sql = "SHOW COLUMNS FROM " . $tableName . " " . $this->joinQuery() . " ";
 
-        $fields = ipDb()->fetchColumn($sql);
+        $fields = constructQuery()->fetchColumn($sql);
 
         foreach ($fields as $fieldName) {
             $result[] = array(
@@ -453,7 +453,7 @@ class Config
         if ($this->isMultilingual()) {
             $sql = "SHOW COLUMNS FROM " . $languageTable . " ";
 
-            $fields = ipDb()->fetchColumn($sql);
+            $fields = constructQuery()->fetchColumn($sql);
 
             foreach ($fields as $fieldName) {
                 if (in_array($fieldName, array($this->languageCodeField(), $this->languageForeignKeyField()))) {

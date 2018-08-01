@@ -35,7 +35,7 @@ class Db
             if (!$this->config->connectionField()) {
                 throw new \Construct\Exception("Nested GRID require 'connectionField' setting to be set.");
             }
-            $where .= ' and (' . $where . ') and ' . $this->config->tableName() . '.`' . $this->config->connectionField() . '` = ' . ipDb()->getConnection()->quote($this->statusVariables['gridParentId' . ($depth - 1)]);
+            $where .= ' and (' . $where . ') and ' . $this->config->tableName() . '.`' . $this->config->connectionField() . '` = ' . constructQuery()->getConnection()->quote($this->statusVariables['gridParentId' . ($depth - 1)]);
         }
 
         $searchVariables = [];
@@ -74,9 +74,9 @@ class Db
         $subgridConfig = $this->config->subgridConfig($this->statusVariables, $depth);
         $id = $this->statusVariables['gridParentId' . $depth];
 
-        $title = ipDb()->fetchValue(
+        $title = constructQuery()->fetchValue(
             "SELECT " . $subgridConfig->tableName() . ".`" . $subgridConfig->getBreadcrumbField() . "` FROM " . $subgridConfig->tableName() . " " . $this->joinQuery(
-            ) . " WHERE " . $subgridConfig->tableName() . '.`' . $subgridConfig->idField() . '` = ' . ipDb()->getConnection()->quote($id) . " "
+            ) . " WHERE " . $subgridConfig->tableName() . '.`' . $subgridConfig->idField() . '` = ' . constructQuery()->getConnection()->quote($id) . " "
         );
         return $title;
     }
@@ -127,7 +127,7 @@ class Db
             $idField = $this->config->tableName() . '.`' . $this->config->idField() . '`';
             $languageReferenceField = $languageTable . '.`' . $this->config->languageForeignKeyField() . '`';
             $languageCodeField =  $languageTable . '.`' . $this->config->languageCodeField() . '`';
-            $joinQuery .= " LEFT OUTER JOIN $languageTable ON $idField = $languageReferenceField AND $languageCodeField = " . ipDb()->getConnection()->quote($languageCode) . "";
+            $joinQuery .= " LEFT OUTER JOIN $languageTable ON $idField = $languageReferenceField AND $languageCodeField = " . constructQuery()->getConnection()->quote($languageCode) . "";
         }
 
         if ($this->config->joinQuery()) {
@@ -142,7 +142,7 @@ class Db
     public function recordCount($where)
     {
         $sql = "SELECT COUNT(*) FROM " . $this->config->tableName() . " " . $this->joinQuery() . " WHERE " . $where . " ";
-        return ipDb()->fetchValue($sql);
+        return constructQuery()->fetchValue($sql);
     }
 
     public function fetch($from, $count, $where = 1)
@@ -163,7 +163,7 @@ class Db
             $from, $count
         ";
 
-        $result = ipDb()->fetchAll($sql);
+        $result = constructQuery()->fetchAll($sql);
 
         return $result;
     }
@@ -185,7 +185,7 @@ class Db
             'id' => $id
         );
 
-        $result = ipDb()->fetchRow($sql, $params);
+        $result = constructQuery()->fetchRow($sql, $params);
 
         return $result;
     }

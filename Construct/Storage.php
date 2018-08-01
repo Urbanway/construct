@@ -40,7 +40,7 @@ class Storage
         );
 
 
-        $row = ipDb()->fetchRow($sql, $params);
+        $row = constructQuery()->fetchRow($sql, $params);
         if (!$row) {
             if ($defaultValue instanceof \Closure) {
                 return $defaultValue();
@@ -71,7 +71,7 @@ class Storage
             'value' => json_encode($value)
         );
 
-        ipDb()->upsert('storage', $keys, $values);
+        constructQuery()->upsert('storage', $keys, $values);
     }
 
 
@@ -97,7 +97,7 @@ class Storage
             ':plugin' => $plugin
         );
 
-        $records = ipDb()->fetchAll($sql, $params);
+        $records = constructQuery()->fetchAll($sql, $params);
         $values = array();
 
         foreach ($records as $record) {
@@ -131,7 +131,7 @@ class Storage
             ':key' => $key
         );
 
-        ipDb()->execute($sql, $params);
+        constructQuery()->execute($sql, $params);
 
     }
     
@@ -153,7 +153,7 @@ class Storage
             ':plugin' => $pluginName
         );
 
-        ipDb()->execute($sql, $params);
+        constructQuery()->execute($sql, $params);
 
     }
 

@@ -48,7 +48,7 @@ class Unique extends \Construct\Form\Validator
 
         $idField = empty($this->data['idField']) ? 'id' : $this->data['idField'];
 
-        $row = ipDb()->selectRow($table, '*', array($valueKey => $values[$valueKey]));
+        $row = constructQuery()->selectRow($table, '*', array($valueKey => $values[$valueKey]));
 
         if (!$row) {
             return false;

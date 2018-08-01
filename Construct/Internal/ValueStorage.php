@@ -17,7 +17,7 @@ abstract class ValueStorage extends RawStorage
      */
     public function get($key, $defaultValue = null)
     {
-        $value = ipDb()->selectValue(
+        $value = constructQuery()->selectValue(
             $this->tableName,
             array($this->valueColumn),
             array($this->namespaceColumn => $this->namespace, $this->keyColumn => $key)
@@ -43,7 +43,7 @@ abstract class ValueStorage extends RawStorage
      */
     public function getAll()
     {
-        $values = ipDb()->selectAll(
+        $values = constructQuery()->selectAll(
             $this->tableName,
             array($this->keyColumn, $this->valueColumn),
             array($this->namespaceColumn => $this->namespace)

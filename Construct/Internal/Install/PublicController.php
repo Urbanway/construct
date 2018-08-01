@@ -376,7 +376,7 @@ class PublicController extends \Construct\Controller
         ipConfig()->set('db', $dbConfig);
 
         try {
-            ipDb()->getConnection();
+            constructQuery()->getConnection();
         } catch (\Exception $e) {
             $_SESSION['db_errors'][] = 'Cannot connect';
             return \Construct\Response\JsonRpc::error(__("Can't connect to database.", 'Install'), false);

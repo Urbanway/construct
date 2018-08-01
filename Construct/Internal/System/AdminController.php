@@ -85,7 +85,7 @@ class AdminController extends \Construct\Controller
             header('Content-type: application/json; charset=utf-8');
             $_SESSION['Construct']['notes'][] = $successNote;
             echo '{"status":"success"}';
-            ipDb()->disconnect();
+            constructQuery()->disconnect();
             exit; //we can't keep executing the code as all files have been replaced.
         } catch (\Exception $e) {
             return new \Construct\Response\Json(array(

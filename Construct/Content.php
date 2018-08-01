@@ -80,7 +80,7 @@ class Content
             $languageCode = ipContent()->getCurrentLanguage()->getCode();
         }
 
-        $row = ipDb()->selectRow(
+        $row = constructQuery()->selectRow(
             'page',
             '*',
             array('alias' => $alias, 'languageCode' => $languageCode, 'isDeleted' => 0)
