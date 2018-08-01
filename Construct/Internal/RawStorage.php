@@ -31,7 +31,7 @@ abstract class RawStorage
      */
     public function get($key, $defaultValue = null)
     {
-        $value = ipDb()->selectValue(
+        $value = constructQuery()->selectValue(
             $this->tableName,
             array($this->valueColumn),
             array($this->namespaceColumn => $this->namespace, $this->keyColumn => $key)
@@ -55,7 +55,7 @@ abstract class RawStorage
             $this->valueColumn => $value
         );
 
-        ipDb()->upsert($this->tableName, $keys, $values);
+        constructQuery()->upsert($this->tableName, $keys, $values);
     }
 
     /**
@@ -65,7 +65,7 @@ abstract class RawStorage
      */
     public function getAll()
     {
-        $values = ipDb()->selectAll(
+        $values = constructQuery()->selectAll(
             $this->tableName,
             array($this->keyColumn, $this->valueColumn),
             array($this->namespaceColumn => $this->namespace)
@@ -85,7 +85,7 @@ abstract class RawStorage
      */
     public function remove($key)
     {
-        ipDb()->delete($this->tableName, array($this->namespaceColumn => $this->namespace, $this->keyColumn => $key));
+        constructQuery()->delete($this->tableName, array($this->namespaceColumn => $this->namespace, $this->keyColumn => $key));
     }
 
     /**
@@ -93,7 +93,7 @@ abstract class RawStorage
      */
     public function removeAll()
     {
-        ipDb()->delete($this->tableName, array($this->namespaceColumn => $this->namespace));
+        constructQuery()->delete($this->tableName, array($this->namespaceColumn => $this->namespace));
     }
 
 }

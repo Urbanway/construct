@@ -36,7 +36,7 @@ class ReflectionModel
 
     public function getReflectionByReflection($reflection)
     {
-        $reflectionRecord = ipDb()->selectRow('repository_reflection', '*', array('reflection' => $reflection));
+        $reflectionRecord = constructQuery()->selectRow('repository_reflection', '*', array('reflection' => $reflection));
         if (!empty($reflectionRecord)) { //because selectRow may return empty array
             return $reflectionRecord;
         } else {
@@ -172,7 +172,7 @@ class ReflectionModel
             return false;
         };
 
-        $exists = ipDb()->selectRow('repository_reflection', '*', array('reflection' => $file));
+        $exists = constructQuery()->selectRow('repository_reflection', '*', array('reflection' => $file));
         if (!empty($exists)) {
             return false;
         }
@@ -229,13 +229,13 @@ class ReflectionModel
             'createdAt' => time()
         );
 
-        ipDb()->insert('repository_reflection', $params);
+        constructQuery()->insert('repository_reflection', $params);
 
     }
 
     private function getReflectionRecord($file, $optionsFingerprint)
     {
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = "
         SELECT
           reflection
@@ -264,7 +264,7 @@ class ReflectionModel
 
     private function getReflections($file)
     {
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = "
         SELECT
           reflection
@@ -287,7 +287,7 @@ class ReflectionModel
 
     private function removeReflectionRecords($file)
     {
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = "
         DELETE FROM
           " . ipTable('repository_reflection') . "

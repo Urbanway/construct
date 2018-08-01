@@ -108,7 +108,7 @@ class Select extends \Construct\Internal\Grid\Model\Field
     public function searchQuery($searchVariables)
     {
         if (isset($searchVariables[$this->field]) && $searchVariables[$this->field] !== '') {
-            return '`' . $this->field . '` = ' . ipDb()->getConnection()->quote($searchVariables[$this->field]) . ' ';
+            return '`' . $this->field . '` = ' . constructQuery()->getConnection()->quote($searchVariables[$this->field]) . ' ';
         }
         return null;
     }

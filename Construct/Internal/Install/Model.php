@@ -27,7 +27,7 @@ class Model
 
     public static function createAndUseDatabase($database)
     {
-        $db = ipDb();
+        $db = constructQuery();
         try {
             $db->execute('USE `' . $database . '`');
         } catch (\PDOException $e) {
@@ -51,7 +51,7 @@ class Model
         $sql = str_replace("CREATE TABLE `ip_", "CREATE TABLE `".$tablePrefix, $sql);
 
         $errors = [];
-        ipDb()->execute($sql);
+        constructQuery()->execute($sql);
 
         return $errors;
     }
@@ -72,7 +72,7 @@ class Model
         $sql = str_replace("[[[[time]]]]", date('Y-m-d H:i:s'), $sql);
         $sql = str_replace("[[[[timestamp]]]]", time(), $sql);
 
-        ipDb()->execute($sql);
+        constructQuery()->execute($sql);
 
         return $errors;
     }

@@ -62,7 +62,7 @@ class Actions
             }
         }
 
-        ipDb()->execute($sql, $params);
+        constructQuery()->execute($sql, $params);
 
         if ($this->subgridConfig->isMultilingual()) {
             $sql = "
@@ -74,7 +74,7 @@ class Actions
                 " . $this->subgridConfig->languageTableName() . ".`" . $this->subgridConfig->languageForeignKeyField() . "` = :id
             ";
 
-            ipDb()->execute($sql, $params);
+            constructQuery()->execute($sql, $params);
         }
 
         $callables = $this->subgridConfig->afterDelete();
@@ -109,7 +109,7 @@ class Actions
                     WHERE
                         $where
                 ";
-                $idsToDelete = ipDb()->fetchColumn($sql);
+                $idsToDelete = constructQuery()->fetchColumn($sql);
                 foreach ($idsToDelete as $idToDelete) {
                     $subActions->delete($idToDelete);
                 }
@@ -178,12 +178,12 @@ class Actions
         $this->updateDb($this->subgridConfig->rawTableName(), $dbData, $id);
         if (!empty($languageData)) {
             foreach($languageData as $languageCode => $rawData) {
-                $translationExists = ipDb()->selectRow($this->subgridConfig->rawLanguageTableName(), '*', array($this->subgridConfig->languageCodeField() => $languageCode, $this->subgridConfig->languageForeignKeyField() => $id));
+                $translationExists = constructQuery()->selectRow($this->subgridConfig->rawLanguageTableName(), '*', array($this->subgridConfig->languageCodeField() => $languageCode, $this->subgridConfig->languageForeignKeyField() => $id));
                 if (!$translationExists) {
                     $insertData = $rawData;
                     $insertData[$this->subgridConfig->languageCodeField()] = $languageCode;
                     $insertData[$this->subgridConfig->languageForeignKeyField()] = $id;
-                    ipDb()->insert($this->subgridConfig->rawLanguageTableName(), $insertData);
+                    constructQuery()->insert($this->subgridConfig->rawLanguageTableName(), $insertData);
                 }
                 $this->updateDb($this->subgridConfig->rawTableName(), $rawData, $id, $languageCode);
             }
@@ -226,7 +226,7 @@ class Actions
         $params[] = $id;
 
 
-        $result = ipDb()->execute($sql, $params);
+        $result = constructQuery()->execute($sql, $params);
 
 
 
@@ -284,10 +284,10 @@ class Actions
         $sortField = $this->subgridConfig->sortField();
         if ($sortField) {
             if ($this->subgridConfig->createPosition() == 'top') {
-                $orderValue = ipDb()->selectValue($this->subgridConfig->rawTableName(), "MIN(`$sortField`)", []);
+                $orderValue = constructQuery()->selectValue($this->subgridConfig->rawTableName(), "MIN(`$sortField`)", []);
                 $dbData[$sortField] = is_numeric($orderValue) ? $orderValue - 1 : 1; // 1 if null
             } else {
-                $orderValue = ipDb()->selectValue($this->subgridConfig->rawTableName(), "MAX(`$sortField`)", []);
+                $orderValue = constructQuery()->selectValue($this->subgridConfig->rawTableName(), "MAX(`$sortField`)", []);
                 $dbData[$sortField] = is_numeric($orderValue) ? $orderValue + 1 : 1; // 1 if null
             }
         }
@@ -307,12 +307,12 @@ class Actions
 
 
 
-        $recordId = ipDb()->insert($this->subgridConfig->rawTableName(), $dbData);
+        $recordId = constructQuery()->insert($this->subgridConfig->rawTableName(), $dbData);
         if (!empty($languageData)) {
             foreach($languageData as $languageCode => $rawData) {
                 $rawData[$this->subgridConfig->languageCodeField()] = $languageCode;
                 $rawData[$this->subgridConfig->languageForeignKeyField()] = $recordId;
-                ipDb()->insert($this->subgridConfig->rawLanguageTableName(), $rawData);
+                constructQuery()->insert($this->subgridConfig->rawLanguageTableName(), $rawData);
             }
         }
 
@@ -335,7 +335,7 @@ class Actions
         }
         $sortField = $this->subgridConfig->sortField();
 
-        $priority = ipDb()->selectValue($this->subgridConfig->rawTableName(), $sortField, array('id' => $targetId));
+        $priority = constructQuery()->selectValue($this->subgridConfig->rawTableName(), $sortField, array('id' => $targetId));
         if ($priority === false) {
             throw new \Construct\Exception('Target record doesn\'t exist');
         }
@@ -370,7 +370,7 @@ class Actions
             'rowNumber' => $priority
         );
 
-        $priority2 = ipDb()->fetchValue($sql, $params);
+        $priority2 = constructQuery()->fetchValue($sql, $params);
 
         if ($priority2 === null) {
             if ($beforeOrAfter == 'before') {
@@ -382,7 +382,7 @@ class Actions
             $newPriority = ($priority + $priority2) / 2;
         }
 
-        ipDb()->update(
+        constructQuery()->update(
             $this->subgridConfig->rawTableName(),
             array($sortField => $newPriority),
             array($this->subgridConfig->idField() => $id)
@@ -421,10 +421,10 @@ class Actions
             $record1 = null;
         } else {
             $preparedSql = str_replace('?', $position - 2, $sql);
-            $record1 = ipDb()->fetchAll($preparedSql);
+            $record1 = constructQuery()->fetchAll($preparedSql);
         }
         $preparedSql = str_replace('?', $position - 1, $sql);
-        $record2 = ipDb()->fetchAll($preparedSql);
+        $record2 = constructQuery()->fetchAll($preparedSql);
 
         if (!isset($record1[0][$sortField]) && !isset($record2[0][$sortField])) {
             if ($position == 0) {
@@ -432,7 +432,7 @@ class Actions
             }
 
             $orderBy = 'ORDER BY ' . $sortField . ' ' . ($this->subgridConfig->sortDirection() == 'asc' ? 'desc' : 'asc'); //sort in opposite. This way when selecting first item with selectValue, we will get the last item
-            $highestPriority = ipDb()->selectValue($this->subgridConfig->rawTableName(), $sortField, [], $orderBy);
+            $highestPriority = constructQuery()->selectValue($this->subgridConfig->rawTableName(), $sortField, [], $orderBy);
             $newPriority = $highestPriority + 5 * $directionInverse;
         } else {
             if (isset($record1[0][$sortField])) {
@@ -456,7 +456,7 @@ class Actions
 
 
 
-        ipDb()->update(
+        constructQuery()->update(
             $this->subgridConfig->rawTableName(),
             array($sortField => $newPriority),
             array($this->subgridConfig->idField() => $id)

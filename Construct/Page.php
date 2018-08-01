@@ -65,7 +65,7 @@ class Page
     {
         if (is_int($id) || ctype_digit($id)) {
             //select by page id from the database
-            $page = ipDb()->selectRow('page', '*', array('id' => $id, 'isDeleted' => 0));
+            $page = constructQuery()->selectRow('page', '*', array('id' => $id, 'isDeleted' => 0));
             if (!$page) {
                 $id = esc($id);
                 throw new \Construct\Exception("Page #" . esc($id) . " not found.");
@@ -76,7 +76,7 @@ class Page
         } else {
             // TODO remove
             //select by alias from the database
-            $page = ipDb()->selectRow('page', '*', array('alias' => $id, 'isDeleted' => 0));
+            $page = constructQuery()->selectRow('page', '*', array('alias' => $id, 'isDeleted' => 0));
             if (!$page) {
                 throw new \Construct\Exception("Page #" . esc($id) . " not found.");
             }
@@ -492,7 +492,7 @@ class Page
             $sql .= " LIMIT " . (int)$from . " , " . (int)$till;
         }
 
-        $list = ipDb()->fetchAll($sql, $params);
+        $list = constructQuery()->fetchAll($sql, $params);
 
         return static::createList($list);
     }

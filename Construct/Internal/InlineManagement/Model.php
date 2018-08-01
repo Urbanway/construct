@@ -31,13 +31,13 @@ class Model
         $oldPart = $old['host'] . $old['path'];
         $newPart = $new['host'] . $new['path'];
 
-        $quotedPart = substr(ipDb()->getConnection()->quote('://' . $oldPart), 1, -1);
+        $quotedPart = substr(constructQuery()->getConnection()->quote('://' . $oldPart), 1, -1);
 
         $search = '%'. addslashes($quotedPart) . '%';
 
         $tableWithPrefix = ipTable($table);
 
-        $records = ipDb()->fetchAll("SELECT * FROM $tableWithPrefix WHERE `value` LIKE ?", array($search));
+        $records = constructQuery()->fetchAll("SELECT * FROM $tableWithPrefix WHERE `value` LIKE ?", array($search));
 
         if (!$records) {
             return;
@@ -67,7 +67,7 @@ class Model
                 foreach($keyFields as $keyField) {
                     $where[$keyField] = $row[$keyField];
                 }
-                ipDb()->update($table, array('value' => $after), $where);
+                constructQuery()->update($table, array('value' => $after), $where);
             }
         }
     }

@@ -7,32 +7,32 @@ class Model
 
     public static function get($id)
     {
-        return ipDb()->selectRow('administrator', '*', array('id' => $id));
+        return constructQuery()->selectRow('administrator', '*', array('id' => $id));
     }
 
     public static function getAll()
     {
-        return ipDb()->selectAll('administrator', '*', [], 'ORDER BY `id` ASC');
+        return constructQuery()->selectAll('administrator', '*', [], 'ORDER BY `id` ASC');
     }
 
     public static function delete($id)
     {
-        ipDb()->delete('administrator', array('id' => $id));
+        constructQuery()->delete('administrator', array('id' => $id));
     }
 
     public static function getByUsername($username)
     {
-        return ipDb()->selectRow('administrator', '*', array('username' => $username));
+        return constructQuery()->selectRow('administrator', '*', array('username' => $username));
     }
 
     public static function getById($id)
     {
-        return ipDb()->selectRow('administrator', '*', array('id' => $id));
+        return constructQuery()->selectRow('administrator', '*', array('id' => $id));
     }
 
     public static function getByEmail($email)
     {
-        return ipDb()->selectRow('administrator', '*', array('email' => $email));
+        return constructQuery()->selectRow('administrator', '*', array('email' => $email));
     }
 
     public static function addAdministrator($username, $email, $password)
@@ -42,7 +42,7 @@ class Model
             'email' => $email,
             'hash' => self::passwordHash($password)
         );
-        return ipDb()->insert('administrator', $data);
+        return constructQuery()->insert('administrator', $data);
     }
 
     public static function sendResetPasswordLink($userId)
@@ -81,7 +81,7 @@ class Model
 
     public static function setUserPassword($userId, $password)
     {
-        ipDb()->update('administrator', array('hash' => self::passwordHash($password)), array('id' => $userId));
+        constructQuery()->update('administrator', array('hash' => self::passwordHash($password)), array('id' => $userId));
     }
 
     public static function update($userId, $username, $email, $password)
@@ -95,7 +95,7 @@ class Model
             $data['hash'] = self::passwordHash($password);
         }
 
-        ipDb()->update('administrator', $data, array('id' => $userId));
+        constructQuery()->update('administrator', $data, array('id' => $userId));
     }
 
 
@@ -118,7 +118,7 @@ class Model
             throw new \Construct\Exception('Password reset link has expired');
         }
 
-        ipDb()->update('administrator', array('hash' => self::passwordHash($password)), array('id' => $userId));
+        constructQuery()->update('administrator', array('hash' => self::passwordHash($password)), array('id' => $userId));
     }
 
     private static function generatePasswordResetSecret($userId)
@@ -128,7 +128,7 @@ class Model
             'resetSecret' => $secret,
             'resetTime' => time()
         );
-        ipDb()->update('administrator', $data, array('id' => $userId));
+        constructQuery()->update('administrator', $data, array('id' => $userId));
         return $secret;
     }
 

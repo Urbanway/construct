@@ -23,7 +23,7 @@ class JsTreeHelper
      */
     protected static function getList($languageCode, $parentId)
     {
-        $pages = ipDb()->selectAll(
+        $pages = constructQuery()->selectAll(
             'page',
             '*',
             array('parentId' => $parentId, 'isDeleted' => 0),

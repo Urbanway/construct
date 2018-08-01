@@ -29,7 +29,7 @@ class Revision
             ORDER BY `createdAt` DESC, `revisionId` DESC
         ";
 
-        $revision = ipDb()->fetchRow($sql, array('pageId' => $pageId));
+        $revision = constructQuery()->fetchRow($sql, array('pageId' => $pageId));
 
         if (!$revision) {
             $revisionId = self::createRevision($pageId, 1);
@@ -52,7 +52,7 @@ class Revision
             ORDER BY `createdAt` DESC, `revisionId` DESC
         ";
 
-        $revision = ipDb()->fetchRow($sql, array($pageId));
+        $revision = constructQuery()->fetchRow($sql, array($pageId));
 
         if (!$revision) {
             $revisionId = self::createRevision($pageId, 1);
@@ -65,7 +65,7 @@ class Revision
     public static function getRevision($revisionId)
     {
 
-        return ipDb()->selectRow('revision', '*', array('revisionId' => $revisionId));
+        return constructQuery()->selectRow('revision', '*', array('revisionId' => $revisionId));
     }
 
 
@@ -80,7 +80,7 @@ class Revision
             'createdAt' => date('Y-m-d H:i:s'),
         );
 
-        $revisionId = ipDb()->insert('revision', $revision);
+        $revisionId = constructQuery()->insert('revision', $revision);
         $revision['id'] = $revisionId;
 
         ipEvent('ipPageRevisionCreated', array('revision' => $revision));
@@ -95,7 +95,7 @@ class Revision
             return false;
         }
 
-        ipDb()->update(
+        constructQuery()->update(
             'revision',
             array(
                 'isPublished' => 0
@@ -104,7 +104,7 @@ class Revision
                 'pageId' => (int)$revision['pageId'],
             )
         );
-        $wasUpdated = ipDb()->update(
+        $wasUpdated = constructQuery()->update(
             'revision',
             array(
                 'isPublished' => 1
@@ -161,7 +161,7 @@ class Revision
             'pageId' => $pageId,
         );
 
-        return ipDb()->selectAll('revision', '*', $where, 'ORDER BY `createdAt` DESC, `revisionId` DESC');
+        return constructQuery()->selectAll('revision', '*', $where, 'ORDER BY `createdAt` DESC, `revisionId` DESC');
     }
 
     /**
@@ -182,10 +182,10 @@ class Revision
 
         $sql = "
             SELECT `revisionId` FROM $table
-            WHERE (" . ipDb()->sqlMinAge('createdAt', $days * 24, 'HOUR') .") AND `isPublished` = 0
+            WHERE (" . constructQuery()->sqlMinAge('createdAt', $days * 24, 'HOUR') .") AND `isPublished` = 0
         ";
 
-        $revisionList = ipDb()->fetchColumn($sql);
+        $revisionList = constructQuery()->fetchColumn($sql);
 
         foreach ($revisionList as $revisionId) {
             \Construct\Internal\Content\Service::removeRevision($revisionId);
@@ -202,11 +202,11 @@ class Revision
 
         $sql = $sql = "
             SELECT `id` FROM $table
-            WHERE (" . ipDb()->sqlMinAge('createdAt', $days * 24, 'HOUR') .") 
+            WHERE (" . constructQuery()->sqlMinAge('createdAt', $days * 24, 'HOUR') .") 
             AND `revisionId` = 0 AND `isDeleted` = 1 AND `deletedAt` IS NOT NULL
         ";
 
-        $staticWidgetList = ipDb()->fetchColumn($sql);
+        $staticWidgetList = constructQuery()->fetchColumn($sql);
 
         foreach ($staticWidgetList as $staticWidgetId) {
             \Construct\Internal\Content\Service::removeWidget($staticWidgetId);

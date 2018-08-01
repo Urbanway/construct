@@ -71,14 +71,14 @@ class Helper
 
         $languageCode = ipContent()->getCurrentLanguage()->getCode();
 
-        $menuRootId = ipDb()->selectValue(
+        $menuRootId = constructQuery()->selectValue(
             'page',
             'id',
             array('languageCode' => $languageCode, 'alias' => $menuName, 'isDeleted' => 0)
         );
 
         if ($depthFrom == 1) {
-            $elements = ipDb()->selectAll(
+            $elements = constructQuery()->selectAll(
                 'page',
                 '*',
                 array('isVisible' => 1, 'isSecured' => 0, 'parentId' => $menuRootId, 'isDeleted' => 0),
@@ -89,7 +89,7 @@ class Helper
                 $rootPage = ipContent()->getPage($breadcrumb[0]->getParentId());
                 if ($rootPage && $rootPage->getAlias() == $menuName) {
                     $parent = $breadcrumb[$depthFrom - 2];
-                    $elements = ipDb()->selectAll(
+                    $elements = constructQuery()->selectAll(
                         'page',
                         '*',
                         array('isVisible' => 1, 'isSecured' => 0, 'parentId' => $parent->getId(), 'isDeleted' => 0),
@@ -138,7 +138,7 @@ class Helper
             $pageId = ipContent()->getCurrentPage()->getId();
         }
 
-        $elements = ipDb()->selectAll(
+        $elements = constructQuery()->selectAll(
             'page',
             '*',
             array('isVisible' => 1, 'isSecured' => 0, 'parentId' => $pageId, 'isDeleted' => 0),
@@ -168,7 +168,7 @@ class Helper
             $item = new Item();
             $subSelected = false;
             if ($curDepth < $depth) {
-                $children = ipDb()->selectAll(
+                $children = constructQuery()->selectAll(
                     'page',
                     '*',
                     array('parentId' => $page->getId(), 'isVisible' => 1, 'isSecured' => 0, 'isDeleted' => 0),

@@ -54,7 +54,7 @@ class Model
             'createdAt' => time(),
             'baseDir' => $baseDir
         );
-        ipDb()->insert('repository_file', $row);
+        constructQuery()->insert('repository_file', $row);
     }
 
     public static function unbindFile($file, $plugin, $instanceId, $baseDir = 'file/repository/')
@@ -73,7 +73,7 @@ class Model
                 AND baseDir = :baseDir
                 LIMIT 1'; // it is important to delete only one record
 
-        ipDb()->execute($sql, $condition);
+        constructQuery()->execute($sql, $condition);
 
         $usages = self::whoUsesFile($file);
         if (empty($usages)) {
@@ -85,7 +85,7 @@ class Model
 
     public static function whoUsesFile($file)
     {
-        return ipDb()->selectAll('repository_file', '*', array('fileName' => $file));
+        return constructQuery()->selectAll('repository_file', '*', array('fileName' => $file));
     }
 
     /**
@@ -101,7 +101,7 @@ class Model
             $where['instanceId'] = $instanceId;
         }
 
-        return ipDb()->selectAll('repository_file', '*', $where);
+        return constructQuery()->selectAll('repository_file', '*', $where);
     }
 
 

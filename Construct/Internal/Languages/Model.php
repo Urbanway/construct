@@ -17,7 +17,7 @@ class Model
 
     public static function addLanguage($title, $abbreviation, $code, $url, $isVisible, $textDirection)
     {
-        $languageOrder = ipDb()->selectValue('language', 'MAX(`languageOrder`) + 3', []);
+        $languageOrder = constructQuery()->selectValue('language', 'MAX(`languageOrder`) + 3', []);
         if (!$languageOrder) {
             $languageOrder = 1;
         }
@@ -31,7 +31,7 @@ class Model
             'languageOrder' => $languageOrder,
             'isVisible' => $isVisible
         );
-        $languageId = ipDb()->insert('language', $params);
+        $languageId = constructQuery()->insert('language', $params);
 
         ipContent()->_invalidateLanguages();
 
@@ -44,7 +44,7 @@ class Model
     {
         ipEvent('ipBeforeLanguageDeleted', array('id' => $id));
 
-        ipDb()->delete('language', array('id' => $id));
+        constructQuery()->delete('language', array('id' => $id));
 
         ipContent()->_invalidateLanguages();
 
@@ -56,7 +56,7 @@ class Model
      */
     public static function getLanguages()
     {
-        return ipDb()->selectAll('language', '*', [], 'ORDER BY `languageOrder`');
+        return constructQuery()->selectAll('language', '*', [], 'ORDER BY `languageOrder`');
     }
 
 

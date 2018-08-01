@@ -10,7 +10,7 @@ class AdminPermissionsModel
         if ($administratorId === null) {
             $administratorId = ipAdminId();
         }
-        $permissions = ipDb()->selectColumn('permission', 'permission', array('administratorId' => $administratorId));
+        $permissions = constructQuery()->selectColumn('permission', 'permission', array('administratorId' => $administratorId));
         if (!empty($permissions)) {
             $permissions = array_combine($permissions, $permissions);
         }
@@ -56,7 +56,7 @@ class AdminPermissionsModel
         if ($administratorId === null) {
             $administratorId = ipAdminId();
         }
-        ipDb()->delete('permission', array('administratorId' => $administratorId));
+        constructQuery()->delete('permission', array('administratorId' => $administratorId));
     }
 
     public static function addPermission($permission, $administratorId = null)
@@ -68,7 +68,7 @@ class AdminPermissionsModel
             'permission' => $permission,
             'administratorId' => $administratorId
         );
-        ipDb()->insert('permission', $data, true);
+        constructQuery()->insert('permission', $data, true);
     }
 
     public static function removePermission($permission, $administratorId = null)
@@ -80,6 +80,6 @@ class AdminPermissionsModel
             'permission' => $permission,
             'administratorId' => $administratorId
         );
-        ipDb()->delete('permission', $condition);
+        constructQuery()->delete('permission', $condition);
     }
 }

@@ -356,7 +356,7 @@ class Helper
         foreach ($tables as $table) {
             try {
                 $sql = 'SELECT 1 FROM `' . $prefix . $table . '`';
-                ipDb()->execute($sql);
+                constructQuery()->execute($sql);
                 $tableExists = true;
             } catch (\Exception $e) {
                 // Do nothing. We have expected this error to occur. That means the database is clean.

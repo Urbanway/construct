@@ -188,7 +188,7 @@ class Model
             `name` = ?
         ';
 
-        ipDb()->execute($sql, array($pluginName));
+        constructQuery()->execute($sql, array($pluginName));
 
         ipLog()->info(
             'Construct.pluginDeactivated: {plugin} {version} deactivated.',
@@ -230,7 +230,7 @@ class Model
             $worker->remove();
         }
 
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
         DELETE FROM
             ' . ipTable('plugin') . '
@@ -271,12 +271,12 @@ class Model
 
     public static function getActivePlugins()
     {
-        return ipDb()->selectAll('plugin', '*', array('isActive' => 1));
+        return constructQuery()->selectAll('plugin', '*', array('isActive' => 1));
     }
 
     protected static function getPluginRecord($pluginName)
     {
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
             SELECT
                 *
@@ -329,7 +329,7 @@ class Model
         if (\Construct\Internal\Admin\Service::isSafeMode()) {
             return [];
         }
-        $dbh = ipDb()->getConnection();
+        $dbh = constructQuery()->getConnection();
         $sql = '
             SELECT
                 `name`
@@ -437,7 +437,7 @@ class Model
             if (preg_replace('/\s+/', '', $sql) == '') {
                 return;
             }
-            ipDb()->execute($sql);
+            constructQuery()->execute($sql);
         }
 
     }
