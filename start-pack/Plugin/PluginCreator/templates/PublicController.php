@@ -4,7 +4,7 @@
 namespace Plugin\#NAME#;
 
 
-class PublicController extends \Ip\Controller
+class PublicController extends \Construct\Controller
 {
     /**
      * Go to /day to see the result
@@ -12,13 +12,13 @@ class PublicController extends \Ip\Controller
      */
     public function index()
     {
-        $data['#NAMELOWER#'] = ipdb()->selectAll('#NAMELOWER#','*');
+        $data['#NAMELOWER#'] = constructQuery()->selectAll('#NAMELOWER#','*');
         return ipView('view/index.php', $data);
     }
 
    public function view($id)
     {
-        $data['#NAMELOWER#'] = ipdb()->selectRow('#NAMELOWER#','*',array('id'=>$id));
+        $data['#NAMELOWER#'] = constructQuery()->selectRow('#NAMELOWER#','*',array('id'=>$id));
         return ipView('view/single.php', $data);
     }
 

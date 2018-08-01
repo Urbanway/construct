@@ -17,7 +17,7 @@ class AdminController
                 #FIELDS#
             )
         );
-        return ipGridController($config);
+        return crud($config);
     }
 
 }

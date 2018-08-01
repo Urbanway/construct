@@ -1086,7 +1086,7 @@ function ipRoute()
  * @throws Construct\Exception\View
  * @return \Construct\Response\Json|\Construct\Response\JsonRpc
  */
-function ipGridController($config)
+function crud($config)
 {
     $request = ipRequest()->getRequest();
 
@@ -1098,13 +1098,13 @@ function ipGridController($config)
 
         $backtrace = debug_backtrace();
         if (empty($backtrace[1]['object']) || empty($backtrace[1]['function']) || empty($backtrace[1]['class'])) {
-            throw new \Construct\Exception('ipGridController() function must be used only in controller.');
+            throw new \Construct\Exception('crud() function must be used only in controller.');
         }
         $method = $backtrace[1]['function'];
 
         $controllerClassParts = explode('\\', $backtrace[1]['class']);
         if (empty($controllerClassParts[2])) {
-            throw new \Construct\Exception('ipGridController() function must be used only in controller (' . $backtrace[1]['class'] . '). ');
+            throw new \Construct\Exception('crud() function must be used only in controller (' . $backtrace[1]['class'] . '). ');
         }
         $plugin = $controllerClassParts[1];
 
@@ -1119,7 +1119,7 @@ function ipGridController($config)
                 $gateway = array('pa' => $plugin . '.' . $method);
                 break;
             default:
-                throw new \Construct\Exception('ipGridController() function must be used only in controller (' . $backtrace[1]['class'] . '). ');
+                throw new \Construct\Exception('crud() function must be used only in controller (' . $backtrace[1]['class'] . '). ');
         }
 
         if (!empty($config['gatewayData'])) {
