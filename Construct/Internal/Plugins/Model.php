@@ -98,7 +98,7 @@ class Model
             'isActive' => 1,
             'version' => $config['version']
         );
-        ConstructDb()->upsert('plugin', $keys, $values);
+        constructQuery()->upsert('plugin', $keys, $values);
 
         // set default plugin options
         if (!empty($config['options'])) {

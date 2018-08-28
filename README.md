@@ -14,7 +14,7 @@ If you want to use the latest version from github, please follow these steps to 
 ```php
 {
 "require": {
-"urbanway/construct": "1.0.0",
+"urbanway/construct": "^5.0.0"
 },
 "scripts": {
 "post-install-cmd": ["php vendor/urbanway/construct/bin/setup.php public"],
