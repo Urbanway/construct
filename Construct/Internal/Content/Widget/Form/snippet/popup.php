@@ -7,7 +7,7 @@
                     <h4 class="modal-title"><?php _e('Form options', 'Construct-admin'); ?></h4>
                 </div>
                 <div class="modal-body">
-                    <ul class="nav nav-tabs ipsTabs">
+                    <ul class="navigation navigation-tabs ipsTabs">
                         <li class="active"><a href="#ipWidgetFormPopup-fields" data-toggle="tab"><?php _e('Fields', 'Construct-admin'); ?></a></li>
                         <li><a href="#ipWidgetFormPopup-options" data-toggle="tab"><?php _e('Options', 'Construct-admin'); ?></a></li>
                     </ul>

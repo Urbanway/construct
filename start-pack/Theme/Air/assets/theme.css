@@ -2887,10 +2887,10 @@ a {
     padding-top: 20px;
   }
 }
-.sidenav {
+.sidenavigation {
   margin-bottom: 0;
 }
-.sidenav nav > ul {
+.sidenavigation navigation > ul {
   margin-bottom: 40px;
 }
 .logo {
@@ -3054,37 +3054,37 @@ a {
 .languages .active a {
   font-weight: bold;
 }
-.sidenav nav {
+.sidenavigation navigation {
   font-size: 14px;
 }
-.sidenav nav ul {
+.sidenavigation navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.sidenav nav ul ul {
+.sidenavigation navigation ul ul {
   margin-left: 1em;
 }
-.sidenav nav a {
+.sidenavigation navigation a {
   color: #019bd4;
   display: block;
   margin-bottom: 10px;
 }
-.sidenav nav a:hover {
+.sidenavigation navigation a:hover {
   text-decoration: underline;
 }
-.sidenav nav .active > a {
+.sidenavigation navigation .active > a {
   font-weight: bold;
 }
-.sidenav nav .crumb > a {
+.sidenavigation navigation .crumb > a {
   color: #000000;
   font-weight: bold;
 }
-.sidenav nav.collapse .level1 ul {
+.sidenavigation navigation.collapse .level1 ul {
   display: none;
 }
-.sidenav nav.collapse .active > ul,
-.sidenav nav.collapse .crumb > ul {
+.sidenavigation navigation.collapse .active > ul,
+.sidenavigation navigation.collapse .crumb > ul {
   display: block;
 }
 @media screen and (max-width: 479px) {

@@ -2,7 +2,7 @@
     <div class="ipModuleRepositoryPopup">
         <button type="button" class="ipsClose close">&times;</button>
 
-        <ul class="nav nav-tabs ipsTabs">
+        <ul class="navigation navigation-tabs ipsTabs">
             <li class="active"><a href="#ipsModuleRepositoryTabUpload" data-toggle="tab"><?php _e('File repository', 'Construct-admin'); ?></a></li>
             <li class="<?php echo $allowUpload ? '' : 'hidden' ?>"><a href="#ipsModuleRepositoryTabBuy" data-toggle="tab"><?php _e('Buy images', 'Construct-admin'); ?></a></li>
         </ul>

@@ -1,5 +1,5 @@
 <div class="ip ipsAdminNavbarContainer">
-    <div class="ipAdminNavbar ipsAdminNavbar menubar menubar-default menubar-fixed-top menubar-inverse" role="navigation">
+    <div class="ipAdminNavbar ipsAdminNavbar menubar menubar-default menubar-fixed-top menubar-inverse" role="navigationigation">
         <button type="button" class="_toggle ipsAdminMenu menubar-toggle">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -15,12 +15,12 @@
                 <p class="menubar-text"><?php _e('Menu', 'Construct-admin'); ?></p>
             </div>
             <div class="_menuContainer ipsAdminMenuBlockContainer">
-                <nav>
+                <navigation>
                     <?php
                         $data = array(
                             'items' => $menuItems,
                             'depth' => 1,
-                            'attributesStr' => 'class="nav nav-stacked"',
+                            'attributesStr' => 'class="navigation navigation-stacked"',
                             'active' => 'active',
                             'selected' => 'selected',
                             'disabled' => 'disabled',
@@ -31,7 +31,7 @@
                         $view = ipView('menu.php', $data);
                         echo $view->render();
                     ?>
-                    <ul class="nav nav-stacked">
+                    <ul class="navigation navigation-stacked">
                         <li>
                             <a href="<?php echo ipActionUrl(array('sa' => 'Admin.logout')); ?>">
                                 <i class="fa fa-fw fa-power-off"></i>
@@ -39,12 +39,12 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </navigation>
             </div>
         </div>
 
         <?php if ($curModTitle) { ?>
-            <ul class="_active nav menubar-nav">
+            <ul class="_active navigation menubar-navigation">
                 <li class="ipsItemCurrent">
                     <a href="<?php echo esc($curModUrl); ?>">
                         <?php if ($curModIcon) { ?>
@@ -56,7 +56,7 @@
             </ul>
         <?php } ?>
 
-        <ul class="_right nav menubar-nav menubar-right">
+        <ul class="_right navigation menubar-navigation menubar-right">
             <?php foreach ($menubarButtons as $button) { ?>
             <li>
                 <a

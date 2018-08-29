@@ -119,9 +119,9 @@ class Page
     }
 
     /**
-     * Get page navigation title
+     * Get page navigationigation title
      *
-     * @return string A title for page navigation
+     * @return string A title for page navigationigation
      */
     public function getTitle()
     {

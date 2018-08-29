@@ -12,7 +12,7 @@ var ipDesignThemeMarket = new function () {
         Market.processOrder(order);
     };
 
-    var navigateBackToMyTheme = function () {
+    var navigationigateBackToMyTheme = function () {
         ipDesignThemeMarket.closeMarketWindow();
     };
 
@@ -61,8 +61,8 @@ var ipDesignThemeMarket = new function () {
                             case 'processOrder':
                                 processOrder(data);
                                 break;
-                            case 'navigateBackToMyTheme':
-                                navigateBackToMyTheme();
+                            case 'navigationigateBackToMyTheme':
+                                navigationigateBackToMyTheme();
                                 break;
                             case 'beforeOpenThemePreview':
                                 beforeOpenThemePreview();

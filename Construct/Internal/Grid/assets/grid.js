@@ -237,7 +237,7 @@
                 var $errorPane = $errorField.closest('.tab-pane');
                 if ($errorPane.length) {
                     var id = $errorPane.attr('id')
-                    $modal.find('.nav-tabs li a[href=#' + id + ']').tab('show');
+                    $modal.find('.navigation-tabs li a[href=#' + id + ']').tab('show');
                     $modal.animate({
                         scrollTop: $errorField.offset().top
                     }, 300);
@@ -274,7 +274,7 @@
                 $modal.find('.ipsBody form').submit();
             });
 
-            $modal.find(".nav-tabs").on("click", "a", function(e) {
+            $modal.find(".navigation-tabs").on("click", "a", function(e) {
                 e.preventDefault();
                 $(this).tab('show');
             });
@@ -285,7 +285,7 @@
                 var $errorPane = $errorField.closest('.tab-pane');
                 if ($errorPane.length) {
                     var id = $errorPane.attr('id')
-                    $modal.find('.nav-tabs li a[href=#' + id + ']').tab('show');
+                    $modal.find('.navigation-tabs li a[href=#' + id + ']').tab('show');
                     $modal.animate({
                         scrollTop: $errorField.offset().top
                     }, 300);
@@ -460,7 +460,7 @@
                 ipInitForms();
 
 
-                $modal.find(".nav-tabs").on("click", "a", function(e) {
+                $modal.find(".navigation-tabs").on("click", "a", function(e) {
                     e.preventDefault();
                     $(this).tab('show');
                 });
@@ -471,7 +471,7 @@
                     var $errorPane = $errorField.closest('.tab-pane');
                     if ($errorPane.length) {
                         var id = $errorPane.attr('id')
-                        $modal.find('.nav-tabs li a[href=#' + id + ']').tab('show');
+                        $modal.find('.navigation-tabs li a[href=#' + id + ']').tab('show');
                         $modal.animate({
                             scrollTop: $errorField.offset().top
                         }, 300);

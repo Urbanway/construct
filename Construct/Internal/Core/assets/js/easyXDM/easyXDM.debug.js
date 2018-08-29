@@ -654,7 +654,7 @@ function prepareTransportStack(config){
             else if (config.remoteHelper) {
                 /*
                  * This is supported in all browsers that retains the value of window.name when
-                 * navigating from one domain to another, and where parent.frames[foo] can be used
+                 * navigationigating from one domain to another, and where parent.frames[foo] can be used
                  * to get access to a frame from the same domain
                  */
                 protocol = "2";
@@ -1010,7 +1010,7 @@ var debug = {
                  */
                 var domain = location.host, windowname = domain.replace(/[\-.:]/g, "") + "easyxdm_log", logWin;
                 try {
-                    logWin = window.open("", windowname, "width=800,height=200,status=0,navigation=0,scrollbars=1");
+                    logWin = window.open("", windowname, "width=800,height=200,status=0,navigationigation=0,scrollbars=1");
                 }
                 catch (e) {
                 }
@@ -2071,7 +2071,7 @@ easyXDM.stack.NameTransport = function(config){
     function _sendMessage(message){
         var url = config.remoteHelper + (isHost ? "#_3" : "#_2") + config.channel;
         trace("sending message " + message);
-        trace("navigating to  '" + url + "'");
+        trace("navigationigating to  '" + url + "'");
         callerWindow.contentWindow.sendMessage(message, url);
     }
 

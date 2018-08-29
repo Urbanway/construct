@@ -2,7 +2,7 @@
 plupload.addI18n({
 	'Select files' : 'Vælg filer',
 	'Add files to the upload queue and click the start button.' : 'Tilføj filer til køen, og tryk på start.',
-	'Filename' : 'Filnavn',
+	'Filename' : 'Filnavigationn',
 	'Status' : 'Status',
 	'Size' : 'Størrelse',
 	'Add files' : 'Tilføj filer',

@@ -145,7 +145,7 @@ A customizable lightbox plugin for jQuery.  See the [project page](http://jacklm
 
 * Better accessibility:
 	* Replaced div controls with buttons
-	* Tabbed navigation confined to modal window
+	* Tabbed navigationigation confined to modal window
 	* Added aria role
 
 ### Version 1.3.34 - 2013/2/4
@@ -475,7 +475,7 @@ Files Changed: jquery.colorbox.js, jquery.colorbox-min.js
 * Added vertical photo centering now works for all browsers (this feature previously excluded IE6&7).
 * Added namespacing to the esc-key keydown event for people who want to disable it: "keydown.colorClose"
 * Added 'title' setting to add the ability to set an alternative title for any Colorbox call.
-* Fixed rollover navigation issue with IE8. (Added JS-based rollover state due to a browser-bug.)
+* Fixed rollover navigationigation issue with IE8. (Added JS-based rollover state due to a browser-bug.)
 * Fixed an overflow issue for when the fixed width/height is smaller than the size of a photo.
 * Fixed a bug in the fade transition where the border would still come up if Colorbox was closed mid-transition.
 * Switch from JSMin to Yui Compressor for minification.  Minified code now under 7KB.

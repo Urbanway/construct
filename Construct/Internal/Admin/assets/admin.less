@@ -16,7 +16,7 @@
         }
     }
 
-    .nav._active { // current active page
+    .navigation._active { // current active page
         margin-left: (@grid-gutter-width / 2);
 
         > li > a {
@@ -33,7 +33,7 @@
         top: 0;
         z-index: (@zindex-menubar-fixed + 10);
 
-        .nav {
+        .navigation {
             border-top: 1px solid @menubar-inverse-bg;
 
             > li {
@@ -70,7 +70,7 @@
             }
         }
 
-        .nav-stacked > li + li {
+        .navigation-stacked > li + li {
             margin-top: 0;
         }
 
@@ -107,7 +107,7 @@
         overflow-x: hidden;
         overflow-y: auto;
 
-        nav {
+        navigation {
             margin-bottom: @menubar-height; // leaving space at the bottom
         }
     }
@@ -118,8 +118,8 @@
 
     // for small screens we hide some elements
     @media (max-width: @screen-xs-max) {
-        .nav._active,
-        .nav._right li:not(:last-child) {
+        .navigation._active,
+        .navigation._right li:not(:last-child) {
             display: none;
         }
     }

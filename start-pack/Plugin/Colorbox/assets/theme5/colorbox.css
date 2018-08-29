@@ -42,7 +42,7 @@
         /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
         #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible;  position:absolute; bottom:-29px; background:url(images/controls.png) no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
         
-        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigationigating) */
         #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
 
         #cboxPrevious{left:0px; background-position: -51px -25px;}

@@ -225,12 +225,12 @@
 }
 
 
-// Navbar nav links
+// Navbar navigation links
 //
-// Builds on top of the `.nav` components with its own modifier class to make
-// the nav the full height of the horizontal nav (above 768px).
+// Builds on top of the `.navigation` components with its own modifier class to make
+// the navigation the full height of the horizontal navigation (above 768px).
 
-.menubar-nav {
+.menubar-navigation {
   margin: (@menubar-padding-vertical / 2) -@menubar-padding-horizontal;
 
   > li > a {
@@ -263,7 +263,7 @@
     }
   }
 
-  // Uncollapse the nav
+  // Uncollapse the navigation
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     margin: 0;
@@ -325,12 +325,12 @@
 // Dropdown menus
 
 // Menu position and menu carets
-.menubar-nav > li > .dropdown-menu {
+.menubar-navigation > li > .dropdown-menu {
   margin-top: 0;
   .border-top-radius(0);
 }
 // Menu position and menu caret support for dropups via extra dropup class
-.menubar-fixed-bottom .menubar-nav > li > .dropdown-menu {
+.menubar-fixed-bottom .menubar-navigation > li > .dropdown-menu {
   margin-bottom: 0;
   .border-top-radius(@menubar-border-radius);
   .border-bottom-radius(0);
@@ -410,7 +410,7 @@
     color: @menubar-default-color;
   }
 
-  .menubar-nav {
+  .menubar-navigation {
     > li > a {
       color: @menubar-default-link-color;
 
@@ -455,7 +455,7 @@
   }
 
   // Dropdown menu items
-  .menubar-nav {
+  .menubar-navigation {
     // Remove background color from open dropdown
     > .open > a {
       &,
@@ -500,7 +500,7 @@
 
   // Links in menubars
   //
-  // Add a class to ensure links outside the menubar nav are colored correctly.
+  // Add a class to ensure links outside the menubar navigation are colored correctly.
 
   .menubar-link {
     color: @menubar-default-link-color;
@@ -544,7 +544,7 @@
     color: @menubar-inverse-color;
   }
 
-  .menubar-nav {
+  .menubar-navigation {
     > li > a {
       color: @menubar-inverse-link-color;
 
@@ -572,7 +572,7 @@
     }
   }
 
-  // Darken the responsive nav toggle
+  // Darken the responsive navigation toggle
   .menubar-toggle {
     border-color: @menubar-inverse-toggle-border-color;
     &:hover,
@@ -590,7 +590,7 @@
   }
 
   // Dropdowns
-  .menubar-nav {
+  .menubar-navigation {
     > .open > a {
       &,
       &:hover,
