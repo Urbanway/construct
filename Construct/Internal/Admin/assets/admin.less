@@ -6,9 +6,9 @@
         border-radius: 0;
         display: inline-block;
         float: left;
-        height: @navbar-height;
+        height: @menubar-height;
         margin: 0 0 0 (@grid-gutter-width / 2);
-        width: @navbar-height;
+        width: @menubar-height;
 
         .icon-bar {
             border-radius: 0;
@@ -20,7 +20,7 @@
         margin-left: (@grid-gutter-width / 2);
 
         > li > a {
-            color: @navbar-inverse-link-active-color;
+            color: @menubar-inverse-link-active-color;
             font-size: 16px; // todox: get calculated size (variable)
         }
     }
@@ -31,23 +31,23 @@
         left: (@grid-gutter-width / 4);
         position: absolute;
         top: 0;
-        z-index: (@zindex-navbar-fixed + 10);
+        z-index: (@zindex-menubar-fixed + 10);
 
         .nav {
-            border-top: 1px solid @navbar-inverse-bg;
+            border-top: 1px solid @menubar-inverse-bg;
 
             > li {
-                border-bottom: 1px solid @navbar-inverse-bg;
+                border-bottom: 1px solid @menubar-inverse-bg;
 
                 > a {
                     background-color: #262732; // todox: calculate color?
-                    color: @navbar-inverse-link-color;
+                    color: @menubar-inverse-link-color;
                     padding: 8px (@grid-gutter-width * 2) 8px (@grid-gutter-width / 4); // leaving for space on the right (especially for scrollbar)
                     white-space: nowrap;
 
                     &:hover {
-                        background-color: @navbar-inverse-link-hover-bg;
-                        color: @navbar-inverse-link-hover-color;
+                        background-color: @menubar-inverse-link-hover-bg;
+                        color: @menubar-inverse-link-hover-color;
                     }
                 }
             }
@@ -81,7 +81,7 @@
 
     ._menuHeader {
         background-color: @color-orange;
-        height: @navbar-height;
+        height: @menubar-height;
         white-space: nowrap;
 
         ._toggle {
@@ -93,8 +93,8 @@
             }
         }
 
-        .navbar-text {
-            color: @navbar-inverse-link-active-color;
+        .menubar-text {
+            color: @menubar-inverse-link-active-color;
             display: inline-block;
             font-size: 16px; // todox: get calculated size (variable)
             font-weight: bold;
@@ -108,7 +108,7 @@
         overflow-y: auto;
 
         nav {
-            margin-bottom: @navbar-height; // leaving space at the bottom
+            margin-bottom: @menubar-height; // leaving space at the bottom
         }
     }
 

@@ -84,7 +84,7 @@ var ipPluginMarket = new function () {
     this.resize = function (e) {
         var $popup = $('.ipsPluginMarketPopup');
         var height = parseInt($(window).height());
-        height -= 40; // leaving place for navbar
+        height -= 40; // leaving place for menubar
         if (isPluginPreview) {
             // do noting
         }

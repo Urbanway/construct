@@ -1,16 +1,16 @@
 // adding centering option
-.navbar-center {
+.menubar-center {
     margin: 0 auto;
     position: relative; // for absolute container
     width: (@grid-gutter-width * 8); // space for center controls to
 
-    .navbar-center-container { // to remove floated element from interfering with centering
+    .menubar-center-container { // to remove floated element from interfering with centering
         position: absolute;
         .text-center();
         width: 100%;
     }
 
-    .navbar-text {
+    .menubar-text {
         display: inline-block;
         float: none;
     }

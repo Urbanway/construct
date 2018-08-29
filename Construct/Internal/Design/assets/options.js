@@ -27,7 +27,7 @@ var ipDesignOptionsResize = function (e) {
     "use strict";
     var $popup = $('.ipModuleDesign .ipsPreview');
     var height = parseInt($(window).height());
-    height -= 40; // leaving place for navbar
+    height -= 40; // leaving place for menubar
     $popup.height(height + 'px');
 };
 

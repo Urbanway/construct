@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: @zindex-navbar-fixed;
+    z-index: @zindex-menubar-fixed;
 
     ._disable {
         background-color: rgba(255,255,255,.6);
@@ -190,7 +190,7 @@
                 padding-bottom: 22px; // to push widget button down to keep space for title
             }
             ._button.ui-draggable-dragging {
-                z-index: (@zindex-navbar-fixed + 10); // draggable object must have the highest z-index to be always on top of everything else
+                z-index: (@zindex-menubar-fixed + 10); // draggable object must have the highest z-index to be always on top of everything else
             }
             ._icon {
                 height: @panel-widget-height;
