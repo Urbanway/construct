@@ -1,18 +1,18 @@
 <div class="ip ipsAdminNavbarContainer">
-    <div class="ipAdminNavbar ipsAdminNavbar navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
-        <button type="button" class="_toggle ipsAdminMenu navbar-toggle">
+    <div class="ipAdminNavbar ipsAdminNavbar menubar menubar-default menubar-fixed-top menubar-inverse" role="navigation">
+        <button type="button" class="_toggle ipsAdminMenu menubar-toggle">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
         <div class="_menu hidden ipsAdminMenuBlock">
             <div class="_menuHeader">
-                <button type="button" class="_toggle navbar-toggle">
+                <button type="button" class="_toggle menubar-toggle">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <p class="navbar-text"><?php _e('Menu', 'Construct-admin'); ?></p>
+                <p class="menubar-text"><?php _e('Menu', 'Construct-admin'); ?></p>
             </div>
             <div class="_menuContainer ipsAdminMenuBlockContainer">
                 <nav>
@@ -44,7 +44,7 @@
         </div>
 
         <?php if ($curModTitle) { ?>
-            <ul class="_active nav navbar-nav">
+            <ul class="_active nav menubar-nav">
                 <li class="ipsItemCurrent">
                     <a href="<?php echo esc($curModUrl); ?>">
                         <?php if ($curModIcon) { ?>
@@ -56,8 +56,8 @@
             </ul>
         <?php } ?>
 
-        <ul class="_right nav navbar-nav navbar-right">
-            <?php foreach ($navbarButtons as $button) { ?>
+        <ul class="_right nav menubar-nav menubar-right">
+            <?php foreach ($menubarButtons as $button) { ?>
             <li>
                 <a
                     href="<?php echo empty($button['url']) ? '#' : escAttr($button['url']); ?>"
@@ -71,9 +71,9 @@
             <?php } ?>
         </ul>
 
-        <div class="navbar-center">
-            <div class="navbar-center-container">
-                <?php foreach ($navbarCenterElements as $el) { echo $el; } ?>
+        <div class="menubar-center">
+            <div class="menubar-center-container">
+                <?php foreach ($menubarCenterElements as $el) { echo $el; } ?>
             </div>
         </div>
     </div>

@@ -259,7 +259,7 @@
         var $container = $('.ipsAdminPanelContainer'); // the most top element physically creates a space
         var $panel = $('.ipsAdminPanel'); // Administration Panel that stays always visible
         $container.height($panel.outerHeight()); // setting the height to container
-        $panel.css('top', $('.ipsAdminNavbarContainer').outerHeight()); // move down to leave space for top navbar
+        $panel.css('top', $('.ipsAdminNavbarContainer').outerHeight()); // move down to leave space for top menubar
     }
 
     var ipStartWidgetDrag = function (event, ui) {

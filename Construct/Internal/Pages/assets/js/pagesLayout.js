@@ -19,11 +19,11 @@ var ipPagesResize;
         var $pages = $('.ipsPagesContainer');
         var $properties = $('.ipsProperties');
 
-        var navbarHeight = parseInt($('.ipsAdminNavbarContainer').outerHeight());
+        var menubarHeight = parseInt($('.ipsAdminNavbarContainer').outerHeight());
 
         var contentHeight = parseInt($window.height());
-        if (navbarHeight > 0) {
-            contentHeight -= navbarHeight; // leaving place for navbar
+        if (menubarHeight > 0) {
+            contentHeight -= menubarHeight; // leaving place for menubar
         }
 
         var windowWidth = parseInt($window.width());

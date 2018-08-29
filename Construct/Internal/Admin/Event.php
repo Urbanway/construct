@@ -33,7 +33,7 @@ class Event
             $curModIcon = isset($pluginConfig['icon']) ? $pluginConfig['icon'] : $curModIcon;
         }
 
-        $navbarButtons = array(
+        $menubarButtons = array(
             array(
                 'text' => '',
                 'hint' => __('Logout', 'Construct-admin', false),
@@ -43,21 +43,21 @@ class Event
             )
         );
 
-        $navbarButtons = ipFilter('ipAdminNavbarButtons', $navbarButtons);
+        $menubarButtons = ipFilter('ipAdminNavbarButtons', $menubarButtons);
 
-        $navbarCenterElements = ipFilter('ipAdminNavbarCenterElements', []);
+        $menubarCenterElements = ipFilter('ipAdminNavbarCenterElements', []);
 
         $data = array(
             'menuItems' => Model::instance()->getAdminMenuItems($curModule),
             'curModTitle' => $curModTitle,
             'curModUrl' => $curModUrl,
             'curModIcon' => $curModIcon,
-            'navbarButtons' => array_reverse($navbarButtons),
-            'navbarCenterElements' => $navbarCenterElements
+            'menubarButtons' => array_reverse($menubarButtons),
+            'menubarCenterElements' => $menubarCenterElements
         );
 
 
-        $html = ipView('view/navbar.php', $data)->render();
+        $html = ipView('view/menubar.php', $data)->render();
         return $html;
     }
 

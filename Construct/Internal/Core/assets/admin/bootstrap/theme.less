@@ -109,52 +109,52 @@
 // Navbar
 // --------------------------------------------------
 
-// Default navbar
-.navbar-default {
-  #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg);
+// Default menubar
+.menubar-default {
+  #gradient > .vertical(@start-color: lighten(@menubar-default-bg, 10%); @end-color: @menubar-default-bg);
   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
-  border-radius: @navbar-border-radius;
+  border-radius: @menubar-border-radius;
   @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
   .box-shadow(@shadow);
 
-  .navbar-nav > .open > a,
-  .navbar-nav > .active > a {
-    #gradient > .vertical(@start-color: darken(@navbar-default-link-active-bg, 5%); @end-color: darken(@navbar-default-link-active-bg, 2%));
+  .menubar-nav > .open > a,
+  .menubar-nav > .active > a {
+    #gradient > .vertical(@start-color: darken(@menubar-default-link-active-bg, 5%); @end-color: darken(@menubar-default-link-active-bg, 2%));
     .box-shadow(inset 0 3px 9px rgba(0,0,0,.075));
   }
 }
-.navbar-brand,
-.navbar-nav > li > a {
+.menubar-brand,
+.menubar-nav > li > a {
   text-shadow: 0 1px 0 rgba(255,255,255,.25);
 }
 
-// Inverted navbar
-.navbar-inverse {
-  #gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
+// Inverted menubar
+.menubar-inverse {
+  #gradient > .vertical(@start-color: lighten(@menubar-inverse-bg, 10%); @end-color: @menubar-inverse-bg);
   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered; see https://github.com/twbs/bootstrap/issues/10257
 
-  .navbar-nav > .open > a,
-  .navbar-nav > .active > a {
-    #gradient > .vertical(@start-color: @navbar-inverse-link-active-bg; @end-color: lighten(@navbar-inverse-link-active-bg, 2.5%));
+  .menubar-nav > .open > a,
+  .menubar-nav > .active > a {
+    #gradient > .vertical(@start-color: @menubar-inverse-link-active-bg; @end-color: lighten(@menubar-inverse-link-active-bg, 2.5%));
     .box-shadow(inset 0 3px 9px rgba(0,0,0,.25));
   }
 
-  .navbar-brand,
-  .navbar-nav > li > a {
+  .menubar-brand,
+  .menubar-nav > li > a {
     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   }
 }
 
-// Undo rounded corners in static and fixed navbars
-.navbar-static-top,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
+// Undo rounded corners in static and fixed menubars
+.menubar-static-top,
+.menubar-fixed-top,
+.menubar-fixed-bottom {
   border-radius: 0;
 }
 
 // Fix active state of dropdown items in collapsed mode
 @media (max-width: @grid-float-breakpoint-max) {
-  .navbar .navbar-nav .open .dropdown-menu > .active > a {
+  .menubar .menubar-nav .open .dropdown-menu > .active > a {
     &,
     &:hover,
     &:focus {
