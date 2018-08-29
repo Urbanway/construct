@@ -862,8 +862,10 @@ select[multiple].ipModuleForm .input-group-sm > .input-group-btn > .btn {
 .ipModuleForm .input-group-addon:first-child,
 .ipModuleForm .input-group-btn:first-child > .btn,
 .ipModuleForm .input-group-btn:first-child > .btn-group > .btn,
-.ipModuleForm .input-group-btn:first-child > .dropdown-toggle,
-.ipModuleForm .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.ipModuleForm .input-group-btn:first-child > .select-toggle
+menubar,
+.ipModuleForm .input-group-btn:last-child > .btn:not(:last-child):not(.select-toggle
+menubar),
 .ipModuleForm .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -875,7 +877,8 @@ select[multiple].ipModuleForm .input-group-sm > .input-group-btn > .btn {
 .ipModuleForm .input-group-addon:last-child,
 .ipModuleForm .input-group-btn:last-child > .btn,
 .ipModuleForm .input-group-btn:last-child > .btn-group > .btn,
-.ipModuleForm .input-group-btn:last-child > .dropdown-toggle,
+.ipModuleForm .input-group-btn:last-child > .select-toggle
+menubar,
 .ipModuleForm .input-group-btn:first-child > .btn:not(:first-child),
 .ipModuleForm .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
   border-bottom-left-radius: 0;

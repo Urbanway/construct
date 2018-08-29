@@ -47,20 +47,24 @@
   }
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.select-toggle
+menubar) {
   border-radius: 0;
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group > .btn:first-child {
   margin-left: 0;
-  &:not(:last-child):not(.dropdown-toggle) {
+  &:not(:last-child):not(.select-toggle
+menubar) {
     .border-right-radius(0);
   }
 }
-// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+// Need .select-toggle
+menubar since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group > .btn:last-child:not(:first-child),
-.btn-group > .dropdown-toggle:not(:first-child) {
+.btn-group > .select-toggle
+menubar:not(:first-child) {
   .border-left-radius(0);
 }
 
@@ -73,7 +77,8 @@
 }
 .btn-group > .btn-group:first-child:not(:last-child) {
   > .btn:last-child,
-  > .dropdown-toggle {
+  > .select-toggle
+menubar {
     .border-right-radius(0);
   }
 }
@@ -82,8 +87,10 @@
 }
 
 // On active and open, don't show outline
-.btn-group .dropdown-toggle:active,
-.btn-group.open .dropdown-toggle {
+.btn-group .select-toggle
+menubar:active,
+.btn-group.open .select-toggle
+menubar {
   outline: 0;
 }
 
@@ -101,18 +108,21 @@
 // ----------------------
 
 // Give the line between buttons some depth
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .select-toggle
+menubar {
   padding-left: 8px;
   padding-right: 8px;
 }
-.btn-group > .btn-lg + .dropdown-toggle {
+.btn-group > .btn-lg + .select-toggle
+menubar {
   padding-left: 12px;
   padding-right: 12px;
 }
 
 // The clickable button for toggling the menu
 // Remove the gradient and set the same inset shadow as the :active state
-.btn-group.open .dropdown-toggle {
+.btn-group.open .select-toggle
+menubar {
   .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
 
   // Show no shadow for `.btn-link` since it has no other button styles.
@@ -185,7 +195,8 @@
 }
 .btn-group-vertical > .btn-group:first-child:not(:last-child) {
   > .btn:last-child,
-  > .dropdown-toggle {
+  > .select-toggle
+menubar {
     .border-bottom-radius(0);
   }
 }

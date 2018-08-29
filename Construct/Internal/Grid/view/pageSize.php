@@ -1,7 +1,8 @@
 <div class="btn-group <?php echo $position == 'top' ? 'dropdown' : 'dropup' ?>">
     <div class="dropdown _pageSize ipsPageSize">
         Items per page
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+        <button class="btn btn-default select-toggle
+menubar" type="button" data-toggle="dropdown" aria-expanded="true">
             <?php echo (int) $pageSize ?>
             <span class="caret"></span>
         </button>

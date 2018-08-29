@@ -20,7 +20,8 @@
                                     <input class="_colorPickerValue ipsLogoColor" type="text" value="" />
                                 </span>
                                 <div class="ipsFontSelect input-group-btn">
-                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                    <button data-toggle="dropdown" class="btn btn-default select-toggle
+menubar">
                                         <span class="ipsFontName"><?php _e('Default', 'Construct-admin'); ?></span>
                                         <span class="caret"></span>
                                     </button>
