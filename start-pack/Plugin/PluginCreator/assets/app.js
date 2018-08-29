@@ -60,9 +60,9 @@
 
 var _counter = 0;
 
-function Add(btn) {
+function Add(bttn) {
      _counter++;
-    var parentFileTemplate = $(btn).parent().next("fieldset");
+    var parentFileTemplate = $(bttn).parent().next("fieldset");
     parentFileTemplate.attr('id',"template" + _counter );
     var parentFilePlaceHolder = $('#template_container');
     cloned = parentFileTemplate.clone();

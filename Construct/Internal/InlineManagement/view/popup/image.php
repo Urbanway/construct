@@ -12,13 +12,13 @@
             </div>
             <?php if (isset($showRemoveLink) && $showRemoveLink) { ?>
                 <div class="form-group pull-right">
-                    <button class="btn btn-danger ipsRemove"><?php _e('Remove this image', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
+                    <button class="bttn bttn-danger ipsRemove"><?php _e('Remove this image', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
                     <div class="hidden ipsRemoveConfirm"><?php _e('There is no option to undo this action. Parent page image or the default one will be applied to this page. Do you want to proceed?', 'Construct-admin'); ?></div>
                 </div>
             <?php } ?>
             <div class="form-group pull-left">
-                <button class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
-                <button class="btn btn-default ipsCancel"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                <button class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                <button class="bttn bttn-default ipsCancel"><?php _e('Cancel', 'Construct-admin'); ?></button>
             </div>
         </div>
     </div>

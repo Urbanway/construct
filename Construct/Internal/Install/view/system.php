@@ -24,8 +24,8 @@
 </table>
 <p class="text-right">
     <?php if ($showNextStep) { ?>
-        <a class="btn btn-primary ipsAutoForward" href="?step=3"><?php _e('Next', 'Install'); ?></a>
+        <a class="bttn bttn-primary ipsAutoForward" href="?step=3"><?php _e('Next', 'Install'); ?></a>
     <?php } else { ?>
-        <a class="btn btn-primary" href="?step=2"><?php _e('Check again', 'Install'); ?></a>
+        <a class="bttn bttn-primary" href="?step=2"><?php _e('Check again', 'Install'); ?></a>
     <?php } ?>
 </p>

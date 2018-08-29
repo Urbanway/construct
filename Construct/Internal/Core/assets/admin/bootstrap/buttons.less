@@ -6,10 +6,10 @@
 // Base styles
 // --------------------------------------------------
 
-.btn {
+.bttn {
   display: inline-block;
-  margin-bottom: 0; // For input.btn
-  font-weight: @btn-font-weight;
+  margin-bottom: 0; // For input.bttn
+  font-weight: @bttn-font-weight;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -32,7 +32,7 @@
   &:hover,
   &:focus,
   &.focus {
-    color: @btn-default-color;
+    color: @bttn-default-color;
     text-decoration: none;
   }
 
@@ -57,27 +57,27 @@
 // Alternate buttons
 // --------------------------------------------------
 
-.btn-default {
-  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+.bttn-default {
+  .button-variant(@bttn-default-color; @bttn-default-bg; @bttn-default-border);
 }
-.btn-primary {
-  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+.bttn-primary {
+  .button-variant(@bttn-primary-color; @bttn-primary-bg; @bttn-primary-border);
 }
 // Success appears as green
-.btn-success {
-  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+.bttn-success {
+  .button-variant(@bttn-success-color; @bttn-success-bg; @bttn-success-border);
 }
 // Info appears as blue-green
-.btn-info {
-  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+.bttn-info {
+  .button-variant(@bttn-info-color; @bttn-info-bg; @bttn-info-border);
 }
 // Warning appears as orange
-.btn-warning {
-  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+.bttn-warning {
+  .button-variant(@bttn-warning-color; @bttn-warning-bg; @bttn-warning-border);
 }
 // Danger and error appear as red
-.btn-danger {
-  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+.bttn-danger {
+  .button-variant(@bttn-danger-color; @bttn-danger-bg; @bttn-danger-border);
 }
 
 
@@ -85,7 +85,7 @@
 // -------------------------
 
 // Make a button look and behave like a link
-.btn-link {
+.bttn-link {
   color: @link-color;
   font-weight: normal;
   border-radius: 0;
@@ -114,7 +114,7 @@
   fieldset[disabled] & {
     &:hover,
     &:focus {
-      color: @btn-link-disabled-color;
+      color: @bttn-link-disabled-color;
       text-decoration: none;
     }
   }
@@ -124,15 +124,15 @@
 // Button Sizes
 // --------------------------------------------------
 
-.btn-lg {
+.bttn-lg {
   // line-height: ensure even-numbered height of button next to large input
   .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
 }
-.btn-sm {
+.bttn-sm {
   // line-height: ensure proper height of button next to small input
   .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
-.btn-xs {
+.bttn-xs {
   .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
 
@@ -140,13 +140,13 @@
 // Block button
 // --------------------------------------------------
 
-.btn-block {
+.bttn-block {
   display: block;
   width: 100%;
 }
 
 // Vertically space out multiple block buttons
-.btn-block + .btn-block {
+.bttn-block + .bttn-block {
   margin-top: 5px;
 }
 
@@ -154,7 +154,7 @@
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.btn-block {
+  &.bttn-block {
     width: 100%;
   }
 }

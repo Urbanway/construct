@@ -35,7 +35,7 @@
             
             
             
-            var btn;
+            var bttn;
             var remote = new easyXDM.Rpc({
                 remote: REMOTE + "/upload_rpc.html",
                 swf: REMOTE + "/../easyxdm.swf",
@@ -44,17 +44,17 @@
                     var frm = document.getElementById("frmUpload");
                     frm.action = REMOTE + "/upload_handler.aspx";
                     frm.style.display = "block";
-                    btn = document.getElementById("btnSubmit");
+                    bttn = document.getElementById("bttnSubmit");
                     
                     frm.onsubmit = function(){
-                        btn.disabled = "disabled";
+                        bttn.disabled = "disabled";
                     };
                 }
             }, {
                 local: {
                     returnUploadResponse: function(response){
                         // here you should call back into your regular workflow
-                        btn.disabled = null;
+                        bttn.disabled = null;
                         alert(response.msg);
                     }
                 }
@@ -77,7 +77,7 @@
         <div id="log" style="height:100px;border:1px dotted black;overflow:auto">
         </div>
         <form id="frmUpload" style="display:none" method="POST" target="upload_target" enctype="multipart/form-data">
-            <input type="file" name="upload_file"/><input type="submit" id="btnSubmit" value="Upload file"/>
+            <input type="file" name="upload_file"/><input type="submit" id="bttnSubmit" value="Upload file"/>
         </form><!--
         tracking code
         -->

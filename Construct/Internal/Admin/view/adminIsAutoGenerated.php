@@ -18,7 +18,7 @@
                     <iframe style="width:0;height:0;border:none;" border="0" src="http://construct.uws.al/installationscript2/?step=last"></iframe>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Yes, I understand how to log in next time', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Yes, I understand how to log in next time', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>

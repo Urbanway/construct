@@ -43,12 +43,12 @@
                     <p class="alert alert-warning">Website content is NOT transferred.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
     <p class="text-right">
-        <button type="submit" class="btn btn-primary ipsUrlRewritesCheck ipsConfigurationSubmit"><?php _e('Next', 'Install'); ?></button>
+        <button type="submit" class="bttn bttn-primary ipsUrlRewritesCheck ipsConfigurationSubmit"><?php _e('Next', 'Install'); ?></button>
     </p>
 </form>

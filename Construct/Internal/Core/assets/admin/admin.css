@@ -320,8 +320,8 @@
   .ip .menubar {
     display: none;
   }
-  .ip .btn > .caret,
-  .ip .dropup > .btn > .caret {
+  .ip .bttn > .caret,
+  .ip .dropup > .bttn > .caret {
     border-top-color: #000 !important;
   }
   .ip .label {
@@ -3058,7 +3058,7 @@
     vertical-align: middle;
   }
   .ip .form-inline .input-group .input-group-addon,
-  .ip .form-inline .input-group .input-group-btn,
+  .ip .form-inline .input-group .input-group-bttn,
   .ip .form-inline .input-group .form-control {
     width: auto;
   }
@@ -3125,7 +3125,7 @@
     padding-top: 6px;
   }
 }
-.ip .btn {
+.ip .bttn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -3145,32 +3145,32 @@
   -ms-user-select: none;
   user-select: none;
 }
-.ip .btn:focus,
-.ip .btn:active:focus,
-.ip .btn.active:focus,
-.ip .btn.focus,
-.ip .btn:active.focus,
-.ip .btn.active.focus {
+.ip .bttn:focus,
+.ip .bttn:active:focus,
+.ip .bttn.active:focus,
+.ip .bttn.focus,
+.ip .bttn:active.focus,
+.ip .bttn.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.ip .btn:hover,
-.ip .btn:focus,
-.ip .btn.focus {
+.ip .bttn:hover,
+.ip .bttn:focus,
+.ip .bttn.focus {
   color: #000000;
   text-decoration: none;
 }
-.ip .btn:active,
-.ip .btn.active {
+.ip .bttn:active,
+.ip .bttn.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.ip .btn.disabled,
-.ip .btn[disabled],
-.ip fieldset[disabled] .btn {
+.ip .bttn.disabled,
+.ip .bttn[disabled],
+.ip fieldset[disabled] .bttn {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -3178,352 +3178,352 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ip .btn-default {
+.ip .bttn-default {
   color: #000000;
   background-color: #e7e7e7;
   border-color: #e7e7e7;
 }
-.ip .btn-default:hover,
-.ip .btn-default:focus,
-.ip .btn-default.focus,
-.ip .btn-default:active,
-.ip .btn-default.active,
+.ip .bttn-default:hover,
+.ip .bttn-default:focus,
+.ip .bttn-default.focus,
+.ip .bttn-default:active,
+.ip .bttn-default.active,
 .ip .open > .select-toggle
-menubar.btn-default {
+menubar.bttn-default {
   color: #000000;
   background-color: #cecece;
   border-color: #c8c8c8;
 }
-.ip .btn-default:active,
-.ip .btn-default.active,
+.ip .bttn-default:active,
+.ip .bttn-default.active,
 .ip .open > .select-toggle
-menubar.btn-default {
+menubar.bttn-default {
   background-image: none;
 }
-.ip .btn-default.disabled,
-.ip .btn-default[disabled],
-.ip fieldset[disabled] .btn-default,
-.ip .btn-default.disabled:hover,
-.ip .btn-default[disabled]:hover,
-.ip fieldset[disabled] .btn-default:hover,
-.ip .btn-default.disabled:focus,
-.ip .btn-default[disabled]:focus,
-.ip fieldset[disabled] .btn-default:focus,
-.ip .btn-default.disabled.focus,
-.ip .btn-default[disabled].focus,
-.ip fieldset[disabled] .btn-default.focus,
-.ip .btn-default.disabled:active,
-.ip .btn-default[disabled]:active,
-.ip fieldset[disabled] .btn-default:active,
-.ip .btn-default.disabled.active,
-.ip .btn-default[disabled].active,
-.ip fieldset[disabled] .btn-default.active {
+.ip .bttn-default.disabled,
+.ip .bttn-default[disabled],
+.ip fieldset[disabled] .bttn-default,
+.ip .bttn-default.disabled:hover,
+.ip .bttn-default[disabled]:hover,
+.ip fieldset[disabled] .bttn-default:hover,
+.ip .bttn-default.disabled:focus,
+.ip .bttn-default[disabled]:focus,
+.ip fieldset[disabled] .bttn-default:focus,
+.ip .bttn-default.disabled.focus,
+.ip .bttn-default[disabled].focus,
+.ip fieldset[disabled] .bttn-default.focus,
+.ip .bttn-default.disabled:active,
+.ip .bttn-default[disabled]:active,
+.ip fieldset[disabled] .bttn-default:active,
+.ip .bttn-default.disabled.active,
+.ip .bttn-default[disabled].active,
+.ip fieldset[disabled] .bttn-default.active {
   background-color: #e7e7e7;
   border-color: #e7e7e7;
 }
-.ip .btn-default .badge {
+.ip .bttn-default .badge {
   color: #e7e7e7;
   background-color: #000000;
 }
-.ip .btn-primary {
+.ip .bttn-primary {
   color: #ffffff;
   background-color: #66a000;
   border-color: #66a000;
 }
-.ip .btn-primary:hover,
-.ip .btn-primary:focus,
-.ip .btn-primary.focus,
-.ip .btn-primary:active,
-.ip .btn-primary.active,
+.ip .bttn-primary:hover,
+.ip .bttn-primary:focus,
+.ip .bttn-primary.focus,
+.ip .bttn-primary:active,
+.ip .bttn-primary.active,
 .ip .open > .select-toggle
-menubar.btn-primary {
+menubar.bttn-primary {
   color: #ffffff;
   background-color: #456d00;
   border-color: #3f6300;
 }
-.ip .btn-primary:active,
-.ip .btn-primary.active,
+.ip .bttn-primary:active,
+.ip .bttn-primary.active,
 .ip .open > .select-toggle
-menubar.btn-primary {
+menubar.bttn-primary {
   background-image: none;
 }
-.ip .btn-primary.disabled,
-.ip .btn-primary[disabled],
-.ip fieldset[disabled] .btn-primary,
-.ip .btn-primary.disabled:hover,
-.ip .btn-primary[disabled]:hover,
-.ip fieldset[disabled] .btn-primary:hover,
-.ip .btn-primary.disabled:focus,
-.ip .btn-primary[disabled]:focus,
-.ip fieldset[disabled] .btn-primary:focus,
-.ip .btn-primary.disabled.focus,
-.ip .btn-primary[disabled].focus,
-.ip fieldset[disabled] .btn-primary.focus,
-.ip .btn-primary.disabled:active,
-.ip .btn-primary[disabled]:active,
-.ip fieldset[disabled] .btn-primary:active,
-.ip .btn-primary.disabled.active,
-.ip .btn-primary[disabled].active,
-.ip fieldset[disabled] .btn-primary.active {
+.ip .bttn-primary.disabled,
+.ip .bttn-primary[disabled],
+.ip fieldset[disabled] .bttn-primary,
+.ip .bttn-primary.disabled:hover,
+.ip .bttn-primary[disabled]:hover,
+.ip fieldset[disabled] .bttn-primary:hover,
+.ip .bttn-primary.disabled:focus,
+.ip .bttn-primary[disabled]:focus,
+.ip fieldset[disabled] .bttn-primary:focus,
+.ip .bttn-primary.disabled.focus,
+.ip .bttn-primary[disabled].focus,
+.ip fieldset[disabled] .bttn-primary.focus,
+.ip .bttn-primary.disabled:active,
+.ip .bttn-primary[disabled]:active,
+.ip fieldset[disabled] .bttn-primary:active,
+.ip .bttn-primary.disabled.active,
+.ip .bttn-primary[disabled].active,
+.ip fieldset[disabled] .bttn-primary.active {
   background-color: #66a000;
   border-color: #66a000;
 }
-.ip .btn-primary .badge {
+.ip .bttn-primary .badge {
   color: #66a000;
   background-color: #ffffff;
 }
-.ip .btn-success {
+.ip .bttn-success {
   color: #ffffff;
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-.ip .btn-success:hover,
-.ip .btn-success:focus,
-.ip .btn-success.focus,
-.ip .btn-success:active,
-.ip .btn-success.active,
+.ip .bttn-success:hover,
+.ip .bttn-success:focus,
+.ip .bttn-success.focus,
+.ip .bttn-success:active,
+.ip .bttn-success.active,
 .ip .open > .select-toggle
-menubar.btn-success {
+menubar.bttn-success {
   color: #ffffff;
   background-color: #449d44;
   border-color: #398439;
 }
-.ip .btn-success:active,
-.ip .btn-success.active,
+.ip .bttn-success:active,
+.ip .bttn-success.active,
 .ip .open > .select-toggle
-menubar.btn-success {
+menubar.bttn-success {
   background-image: none;
 }
-.ip .btn-success.disabled,
-.ip .btn-success[disabled],
-.ip fieldset[disabled] .btn-success,
-.ip .btn-success.disabled:hover,
-.ip .btn-success[disabled]:hover,
-.ip fieldset[disabled] .btn-success:hover,
-.ip .btn-success.disabled:focus,
-.ip .btn-success[disabled]:focus,
-.ip fieldset[disabled] .btn-success:focus,
-.ip .btn-success.disabled.focus,
-.ip .btn-success[disabled].focus,
-.ip fieldset[disabled] .btn-success.focus,
-.ip .btn-success.disabled:active,
-.ip .btn-success[disabled]:active,
-.ip fieldset[disabled] .btn-success:active,
-.ip .btn-success.disabled.active,
-.ip .btn-success[disabled].active,
-.ip fieldset[disabled] .btn-success.active {
+.ip .bttn-success.disabled,
+.ip .bttn-success[disabled],
+.ip fieldset[disabled] .bttn-success,
+.ip .bttn-success.disabled:hover,
+.ip .bttn-success[disabled]:hover,
+.ip fieldset[disabled] .bttn-success:hover,
+.ip .bttn-success.disabled:focus,
+.ip .bttn-success[disabled]:focus,
+.ip fieldset[disabled] .bttn-success:focus,
+.ip .bttn-success.disabled.focus,
+.ip .bttn-success[disabled].focus,
+.ip fieldset[disabled] .bttn-success.focus,
+.ip .bttn-success.disabled:active,
+.ip .bttn-success[disabled]:active,
+.ip fieldset[disabled] .bttn-success:active,
+.ip .bttn-success.disabled.active,
+.ip .bttn-success[disabled].active,
+.ip fieldset[disabled] .bttn-success.active {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-.ip .btn-success .badge {
+.ip .bttn-success .badge {
   color: #5cb85c;
   background-color: #ffffff;
 }
-.ip .btn-info {
+.ip .bttn-info {
   color: #ffffff;
   background-color: #5bc0de;
   border-color: #46b8da;
 }
-.ip .btn-info:hover,
-.ip .btn-info:focus,
-.ip .btn-info.focus,
-.ip .btn-info:active,
-.ip .btn-info.active,
+.ip .bttn-info:hover,
+.ip .bttn-info:focus,
+.ip .bttn-info.focus,
+.ip .bttn-info:active,
+.ip .bttn-info.active,
 .ip .open > .select-toggle
-menubar.btn-info {
+menubar.bttn-info {
   color: #ffffff;
   background-color: #31b0d5;
   border-color: #269abc;
 }
-.ip .btn-info:active,
-.ip .btn-info.active,
+.ip .bttn-info:active,
+.ip .bttn-info.active,
 .ip .open > .select-toggle
-menubar.btn-info {
+menubar.bttn-info {
   background-image: none;
 }
-.ip .btn-info.disabled,
-.ip .btn-info[disabled],
-.ip fieldset[disabled] .btn-info,
-.ip .btn-info.disabled:hover,
-.ip .btn-info[disabled]:hover,
-.ip fieldset[disabled] .btn-info:hover,
-.ip .btn-info.disabled:focus,
-.ip .btn-info[disabled]:focus,
-.ip fieldset[disabled] .btn-info:focus,
-.ip .btn-info.disabled.focus,
-.ip .btn-info[disabled].focus,
-.ip fieldset[disabled] .btn-info.focus,
-.ip .btn-info.disabled:active,
-.ip .btn-info[disabled]:active,
-.ip fieldset[disabled] .btn-info:active,
-.ip .btn-info.disabled.active,
-.ip .btn-info[disabled].active,
-.ip fieldset[disabled] .btn-info.active {
+.ip .bttn-info.disabled,
+.ip .bttn-info[disabled],
+.ip fieldset[disabled] .bttn-info,
+.ip .bttn-info.disabled:hover,
+.ip .bttn-info[disabled]:hover,
+.ip fieldset[disabled] .bttn-info:hover,
+.ip .bttn-info.disabled:focus,
+.ip .bttn-info[disabled]:focus,
+.ip fieldset[disabled] .bttn-info:focus,
+.ip .bttn-info.disabled.focus,
+.ip .bttn-info[disabled].focus,
+.ip fieldset[disabled] .bttn-info.focus,
+.ip .bttn-info.disabled:active,
+.ip .bttn-info[disabled]:active,
+.ip fieldset[disabled] .bttn-info:active,
+.ip .bttn-info.disabled.active,
+.ip .bttn-info[disabled].active,
+.ip fieldset[disabled] .bttn-info.active {
   background-color: #5bc0de;
   border-color: #46b8da;
 }
-.ip .btn-info .badge {
+.ip .bttn-info .badge {
   color: #5bc0de;
   background-color: #ffffff;
 }
-.ip .btn-warning {
+.ip .bttn-warning {
   color: #ffffff;
   background-color: #f0ad4e;
   border-color: #eea236;
 }
-.ip .btn-warning:hover,
-.ip .btn-warning:focus,
-.ip .btn-warning.focus,
-.ip .btn-warning:active,
-.ip .btn-warning.active,
+.ip .bttn-warning:hover,
+.ip .bttn-warning:focus,
+.ip .bttn-warning.focus,
+.ip .bttn-warning:active,
+.ip .bttn-warning.active,
 .ip .open > .select-toggle
-menubar.btn-warning {
+menubar.bttn-warning {
   color: #ffffff;
   background-color: #ec971f;
   border-color: #d58512;
 }
-.ip .btn-warning:active,
-.ip .btn-warning.active,
+.ip .bttn-warning:active,
+.ip .bttn-warning.active,
 .ip .open > .select-toggle
-menubar.btn-warning {
+menubar.bttn-warning {
   background-image: none;
 }
-.ip .btn-warning.disabled,
-.ip .btn-warning[disabled],
-.ip fieldset[disabled] .btn-warning,
-.ip .btn-warning.disabled:hover,
-.ip .btn-warning[disabled]:hover,
-.ip fieldset[disabled] .btn-warning:hover,
-.ip .btn-warning.disabled:focus,
-.ip .btn-warning[disabled]:focus,
-.ip fieldset[disabled] .btn-warning:focus,
-.ip .btn-warning.disabled.focus,
-.ip .btn-warning[disabled].focus,
-.ip fieldset[disabled] .btn-warning.focus,
-.ip .btn-warning.disabled:active,
-.ip .btn-warning[disabled]:active,
-.ip fieldset[disabled] .btn-warning:active,
-.ip .btn-warning.disabled.active,
-.ip .btn-warning[disabled].active,
-.ip fieldset[disabled] .btn-warning.active {
+.ip .bttn-warning.disabled,
+.ip .bttn-warning[disabled],
+.ip fieldset[disabled] .bttn-warning,
+.ip .bttn-warning.disabled:hover,
+.ip .bttn-warning[disabled]:hover,
+.ip fieldset[disabled] .bttn-warning:hover,
+.ip .bttn-warning.disabled:focus,
+.ip .bttn-warning[disabled]:focus,
+.ip fieldset[disabled] .bttn-warning:focus,
+.ip .bttn-warning.disabled.focus,
+.ip .bttn-warning[disabled].focus,
+.ip fieldset[disabled] .bttn-warning.focus,
+.ip .bttn-warning.disabled:active,
+.ip .bttn-warning[disabled]:active,
+.ip fieldset[disabled] .bttn-warning:active,
+.ip .bttn-warning.disabled.active,
+.ip .bttn-warning[disabled].active,
+.ip fieldset[disabled] .bttn-warning.active {
   background-color: #f0ad4e;
   border-color: #eea236;
 }
-.ip .btn-warning .badge {
+.ip .bttn-warning .badge {
   color: #f0ad4e;
   background-color: #ffffff;
 }
-.ip .btn-danger {
+.ip .bttn-danger {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
-.ip .btn-danger:hover,
-.ip .btn-danger:focus,
-.ip .btn-danger.focus,
-.ip .btn-danger:active,
-.ip .btn-danger.active,
+.ip .bttn-danger:hover,
+.ip .bttn-danger:focus,
+.ip .bttn-danger.focus,
+.ip .bttn-danger:active,
+.ip .bttn-danger.active,
 .ip .open > .select-toggle
-menubar.btn-danger {
+menubar.bttn-danger {
   color: #ffffff;
   background-color: #c9302c;
   border-color: #ac2925;
 }
-.ip .btn-danger:active,
-.ip .btn-danger.active,
+.ip .bttn-danger:active,
+.ip .bttn-danger.active,
 .ip .open > .select-toggle
-menubar.btn-danger {
+menubar.bttn-danger {
   background-image: none;
 }
-.ip .btn-danger.disabled,
-.ip .btn-danger[disabled],
-.ip fieldset[disabled] .btn-danger,
-.ip .btn-danger.disabled:hover,
-.ip .btn-danger[disabled]:hover,
-.ip fieldset[disabled] .btn-danger:hover,
-.ip .btn-danger.disabled:focus,
-.ip .btn-danger[disabled]:focus,
-.ip fieldset[disabled] .btn-danger:focus,
-.ip .btn-danger.disabled.focus,
-.ip .btn-danger[disabled].focus,
-.ip fieldset[disabled] .btn-danger.focus,
-.ip .btn-danger.disabled:active,
-.ip .btn-danger[disabled]:active,
-.ip fieldset[disabled] .btn-danger:active,
-.ip .btn-danger.disabled.active,
-.ip .btn-danger[disabled].active,
-.ip fieldset[disabled] .btn-danger.active {
+.ip .bttn-danger.disabled,
+.ip .bttn-danger[disabled],
+.ip fieldset[disabled] .bttn-danger,
+.ip .bttn-danger.disabled:hover,
+.ip .bttn-danger[disabled]:hover,
+.ip fieldset[disabled] .bttn-danger:hover,
+.ip .bttn-danger.disabled:focus,
+.ip .bttn-danger[disabled]:focus,
+.ip fieldset[disabled] .bttn-danger:focus,
+.ip .bttn-danger.disabled.focus,
+.ip .bttn-danger[disabled].focus,
+.ip fieldset[disabled] .bttn-danger.focus,
+.ip .bttn-danger.disabled:active,
+.ip .bttn-danger[disabled]:active,
+.ip fieldset[disabled] .bttn-danger:active,
+.ip .bttn-danger.disabled.active,
+.ip .bttn-danger[disabled].active,
+.ip fieldset[disabled] .bttn-danger.active {
   background-color: #d9534f;
   border-color: #d43f3a;
 }
-.ip .btn-danger .badge {
+.ip .bttn-danger .badge {
   color: #d9534f;
   background-color: #ffffff;
 }
-.ip .btn-link {
+.ip .bttn-link {
   color: #337ab7;
   font-weight: normal;
   border-radius: 0;
 }
-.ip .btn-link,
-.ip .btn-link:active,
-.ip .btn-link.active,
-.ip .btn-link[disabled],
-.ip fieldset[disabled] .btn-link {
+.ip .bttn-link,
+.ip .bttn-link:active,
+.ip .bttn-link.active,
+.ip .bttn-link[disabled],
+.ip fieldset[disabled] .bttn-link {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ip .btn-link,
-.ip .btn-link:hover,
-.ip .btn-link:focus,
-.ip .btn-link:active {
+.ip .bttn-link,
+.ip .bttn-link:hover,
+.ip .bttn-link:focus,
+.ip .bttn-link:active {
   border-color: transparent;
 }
-.ip .btn-link:hover,
-.ip .btn-link:focus {
+.ip .bttn-link:hover,
+.ip .bttn-link:focus {
   color: #23527c;
   text-decoration: underline;
   background-color: transparent;
 }
-.ip .btn-link[disabled]:hover,
-.ip fieldset[disabled] .btn-link:hover,
-.ip .btn-link[disabled]:focus,
-.ip fieldset[disabled] .btn-link:focus {
+.ip .bttn-link[disabled]:hover,
+.ip fieldset[disabled] .bttn-link:hover,
+.ip .bttn-link[disabled]:focus,
+.ip fieldset[disabled] .bttn-link:focus {
   color: #777777;
   text-decoration: none;
 }
-.ip .btn-lg,
-.ip .btn-group-lg > .btn {
+.ip .bttn-lg,
+.ip .bttn-group-lg > .bttn {
   padding: 10px 16px;
   font-size: 16px;
   line-height: 1.3333333;
   border-radius: 6px;
 }
-.ip .btn-sm,
-.ip .btn-group-sm > .btn {
+.ip .bttn-sm,
+.ip .bttn-group-sm > .bttn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
-.ip .btn-xs,
-.ip .btn-group-xs > .btn {
+.ip .bttn-xs,
+.ip .bttn-group-xs > .bttn {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
-.ip .btn-block {
+.ip .bttn-block {
   display: block;
   width: 100%;
 }
-.ip .btn-block + .btn-block {
+.ip .bttn-block + .bttn-block {
   margin-top: 5px;
 }
-.ip input[type="submit"].btn-block,
-.ip input[type="reset"].btn-block,
-.ip input[type="button"].btn-block {
+.ip input[type="submit"].bttn-block,
+.ip input[type="reset"].bttn-block,
+.ip input[type="button"].bttn-block {
   width: 100%;
 }
 .ip .fade {
@@ -3701,181 +3701,181 @@ menubar:focus {
     right: auto;
   }
 }
-.ip .btn-group,
-.ip .btn-group-vertical {
+.ip .bttn-group,
+.ip .bttn-group-vertical {
   position: relative;
   display: inline-block;
   vertical-align: middle;
 }
-.ip .btn-group > .btn,
-.ip .btn-group-vertical > .btn {
+.ip .bttn-group > .bttn,
+.ip .bttn-group-vertical > .bttn {
   position: relative;
   float: left;
 }
-.ip .btn-group > .btn:hover,
-.ip .btn-group-vertical > .btn:hover,
-.ip .btn-group > .btn:focus,
-.ip .btn-group-vertical > .btn:focus,
-.ip .btn-group > .btn:active,
-.ip .btn-group-vertical > .btn:active,
-.ip .btn-group > .btn.active,
-.ip .btn-group-vertical > .btn.active {
+.ip .bttn-group > .bttn:hover,
+.ip .bttn-group-vertical > .bttn:hover,
+.ip .bttn-group > .bttn:focus,
+.ip .bttn-group-vertical > .bttn:focus,
+.ip .bttn-group > .bttn:active,
+.ip .bttn-group-vertical > .bttn:active,
+.ip .bttn-group > .bttn.active,
+.ip .bttn-group-vertical > .bttn.active {
   z-index: 2;
 }
-.ip .btn-group .btn + .btn,
-.ip .btn-group .btn + .btn-group,
-.ip .btn-group .btn-group + .btn,
-.ip .btn-group .btn-group + .btn-group {
+.ip .bttn-group .bttn + .bttn,
+.ip .bttn-group .bttn + .bttn-group,
+.ip .bttn-group .bttn-group + .bttn,
+.ip .bttn-group .bttn-group + .bttn-group {
   margin-left: -1px;
 }
-.ip .btn-toolbar {
+.ip .bttn-toolbar {
   margin-left: -5px;
 }
-.ip .btn-toolbar .btn-group,
-.ip .btn-toolbar .input-group {
+.ip .bttn-toolbar .bttn-group,
+.ip .bttn-toolbar .input-group {
   float: left;
 }
-.ip .btn-toolbar > .btn,
-.ip .btn-toolbar > .btn-group,
-.ip .btn-toolbar > .input-group {
+.ip .bttn-toolbar > .bttn,
+.ip .bttn-toolbar > .bttn-group,
+.ip .bttn-toolbar > .input-group {
   margin-left: 5px;
 }
-.ip .btn-group > .btn:not(:first-child):not(:last-child):not(.select-toggle
+.ip .bttn-group > .bttn:not(:first-child):not(:last-child):not(.select-toggle
 menubar) {
   border-radius: 0;
 }
-.ip .btn-group > .btn:first-child {
+.ip .bttn-group > .bttn:first-child {
   margin-left: 0;
 }
-.ip .btn-group > .btn:first-child:not(:last-child):not(.select-toggle
+.ip .bttn-group > .bttn:first-child:not(:last-child):not(.select-toggle
 menubar) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
-.ip .btn-group > .btn:last-child:not(:first-child),
-.ip .btn-group > .select-toggle
+.ip .bttn-group > .bttn:last-child:not(:first-child),
+.ip .bttn-group > .select-toggle
 menubar:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.ip .btn-group > .btn-group {
+.ip .bttn-group > .bttn-group {
   float: left;
 }
-.ip .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+.ip .bttn-group > .bttn-group:not(:first-child):not(:last-child) > .bttn {
   border-radius: 0;
 }
-.ip .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
-.ip .btn-group > .btn-group:first-child:not(:last-child) > .select-toggle
+.ip .bttn-group > .bttn-group:first-child:not(:last-child) > .bttn:last-child,
+.ip .bttn-group > .bttn-group:first-child:not(:last-child) > .select-toggle
 menubar {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
-.ip .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.ip .bttn-group > .bttn-group:last-child:not(:first-child) > .bttn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.ip .btn-group .select-toggle
+.ip .bttn-group .select-toggle
 menubar:active,
-.ip .btn-group.open .select-toggle
+.ip .bttn-group.open .select-toggle
 menubar {
   outline: 0;
 }
-.ip .btn-group > .btn + .select-toggle
+.ip .bttn-group > .bttn + .select-toggle
 menubar {
   padding-left: 8px;
   padding-right: 8px;
 }
-.ip .btn-group > .btn-lg + .select-toggle
+.ip .bttn-group > .bttn-lg + .select-toggle
 menubar {
   padding-left: 12px;
   padding-right: 12px;
 }
-.ip .btn-group.open .select-toggle
+.ip .bttn-group.open .select-toggle
 menubar {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.ip .btn-group.open .select-toggle
-menubar.btn-link {
+.ip .bttn-group.open .select-toggle
+menubar.bttn-link {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.ip .btn .caret {
+.ip .bttn .caret {
   margin-left: 0;
 }
-.ip .btn-lg .caret {
+.ip .bttn-lg .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
-.ip .dropup .btn-lg .caret {
+.ip .dropup .bttn-lg .caret {
   border-width: 0 5px 5px;
 }
-.ip .btn-group-vertical > .btn,
-.ip .btn-group-vertical > .btn-group,
-.ip .btn-group-vertical > .btn-group > .btn {
+.ip .bttn-group-vertical > .bttn,
+.ip .bttn-group-vertical > .bttn-group,
+.ip .bttn-group-vertical > .bttn-group > .bttn {
   display: block;
   float: none;
   width: 100%;
   max-width: 100%;
 }
-.ip .btn-group-vertical > .btn-group > .btn {
+.ip .bttn-group-vertical > .bttn-group > .bttn {
   float: none;
 }
-.ip .btn-group-vertical > .btn + .btn,
-.ip .btn-group-vertical > .btn + .btn-group,
-.ip .btn-group-vertical > .btn-group + .btn,
-.ip .btn-group-vertical > .btn-group + .btn-group {
+.ip .bttn-group-vertical > .bttn + .bttn,
+.ip .bttn-group-vertical > .bttn + .bttn-group,
+.ip .bttn-group-vertical > .bttn-group + .bttn,
+.ip .bttn-group-vertical > .bttn-group + .bttn-group {
   margin-top: -1px;
   margin-left: 0;
 }
-.ip .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+.ip .bttn-group-vertical > .bttn:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
-.ip .btn-group-vertical > .btn:first-child:not(:last-child) {
+.ip .bttn-group-vertical > .bttn:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.ip .btn-group-vertical > .btn:last-child:not(:first-child) {
+.ip .bttn-group-vertical > .bttn:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.ip .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+.ip .bttn-group-vertical > .bttn-group:not(:first-child):not(:last-child) > .bttn {
   border-radius: 0;
 }
-.ip .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
-.ip .btn-group-vertical > .btn-group:first-child:not(:last-child) > .select-toggle
+.ip .bttn-group-vertical > .bttn-group:first-child:not(:last-child) > .bttn:last-child,
+.ip .bttn-group-vertical > .bttn-group:first-child:not(:last-child) > .select-toggle
 menubar {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.ip .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.ip .bttn-group-vertical > .bttn-group:last-child:not(:first-child) > .bttn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.ip .btn-group-justified {
+.ip .bttn-group-justified {
   display: table;
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
 }
-.ip .btn-group-justified > .btn,
-.ip .btn-group-justified > .btn-group {
+.ip .bttn-group-justified > .bttn,
+.ip .bttn-group-justified > .bttn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
-.ip .btn-group-justified > .btn-group .btn {
+.ip .bttn-group-justified > .bttn-group .bttn {
   width: 100%;
 }
-.ip .btn-group-justified > .btn-group .dropdown-menu {
+.ip .bttn-group-justified > .bttn-group .dropdown-menu {
   left: auto;
 }
-.ip [data-toggle="buttons"] > .btn input[type="radio"],
-.ip [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
-.ip [data-toggle="buttons"] > .btn input[type="checkbox"],
-.ip [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
+.ip [data-toggle="buttons"] > .bttn input[type="radio"],
+.ip [data-toggle="buttons"] > .bttn-group > .bttn input[type="radio"],
+.ip [data-toggle="buttons"] > .bttn input[type="checkbox"],
+.ip [data-toggle="buttons"] > .bttn-group > .bttn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3899,7 +3899,7 @@ menubar {
 }
 .ip .input-group-lg > .form-control,
 .ip .input-group-lg > .input-group-addon,
-.ip .input-group-lg > .input-group-btn > .btn {
+.ip .input-group-lg > .input-group-bttn > .bttn {
   height: 44px;
   padding: 10px 16px;
   font-size: 16px;
@@ -3908,21 +3908,21 @@ menubar {
 }
 .ip select.input-group-lg > .form-control,
 .ip select.input-group-lg > .input-group-addon,
-.ip select.input-group-lg > .input-group-btn > .btn {
+.ip select.input-group-lg > .input-group-bttn > .bttn {
   height: 44px;
   line-height: 44px;
 }
 .ip textarea.input-group-lg > .form-control,
 .ip textarea.input-group-lg > .input-group-addon,
-.ip textarea.input-group-lg > .input-group-btn > .btn,
+.ip textarea.input-group-lg > .input-group-bttn > .bttn,
 .ip select[multiple].input-group-lg > .form-control,
 .ip select[multiple].input-group-lg > .input-group-addon,
-.ip select[multiple].input-group-lg > .input-group-btn > .btn {
+.ip select[multiple].input-group-lg > .input-group-bttn > .bttn {
   height: auto;
 }
 .ip .input-group-sm > .form-control,
 .ip .input-group-sm > .input-group-addon,
-.ip .input-group-sm > .input-group-btn > .btn {
+.ip .input-group-sm > .input-group-bttn > .bttn {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -3931,30 +3931,30 @@ menubar {
 }
 .ip select.input-group-sm > .form-control,
 .ip select.input-group-sm > .input-group-addon,
-.ip select.input-group-sm > .input-group-btn > .btn {
+.ip select.input-group-sm > .input-group-bttn > .bttn {
   height: 30px;
   line-height: 30px;
 }
 .ip textarea.input-group-sm > .form-control,
 .ip textarea.input-group-sm > .input-group-addon,
-.ip textarea.input-group-sm > .input-group-btn > .btn,
+.ip textarea.input-group-sm > .input-group-bttn > .bttn,
 .ip select[multiple].input-group-sm > .form-control,
 .ip select[multiple].input-group-sm > .input-group-addon,
-.ip select[multiple].input-group-sm > .input-group-btn > .btn {
+.ip select[multiple].input-group-sm > .input-group-bttn > .bttn {
   height: auto;
 }
 .ip .input-group-addon,
-.ip .input-group-btn,
+.ip .input-group-bttn,
 .ip .input-group .form-control {
   display: table-cell;
 }
 .ip .input-group-addon:not(:first-child):not(:last-child),
-.ip .input-group-btn:not(:first-child):not(:last-child),
+.ip .input-group-bttn:not(:first-child):not(:last-child),
 .ip .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 .ip .input-group-addon,
-.ip .input-group-btn {
+.ip .input-group-bttn {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle;
@@ -3986,13 +3986,13 @@ menubar {
 }
 .ip .input-group .form-control:first-child,
 .ip .input-group-addon:first-child,
-.ip .input-group-btn:first-child > .btn,
-.ip .input-group-btn:first-child > .btn-group > .btn,
-.ip .input-group-btn:first-child > .select-toggle
+.ip .input-group-bttn:first-child > .bttn,
+.ip .input-group-bttn:first-child > .bttn-group > .bttn,
+.ip .input-group-bttn:first-child > .select-toggle
 menubar,
-.ip .input-group-btn:last-child > .btn:not(:last-child):not(.select-toggle
+.ip .input-group-bttn:last-child > .bttn:not(:last-child):not(.select-toggle
 menubar),
-.ip .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+.ip .input-group-bttn:last-child > .bttn-group:not(:last-child) > .bttn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4001,40 +4001,40 @@ menubar),
 }
 .ip .input-group .form-control:last-child,
 .ip .input-group-addon:last-child,
-.ip .input-group-btn:last-child > .btn,
-.ip .input-group-btn:last-child > .btn-group > .btn,
-.ip .input-group-btn:last-child > .select-toggle
+.ip .input-group-bttn:last-child > .bttn,
+.ip .input-group-bttn:last-child > .bttn-group > .bttn,
+.ip .input-group-bttn:last-child > .select-toggle
 menubar,
-.ip .input-group-btn:first-child > .btn:not(:first-child),
-.ip .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+.ip .input-group-bttn:first-child > .bttn:not(:first-child),
+.ip .input-group-bttn:first-child > .bttn-group:not(:first-child) > .bttn {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 .ip .input-group-addon:last-child {
   border-left: 0;
 }
-.ip .input-group-btn {
+.ip .input-group-bttn {
   position: relative;
   font-size: 0;
   white-space: nowrap;
 }
-.ip .input-group-btn > .btn {
+.ip .input-group-bttn > .bttn {
   position: relative;
 }
-.ip .input-group-btn > .btn + .btn {
+.ip .input-group-bttn > .bttn + .bttn {
   margin-left: -1px;
 }
-.ip .input-group-btn > .btn:hover,
-.ip .input-group-btn > .btn:focus,
-.ip .input-group-btn > .btn:active {
+.ip .input-group-bttn > .bttn:hover,
+.ip .input-group-bttn > .bttn:focus,
+.ip .input-group-bttn > .bttn:active {
   z-index: 2;
 }
-.ip .input-group-btn:first-child > .btn,
-.ip .input-group-btn:first-child > .btn-group {
+.ip .input-group-bttn:first-child > .bttn,
+.ip .input-group-bttn:first-child > .bttn-group {
   margin-right: -1px;
 }
-.ip .input-group-btn:last-child > .btn,
-.ip .input-group-btn:last-child > .btn-group {
+.ip .input-group-bttn:last-child > .bttn,
+.ip .input-group-bttn:last-child > .bttn-group {
   margin-left: -1px;
 }
 .ip .nav {
@@ -4460,7 +4460,7 @@ menubar,
     vertical-align: middle;
   }
   .ip .menubar-form .input-group .input-group-addon,
-  .ip .menubar-form .input-group .input-group-btn,
+  .ip .menubar-form .input-group .input-group-bttn,
   .ip .menubar-form .input-group .form-control {
     width: auto;
   }
@@ -4523,15 +4523,15 @@ menubar,
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.ip .menubar-btn {
+.ip .menubar-bttn {
   margin-top: 3px;
   margin-bottom: 3px;
 }
-.ip .menubar-btn.btn-sm {
+.ip .menubar-bttn.bttn-sm {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.ip .menubar-btn.btn-xs {
+.ip .menubar-bttn.bttn-xs {
   margin-top: 9px;
   margin-bottom: 9px;
 }
@@ -4643,17 +4643,17 @@ menubar,
 .ip .menubar-default .menubar-link:hover {
   color: #333333;
 }
-.ip .menubar-default .btn-link {
+.ip .menubar-default .bttn-link {
   color: #777777;
 }
-.ip .menubar-default .btn-link:hover,
-.ip .menubar-default .btn-link:focus {
+.ip .menubar-default .bttn-link:hover,
+.ip .menubar-default .bttn-link:focus {
   color: #333333;
 }
-.ip .menubar-default .btn-link[disabled]:hover,
-.ip fieldset[disabled] .menubar-default .btn-link:hover,
-.ip .menubar-default .btn-link[disabled]:focus,
-.ip fieldset[disabled] .menubar-default .btn-link:focus {
+.ip .menubar-default .bttn-link[disabled]:hover,
+.ip fieldset[disabled] .menubar-default .bttn-link:hover,
+.ip .menubar-default .bttn-link[disabled]:focus,
+.ip fieldset[disabled] .menubar-default .bttn-link:focus {
   color: #cccccc;
 }
 .ip .menubar-inverse {
@@ -4745,17 +4745,17 @@ menubar,
 .ip .menubar-inverse .menubar-link:hover {
   color: #ffffff;
 }
-.ip .menubar-inverse .btn-link {
+.ip .menubar-inverse .bttn-link {
   color: #9d9d9d;
 }
-.ip .menubar-inverse .btn-link:hover,
-.ip .menubar-inverse .btn-link:focus {
+.ip .menubar-inverse .bttn-link:hover,
+.ip .menubar-inverse .bttn-link:focus {
   color: #ffffff;
 }
-.ip .menubar-inverse .btn-link[disabled]:hover,
-.ip fieldset[disabled] .menubar-inverse .btn-link:hover,
-.ip .menubar-inverse .btn-link[disabled]:focus,
-.ip fieldset[disabled] .menubar-inverse .btn-link:focus {
+.ip .menubar-inverse .bttn-link[disabled]:hover,
+.ip fieldset[disabled] .menubar-inverse .bttn-link:hover,
+.ip .menubar-inverse .bttn-link[disabled]:focus,
+.ip fieldset[disabled] .menubar-inverse .bttn-link:focus {
   color: #444444;
 }
 .ip .breadcrumb {
@@ -4928,7 +4928,7 @@ menubar,
 .ip .label:empty {
   display: none;
 }
-.ip .btn .label {
+.ip .bttn .label {
   position: relative;
   top: -1px;
 }
@@ -4991,11 +4991,11 @@ menubar,
 .ip .badge:empty {
   display: none;
 }
-.ip .btn .badge {
+.ip .bttn .badge {
   position: relative;
   top: -1px;
 }
-.ip .btn-xs .badge {
+.ip .bttn-xs .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -5965,14 +5965,14 @@ menubar {
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
-.ip .modal-footer .btn + .btn {
+.ip .modal-footer .bttn + .bttn {
   margin-left: 5px;
   margin-bottom: 0;
 }
-.ip .modal-footer .btn-group .btn + .btn {
+.ip .modal-footer .bttn-group .bttn + .bttn {
   margin-left: -1px;
 }
-.ip .modal-footer .btn-block + .btn-block {
+.ip .modal-footer .bttn-block + .bttn-block {
   margin-left: 0;
 }
 .ip .modal-scrollbar-measure {
@@ -6418,7 +6418,7 @@ menubar {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-.ip .carousel-caption .btn {
+.ip .carousel-caption .bttn {
   text-shadow: none;
 }
 @media screen and (min-width: 768px) {
@@ -6460,10 +6460,10 @@ menubar {
 .ip .row:after,
 .ip .form-horizontal .form-group:before,
 .ip .form-horizontal .form-group:after,
-.ip .btn-toolbar:before,
-.ip .btn-toolbar:after,
-.ip .btn-group-vertical > .btn-group:before,
-.ip .btn-group-vertical > .btn-group:after,
+.ip .bttn-toolbar:before,
+.ip .bttn-toolbar:after,
+.ip .bttn-group-vertical > .bttn-group:before,
+.ip .bttn-group-vertical > .bttn-group:after,
 .ip .nav:before,
 .ip .nav:after,
 .ip .menubar:before,
@@ -6487,8 +6487,8 @@ menubar {
 .ip .container-fluid:after,
 .ip .row:after,
 .ip .form-horizontal .form-group:after,
-.ip .btn-toolbar:after,
-.ip .btn-group-vertical > .btn-group:after,
+.ip .bttn-toolbar:after,
+.ip .bttn-group-vertical > .bttn-group:after,
 .ip .nav:after,
 .ip .menubar:after,
 .ip .menubar-header:after,
@@ -8843,201 +8843,201 @@ menubar {
   padding-top: 3px;
   width: 20px;
 }
-.ip .btn {
+.ip .bttn {
   font-weight: bold;
   padding: 6px 12px;
   font-size: 12px;
   line-height: 1.42857143;
   border-radius: 3px;
 }
-.ip .btn .fa {
+.ip .bttn .fa {
   font-size: 14px;
 }
-.ip .btn .fa-fw {
+.ip .bttn .fa-fw {
   text-align: right;
   width: 1.5em;
 }
-.ip .btn.disabled,
-.ip .btn[disabled],
-.ip fieldset[disabled] .btn {
+.ip .bttn.disabled,
+.ip .bttn[disabled],
+.ip fieldset[disabled] .bttn {
   opacity: 0.25;
   filter: alpha(opacity=25);
 }
-.ip .btn-lg,
-.ip .btn-group-lg > .btn {
+.ip .bttn-lg,
+.ip .bttn-group-lg > .bttn {
   padding: 10px 16px;
   font-size: 16px;
   line-height: 1.3333333;
   border-radius: 6px;
 }
-.ip .btn-lg .fa {
+.ip .bttn-lg .fa {
   font-size: 18px;
 }
-.ip .btn-sm,
-.ip .btn-xs,
-.ip .btn-group-xs > .btn,
-.ip .btn-group-sm > .btn {
+.ip .bttn-sm,
+.ip .bttn-xs,
+.ip .bttn-group-xs > .bttn,
+.ip .bttn-group-sm > .bttn {
   padding: 5px 10px;
   font-size: 11px;
   line-height: 1.5;
   border-radius: 3px;
 }
-.ip .btn-sm .fa,
-.ip .btn-xs .fa {
+.ip .bttn-sm .fa,
+.ip .bttn-xs .fa {
   font-size: 14px;
 }
-.ip .btn-xs,
-.ip .btn-group-xs > .btn {
+.ip .bttn-xs,
+.ip .bttn-group-xs > .bttn {
   padding: 1px 5px;
 }
-.ip .btn-danger {
+.ip .bttn-danger {
   color: #000000;
   background-color: #e7e7e7;
   border-color: #e7e7e7;
 }
-.ip .btn-danger:hover,
-.ip .btn-danger:focus,
-.ip .btn-danger.focus,
-.ip .btn-danger:active,
-.ip .btn-danger.active,
+.ip .bttn-danger:hover,
+.ip .bttn-danger:focus,
+.ip .bttn-danger.focus,
+.ip .bttn-danger:active,
+.ip .bttn-danger.active,
 .ip .open > .select-toggle
-menubar.btn-danger {
+menubar.bttn-danger {
   color: #000000;
   background-color: #cecece;
   border-color: #c8c8c8;
 }
-.ip .btn-danger:active,
-.ip .btn-danger.active,
+.ip .bttn-danger:active,
+.ip .bttn-danger.active,
 .ip .open > .select-toggle
-menubar.btn-danger {
+menubar.bttn-danger {
   background-image: none;
 }
-.ip .btn-danger.disabled,
-.ip .btn-danger[disabled],
-.ip fieldset[disabled] .btn-danger,
-.ip .btn-danger.disabled:hover,
-.ip .btn-danger[disabled]:hover,
-.ip fieldset[disabled] .btn-danger:hover,
-.ip .btn-danger.disabled:focus,
-.ip .btn-danger[disabled]:focus,
-.ip fieldset[disabled] .btn-danger:focus,
-.ip .btn-danger.disabled.focus,
-.ip .btn-danger[disabled].focus,
-.ip fieldset[disabled] .btn-danger.focus,
-.ip .btn-danger.disabled:active,
-.ip .btn-danger[disabled]:active,
-.ip fieldset[disabled] .btn-danger:active,
-.ip .btn-danger.disabled.active,
-.ip .btn-danger[disabled].active,
-.ip fieldset[disabled] .btn-danger.active {
+.ip .bttn-danger.disabled,
+.ip .bttn-danger[disabled],
+.ip fieldset[disabled] .bttn-danger,
+.ip .bttn-danger.disabled:hover,
+.ip .bttn-danger[disabled]:hover,
+.ip fieldset[disabled] .bttn-danger:hover,
+.ip .bttn-danger.disabled:focus,
+.ip .bttn-danger[disabled]:focus,
+.ip fieldset[disabled] .bttn-danger:focus,
+.ip .bttn-danger.disabled.focus,
+.ip .bttn-danger[disabled].focus,
+.ip fieldset[disabled] .bttn-danger.focus,
+.ip .bttn-danger.disabled:active,
+.ip .bttn-danger[disabled]:active,
+.ip fieldset[disabled] .bttn-danger:active,
+.ip .bttn-danger.disabled.active,
+.ip .bttn-danger[disabled].active,
+.ip fieldset[disabled] .bttn-danger.active {
   background-color: #e7e7e7;
   border-color: #e7e7e7;
 }
-.ip .btn-danger .badge {
+.ip .bttn-danger .badge {
   color: #e7e7e7;
   background-color: #000000;
 }
-.ip .btn-danger:hover,
-.ip .btn-danger:focus,
-.ip .btn-danger:active,
-.ip .btn-danger.active,
+.ip .bttn-danger:hover,
+.ip .bttn-danger:focus,
+.ip .bttn-danger:active,
+.ip .bttn-danger.active,
 .ip .open .select-toggle
-menubar.btn-danger {
+menubar.bttn-danger {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
-.ip .btn-controls {
+.ip .bttn-controls {
   color: #e2e2e2;
   background-color: #46495e;
   border-color: #ffffff;
 }
-.ip .btn-controls:hover,
-.ip .btn-controls:focus,
-.ip .btn-controls.focus,
-.ip .btn-controls:active,
-.ip .btn-controls.active,
+.ip .bttn-controls:hover,
+.ip .bttn-controls:focus,
+.ip .bttn-controls.focus,
+.ip .bttn-controls:active,
+.ip .bttn-controls.active,
 .ip .open > .select-toggle
-menubar.btn-controls {
+menubar.bttn-controls {
   color: #e2e2e2;
   background-color: #303241;
   border-color: #e0e0e0;
 }
-.ip .btn-controls:active,
-.ip .btn-controls.active,
+.ip .bttn-controls:active,
+.ip .bttn-controls.active,
 .ip .open > .select-toggle
-menubar.btn-controls {
+menubar.bttn-controls {
   background-image: none;
 }
-.ip .btn-controls.disabled,
-.ip .btn-controls[disabled],
-.ip fieldset[disabled] .btn-controls,
-.ip .btn-controls.disabled:hover,
-.ip .btn-controls[disabled]:hover,
-.ip fieldset[disabled] .btn-controls:hover,
-.ip .btn-controls.disabled:focus,
-.ip .btn-controls[disabled]:focus,
-.ip fieldset[disabled] .btn-controls:focus,
-.ip .btn-controls.disabled.focus,
-.ip .btn-controls[disabled].focus,
-.ip fieldset[disabled] .btn-controls.focus,
-.ip .btn-controls.disabled:active,
-.ip .btn-controls[disabled]:active,
-.ip fieldset[disabled] .btn-controls:active,
-.ip .btn-controls.disabled.active,
-.ip .btn-controls[disabled].active,
-.ip fieldset[disabled] .btn-controls.active {
+.ip .bttn-controls.disabled,
+.ip .bttn-controls[disabled],
+.ip fieldset[disabled] .bttn-controls,
+.ip .bttn-controls.disabled:hover,
+.ip .bttn-controls[disabled]:hover,
+.ip fieldset[disabled] .bttn-controls:hover,
+.ip .bttn-controls.disabled:focus,
+.ip .bttn-controls[disabled]:focus,
+.ip fieldset[disabled] .bttn-controls:focus,
+.ip .bttn-controls.disabled.focus,
+.ip .bttn-controls[disabled].focus,
+.ip fieldset[disabled] .bttn-controls.focus,
+.ip .bttn-controls.disabled:active,
+.ip .bttn-controls[disabled]:active,
+.ip fieldset[disabled] .bttn-controls:active,
+.ip .bttn-controls.disabled.active,
+.ip .bttn-controls[disabled].active,
+.ip fieldset[disabled] .bttn-controls.active {
   background-color: #46495e;
   border-color: #ffffff;
 }
-.ip .btn-controls .badge {
+.ip .bttn-controls .badge {
   color: #46495e;
   background-color: #e2e2e2;
 }
-.ip .btn-new {
+.ip .bttn-new {
   color: #ffffff;
   background-color: #019bd4;
   border-color: #019bd4;
 }
-.ip .btn-new:hover,
-.ip .btn-new:focus,
-.ip .btn-new.focus,
-.ip .btn-new:active,
-.ip .btn-new.active,
+.ip .bttn-new:hover,
+.ip .bttn-new:focus,
+.ip .bttn-new.focus,
+.ip .bttn-new:active,
+.ip .bttn-new.active,
 .ip .open > .select-toggle
-menubar.btn-new {
+menubar.bttn-new {
   color: #ffffff;
   background-color: #0176a1;
   border-color: #016e97;
 }
-.ip .btn-new:active,
-.ip .btn-new.active,
+.ip .bttn-new:active,
+.ip .bttn-new.active,
 .ip .open > .select-toggle
-menubar.btn-new {
+menubar.bttn-new {
   background-image: none;
 }
-.ip .btn-new.disabled,
-.ip .btn-new[disabled],
-.ip fieldset[disabled] .btn-new,
-.ip .btn-new.disabled:hover,
-.ip .btn-new[disabled]:hover,
-.ip fieldset[disabled] .btn-new:hover,
-.ip .btn-new.disabled:focus,
-.ip .btn-new[disabled]:focus,
-.ip fieldset[disabled] .btn-new:focus,
-.ip .btn-new.disabled.focus,
-.ip .btn-new[disabled].focus,
-.ip fieldset[disabled] .btn-new.focus,
-.ip .btn-new.disabled:active,
-.ip .btn-new[disabled]:active,
-.ip fieldset[disabled] .btn-new:active,
-.ip .btn-new.disabled.active,
-.ip .btn-new[disabled].active,
-.ip fieldset[disabled] .btn-new.active {
+.ip .bttn-new.disabled,
+.ip .bttn-new[disabled],
+.ip fieldset[disabled] .bttn-new,
+.ip .bttn-new.disabled:hover,
+.ip .bttn-new[disabled]:hover,
+.ip fieldset[disabled] .bttn-new:hover,
+.ip .bttn-new.disabled:focus,
+.ip .bttn-new[disabled]:focus,
+.ip fieldset[disabled] .bttn-new:focus,
+.ip .bttn-new.disabled.focus,
+.ip .bttn-new[disabled].focus,
+.ip fieldset[disabled] .bttn-new.focus,
+.ip .bttn-new.disabled:active,
+.ip .bttn-new[disabled]:active,
+.ip fieldset[disabled] .bttn-new:active,
+.ip .bttn-new.disabled.active,
+.ip .bttn-new[disabled].active,
+.ip fieldset[disabled] .bttn-new.active {
   background-color: #019bd4;
   border-color: #019bd4;
 }
-.ip .btn-new .badge {
+.ip .bttn-new .badge {
   color: #019bd4;
   background-color: #ffffff;
 }
@@ -9114,11 +9114,11 @@ menubar.btn-new {
   margin-top: 5px;
   margin-bottom: 0;
 }
-.ip .input-group-btn > .btn {
+.ip .input-group-bttn > .bttn {
   line-height: 20px;
 }
-.ip .input-group-btn .btn-default,
-.ip .input-group-btn .btn-danger {
+.ip .input-group-bttn .bttn-default,
+.ip .input-group-bttn .bttn-danger {
   border-color: #a3a4af;
 }
 .ip a.list-group-item.success,
@@ -9599,11 +9599,11 @@ menubar.btn-new {
   right: 0;
   top: 0;
 }
-.ip .ipModuleContentPublishButton .btn {
+.ip .ipModuleContentPublishButton .bttn {
   font-size: 14px;
   line-height: 1.42857143;
 }
-.ip .ipModuleContentPublishButton .btn .fa-fw {
+.ip .ipModuleContentPublishButton .bttn .fa-fw {
   text-align: center;
 }
 .ip .ipModuleContentPublishButton .select-toggle
@@ -9860,7 +9860,7 @@ menubar {
 .ip .ipModuleInlineManagementLogoModal .nav-tabs {
   margin-bottom: 20px;
 }
-.ip .ipModuleInlineManagementLogoModal .input-group-lg > .input-group-btn > .btn {
+.ip .ipModuleInlineManagementLogoModal .input-group-lg > .input-group-bttn > .bttn {
   font-size: 14px;
 }
 .ip .ipModuleInlineManagementLogoModal ._colorPicker {
@@ -10014,81 +10014,81 @@ menubar {
   margin-bottom: 10px;
   margin-top: -10px;
 }
-.ip .ipAdminPages ._languages .btn-new,
-.ip .ipAdminPages ._menus .btn-new {
+.ip .ipAdminPages ._languages .bttn-new,
+.ip .ipAdminPages ._menus .bttn-new {
   color: #ffffff;
   background-color: #46495e;
   border-color: #46495e;
 }
-.ip .ipAdminPages ._languages .btn-new:hover,
-.ip .ipAdminPages ._menus .btn-new:hover,
-.ip .ipAdminPages ._languages .btn-new:focus,
-.ip .ipAdminPages ._menus .btn-new:focus,
-.ip .ipAdminPages ._languages .btn-new.focus,
-.ip .ipAdminPages ._menus .btn-new.focus,
-.ip .ipAdminPages ._languages .btn-new:active,
-.ip .ipAdminPages ._menus .btn-new:active,
-.ip .ipAdminPages ._languages .btn-new.active,
-.ip .ipAdminPages ._menus .btn-new.active,
+.ip .ipAdminPages ._languages .bttn-new:hover,
+.ip .ipAdminPages ._menus .bttn-new:hover,
+.ip .ipAdminPages ._languages .bttn-new:focus,
+.ip .ipAdminPages ._menus .bttn-new:focus,
+.ip .ipAdminPages ._languages .bttn-new.focus,
+.ip .ipAdminPages ._menus .bttn-new.focus,
+.ip .ipAdminPages ._languages .bttn-new:active,
+.ip .ipAdminPages ._menus .bttn-new:active,
+.ip .ipAdminPages ._languages .bttn-new.active,
+.ip .ipAdminPages ._menus .bttn-new.active,
 .ip .open > .select-toggle
-menubar.ipAdminPages ._languages .btn-new,
+menubar.ipAdminPages ._languages .bttn-new,
 .ip .open > .select-toggle
-menubar.ipAdminPages ._menus .btn-new {
+menubar.ipAdminPages ._menus .bttn-new {
   color: #ffffff;
   background-color: #303241;
   border-color: #2c2e3b;
 }
-.ip .ipAdminPages ._languages .btn-new:active,
-.ip .ipAdminPages ._menus .btn-new:active,
-.ip .ipAdminPages ._languages .btn-new.active,
-.ip .ipAdminPages ._menus .btn-new.active,
+.ip .ipAdminPages ._languages .bttn-new:active,
+.ip .ipAdminPages ._menus .bttn-new:active,
+.ip .ipAdminPages ._languages .bttn-new.active,
+.ip .ipAdminPages ._menus .bttn-new.active,
 .ip .open > .select-toggle
-menubar.ipAdminPages ._languages .btn-new,
+menubar.ipAdminPages ._languages .bttn-new,
 .ip .open > .select-toggle
-menubar.ipAdminPages ._menus .btn-new {
+menubar.ipAdminPages ._menus .bttn-new {
   background-image: none;
 }
-.ip .ipAdminPages ._languages .btn-new.disabled,
-.ip .ipAdminPages ._menus .btn-new.disabled,
-.ip .ipAdminPages ._languages .btn-new[disabled],
-.ip .ipAdminPages ._menus .btn-new[disabled],
-.ip fieldset[disabled] .ipAdminPages ._languages .btn-new,
-.ip fieldset[disabled] .ipAdminPages ._menus .btn-new,
-.ip .ipAdminPages ._languages .btn-new.disabled:hover,
-.ip .ipAdminPages ._menus .btn-new.disabled:hover,
-.ip .ipAdminPages ._languages .btn-new[disabled]:hover,
-.ip .ipAdminPages ._menus .btn-new[disabled]:hover,
-.ip fieldset[disabled] .ipAdminPages ._languages .btn-new:hover,
-.ip fieldset[disabled] .ipAdminPages ._menus .btn-new:hover,
-.ip .ipAdminPages ._languages .btn-new.disabled:focus,
-.ip .ipAdminPages ._menus .btn-new.disabled:focus,
-.ip .ipAdminPages ._languages .btn-new[disabled]:focus,
-.ip .ipAdminPages ._menus .btn-new[disabled]:focus,
-.ip fieldset[disabled] .ipAdminPages ._languages .btn-new:focus,
-.ip fieldset[disabled] .ipAdminPages ._menus .btn-new:focus,
-.ip .ipAdminPages ._languages .btn-new.disabled.focus,
-.ip .ipAdminPages ._menus .btn-new.disabled.focus,
-.ip .ipAdminPages ._languages .btn-new[disabled].focus,
-.ip .ipAdminPages ._menus .btn-new[disabled].focus,
-.ip fieldset[disabled] .ipAdminPages ._languages .btn-new.focus,
-.ip fieldset[disabled] .ipAdminPages ._menus .btn-new.focus,
-.ip .ipAdminPages ._languages .btn-new.disabled:active,
-.ip .ipAdminPages ._menus .btn-new.disabled:active,
-.ip .ipAdminPages ._languages .btn-new[disabled]:active,
-.ip .ipAdminPages ._menus .btn-new[disabled]:active,
-.ip fieldset[disabled] .ipAdminPages ._languages .btn-new:active,
-.ip fieldset[disabled] .ipAdminPages ._menus .btn-new:active,
-.ip .ipAdminPages ._languages .btn-new.disabled.active,
-.ip .ipAdminPages ._menus .btn-new.disabled.active,
-.ip .ipAdminPages ._languages .btn-new[disabled].active,
-.ip .ipAdminPages ._menus .btn-new[disabled].active,
-.ip fieldset[disabled] .ipAdminPages ._languages .btn-new.active,
-.ip fieldset[disabled] .ipAdminPages ._menus .btn-new.active {
+.ip .ipAdminPages ._languages .bttn-new.disabled,
+.ip .ipAdminPages ._menus .bttn-new.disabled,
+.ip .ipAdminPages ._languages .bttn-new[disabled],
+.ip .ipAdminPages ._menus .bttn-new[disabled],
+.ip fieldset[disabled] .ipAdminPages ._languages .bttn-new,
+.ip fieldset[disabled] .ipAdminPages ._menus .bttn-new,
+.ip .ipAdminPages ._languages .bttn-new.disabled:hover,
+.ip .ipAdminPages ._menus .bttn-new.disabled:hover,
+.ip .ipAdminPages ._languages .bttn-new[disabled]:hover,
+.ip .ipAdminPages ._menus .bttn-new[disabled]:hover,
+.ip fieldset[disabled] .ipAdminPages ._languages .bttn-new:hover,
+.ip fieldset[disabled] .ipAdminPages ._menus .bttn-new:hover,
+.ip .ipAdminPages ._languages .bttn-new.disabled:focus,
+.ip .ipAdminPages ._menus .bttn-new.disabled:focus,
+.ip .ipAdminPages ._languages .bttn-new[disabled]:focus,
+.ip .ipAdminPages ._menus .bttn-new[disabled]:focus,
+.ip fieldset[disabled] .ipAdminPages ._languages .bttn-new:focus,
+.ip fieldset[disabled] .ipAdminPages ._menus .bttn-new:focus,
+.ip .ipAdminPages ._languages .bttn-new.disabled.focus,
+.ip .ipAdminPages ._menus .bttn-new.disabled.focus,
+.ip .ipAdminPages ._languages .bttn-new[disabled].focus,
+.ip .ipAdminPages ._menus .bttn-new[disabled].focus,
+.ip fieldset[disabled] .ipAdminPages ._languages .bttn-new.focus,
+.ip fieldset[disabled] .ipAdminPages ._menus .bttn-new.focus,
+.ip .ipAdminPages ._languages .bttn-new.disabled:active,
+.ip .ipAdminPages ._menus .bttn-new.disabled:active,
+.ip .ipAdminPages ._languages .bttn-new[disabled]:active,
+.ip .ipAdminPages ._menus .bttn-new[disabled]:active,
+.ip fieldset[disabled] .ipAdminPages ._languages .bttn-new:active,
+.ip fieldset[disabled] .ipAdminPages ._menus .bttn-new:active,
+.ip .ipAdminPages ._languages .bttn-new.disabled.active,
+.ip .ipAdminPages ._menus .bttn-new.disabled.active,
+.ip .ipAdminPages ._languages .bttn-new[disabled].active,
+.ip .ipAdminPages ._menus .bttn-new[disabled].active,
+.ip fieldset[disabled] .ipAdminPages ._languages .bttn-new.active,
+.ip fieldset[disabled] .ipAdminPages ._menus .bttn-new.active {
   background-color: #46495e;
   border-color: #46495e;
 }
-.ip .ipAdminPages ._languages .btn-new .badge,
-.ip .ipAdminPages ._menus .btn-new .badge {
+.ip .ipAdminPages ._languages .bttn-new .badge,
+.ip .ipAdminPages ._menus .bttn-new .badge {
   color: #46495e;
   background-color: #ffffff;
 }
@@ -11336,7 +11336,7 @@ menubar.ipAdminPages ._menus .btn-new {
   line-height: 26px;
   position: absolute;
 }
-.ip .ipModuleRepositoryPopup ._tabUpload ._repositoryActions .btn {
+.ip .ipModuleRepositoryPopup ._tabUpload ._repositoryActions .bttn {
   margin-right: 20px;
 }
 .ip .ipModuleRepositoryPopup ._tabBuy {
@@ -11375,7 +11375,7 @@ menubar.ipAdminPages ._menus .btn-new {
   margin: 0;
   vertical-align: middle;
 }
-.ip .ipModuleGrid ._pages .pagination + .btn-group {
+.ip .ipModuleGrid ._pages .pagination + .bttn-group {
   margin-left: 20px;
 }
 .ip .ipModuleGrid ._clickable {

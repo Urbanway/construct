@@ -22,7 +22,7 @@ class Submit extends Field
      */
     public function render($doctype, $environment)
     {
-        return '<button ' . $this->getAttributesStr($doctype) . ' class="btn btn-default ' . implode(
+        return '<button ' . $this->getAttributesStr($doctype) . ' class="bttn bttn-default ' . implode(
             ' ',
             $this->getClasses()
         ) . '" name="' . htmlspecialchars($this->getName()) . '" ' . $this->getValidationAttributesStr(

@@ -10,7 +10,7 @@
                     <iframe src=""></iframe>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary ipsOk"><?php _e('Ok', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsOk"><?php _e('Ok', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>

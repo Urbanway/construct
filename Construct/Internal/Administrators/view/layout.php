@@ -1,7 +1,7 @@
 <div ng-app="Administrators" ng-controller="ipAdministratorsController" class="ipModuleAdministrators ipsModuleAdministrators">
     <div class="_menu">
         <div class="_actions">
-            <button class="btn btn-new" ng-click="addModal()"><i class="fa fa-plus"></i> <?php _e('Add', 'Construct-admin'); ?></button>
+            <button class="bttn bttn-new" ng-click="addModal()"><i class="fa fa-plus"></i> <?php _e('Add', 'Construct-admin'); ?></button>
         </div>
         <ul>
             <li ng-repeat="administrator in administrators" ng-class="[administrator.id == activeAdministrator.id ? 'active' : '']" ng-cloak>
@@ -14,8 +14,8 @@
     </div>
     <div ng-show="activeAdministrator" ng-cloak>
         <div class="_actions clearfix">
-            <button class="btn btn-danger pull-right" role="button" ng-show="activeAdministrator.id != ipAdministratorsAdminId" ng-click="deleteModal()"><?php _e('Delete', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
-            <button class="btn btn-new" role="button" ng-click="updateModal()"><?php _e('Edit', 'Construct-admin'); ?> <i class="fa fa-fw fa-edit"></i></button>
+            <button class="bttn bttn-danger pull-right" role="button" ng-show="activeAdministrator.id != ipAdministratorsAdminId" ng-click="deleteModal()"><?php _e('Delete', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
+            <button class="bttn bttn-new" role="button" ng-click="updateModal()"><?php _e('Edit', 'Construct-admin'); ?> <i class="fa fa-fw fa-edit"></i></button>
         </div>
         <div ng-show="!editMode">
             <h2><?php _e('General', 'Construct-admin'); ?></h2>

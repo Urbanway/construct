@@ -19,8 +19,8 @@
                                     <i></i>
                                     <input class="_colorPickerValue ipsLogoColor" type="text" value="" />
                                 </span>
-                                <div class="ipsFontSelect input-group-btn">
-                                    <button data-toggle="dropdown" class="btn btn-default select-toggle
+                                <div class="ipsFontSelect input-group-bttn">
+                                    <button data-toggle="dropdown" class="bttn bttn-default select-toggle
 menubar">
                                         <span class="ipsFontName"><?php _e('Default', 'Construct-admin'); ?></span>
                                         <span class="caret"></span>
@@ -40,8 +40,8 @@ menubar">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>

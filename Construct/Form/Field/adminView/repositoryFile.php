@@ -6,7 +6,7 @@
      data-path="<?php echo escAttr($path); ?>"
      data-filter="<?php echo escAttr($filter); ?>"
      data-filterextensions='<?php echo escAttr(json_encode($filterExtensions)); ?>'>
-    <a <?php echo $attributesStr; ?> class="btn btn-default ipsSelect ipsFileAddButton" href="#"><?php _e(
+    <a <?php echo $attributesStr; ?> class="bttn bttn-default ipsSelect ipsFileAddButton" href="#"><?php _e(
             'Select',
             'Construct-admin'
         ); ?></a>

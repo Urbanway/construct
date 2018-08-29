@@ -1,4 +1,4 @@
-.btn {
+.bttn {
     font-weight: bold;
     .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-small; @line-height-base; @border-radius-small);
 
@@ -16,7 +16,7 @@
         .opacity(.25);
     }
 }
-.btn-lg {
+.bttn-lg {
     // line-height: ensure even-numbered height of button next to large input
     .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
 
@@ -24,8 +24,8 @@
         font-size: (@font-size-large + 2);
     }
 }
-.btn-sm,
-.btn-xs {
+.bttn-sm,
+.bttn-xs {
     // line-height: ensure proper height of button next to small input
     .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-xsmall; @line-height-small; @border-radius-small);
 
@@ -33,25 +33,25 @@
         font-size: @fa-font-size-min;
     }
 }
-.btn-xs {
+.bttn-xs {
     padding: 1px 5px;
 }
-.btn-danger {
-    .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+.bttn-danger {
+    .button-variant(@bttn-default-color; @bttn-default-bg; @bttn-default-border);
     &:hover,
     &:focus,
     &:active,
     &.active,
     .open .select-toggle
 menubar& {
-        color: @btn-danger-color;
-        background-color: @btn-danger-bg;
-        border-color: @btn-danger-border;
+        color: @bttn-danger-color;
+        background-color: @bttn-danger-bg;
+        border-color: @bttn-danger-border;
     }
 }
-.btn-controls { // used for widget controls
-    .button-variant(@btn-controls-color; @btn-controls-bg; @btn-controls-border);
+.bttn-controls { // used for widget controls
+    .button-variant(@bttn-controls-color; @bttn-controls-bg; @bttn-controls-border);
 }
-.btn-new { // todox: if possible, use default naming from bootstrap
-    .button-variant(@btn-new-color; @btn-new-bg; @btn-new-border);
+.bttn-new { // todox: if possible, use default naming from bootstrap
+    .button-variant(@bttn-new-color; @bttn-new-bg; @bttn-new-border);
 }

@@ -9,8 +9,8 @@
                 <?php _e('Are you sure you want to delete?', 'Construct-admin'); ?>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                <button type="button" class="ipsDelete btn btn-primary"><?php _e('Delete', 'Construct-admin'); ?></button>
+                <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                <button type="button" class="ipsDelete bttn bttn-primary"><?php _e('Delete', 'Construct-admin'); ?></button>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 // Variables
 // Syntax: <control>-(<sub control>)-<bg|border|text>-(<state>)-(<extra>);
-// Example: @btn-primary-bg-hover-hlight;
+// Example: @bttn-primary-bg-hover-hlight;
 
 @prefix:                         mce;
 
@@ -20,33 +20,33 @@
 @text-error:                     #a94442;
 
 // Button
-@btn-text:                       #e2e2e2;
-@btn-text-shadow:                #46495e;
-@btn-border-top:                 rgba(134,134,134,0);
-@btn-border-right:               rgba(134,134,134,0);
-@btn-border-bottom:              rgba(134,134,134,0);
-@btn-border-left:                rgba(134,134,134,0);
-@btn-split-border:               #3a3d4e;
-@btn-caret-border:               @btn-text;
-@btn-text-disabled:              @text-disabled;
-@btn-box-shadow:                 inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
-@btn-box-shadow-active:          inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
-@btn-box-disabled-opacity:       0.4;
-@btn-bg:                         #46495e;
-@btn-bg-hlight:                  #46495e;
-@btn-bg-hover:                   darken(@btn-bg, 5%);
-@btn-bg-hlight-hover:            darken(@btn-bg-hlight, 5%);
+@bttn-text:                       #e2e2e2;
+@bttn-text-shadow:                #46495e;
+@bttn-border-top:                 rgba(134,134,134,0);
+@bttn-border-right:               rgba(134,134,134,0);
+@bttn-border-bottom:              rgba(134,134,134,0);
+@bttn-border-left:                rgba(134,134,134,0);
+@bttn-split-border:               #3a3d4e;
+@bttn-caret-border:               @bttn-text;
+@bttn-text-disabled:              @text-disabled;
+@bttn-box-shadow:                 inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+@bttn-box-shadow-active:          inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
+@bttn-box-disabled-opacity:       0.4;
+@bttn-bg:                         #46495e;
+@bttn-bg-hlight:                  #46495e;
+@bttn-bg-hover:                   darken(@bttn-bg, 5%);
+@bttn-bg-hlight-hover:            darken(@bttn-bg-hlight, 5%);
 
-@btn-primary-bg:                 #019bd4;
-@btn-primary-bg-hlight:          #019bd4;
-@btn-primary-bg-hover:           darken(@btn-primary-bg, 5%);
-@btn-primary-bg-hover-hlight:    darken(@btn-primary-bg-hlight, 5%);
-@btn-primary-text:               #ffffff;
-@btn-primary-text-shadow:        #019bd4;
-@btn-primary-border-top:         mix(@btn-border-top, @btn-primary-bg, 50%);
-@btn-primary-border-right:       mix(@btn-border-right, @btn-primary-bg, 50%);
-@btn-primary-border-bottom:      mix(@btn-border-bottom, @btn-primary-bg, 50%);
-@btn-primary-border-left:        mix(@btn-border-left, @btn-primary-bg, 50%);
+@bttn-primary-bg:                 #019bd4;
+@bttn-primary-bg-hlight:          #019bd4;
+@bttn-primary-bg-hover:           darken(@bttn-primary-bg, 5%);
+@bttn-primary-bg-hover-hlight:    darken(@bttn-primary-bg-hlight, 5%);
+@bttn-primary-text:               #ffffff;
+@bttn-primary-text-shadow:        #019bd4;
+@bttn-primary-border-top:         mix(@bttn-border-top, @bttn-primary-bg, 50%);
+@bttn-primary-border-right:       mix(@bttn-border-right, @bttn-primary-bg, 50%);
+@bttn-primary-border-bottom:      mix(@bttn-border-bottom, @bttn-primary-bg, 50%);
+@bttn-primary-border-left:        mix(@bttn-border-left, @bttn-primary-bg, 50%);
 
 // Menu
 @menuitem-text:                  #000000;
@@ -54,7 +54,7 @@
 @menu-border:                    #a3a4af;
 @menubar-border:                 mix(@panel-border, @panel-bg, 60%);
 @menuitem-text-inverse:          #ffffff;
-@menubar-bg-active:              darken(@btn-bg, 10%);
+@menubar-bg-active:              darken(@bttn-bg, 10%);
 @menuitem-bg-hover:              #0081C2;
 @menuitem-bg-selected:           #3a3d4e;
 @menuitem-bg-selected-hlight:    #3a3d4e;
@@ -108,8 +108,8 @@
 @floatpanel-box-shadow:          0 5px 10px rgba(0, 0, 0, .2);
 
 // Checkbox
-@checkbox-bg:                    @btn-bg;
-@checkbox-bg-hlight:             @btn-bg-hlight;
+@checkbox-bg:                    @bttn-bg;
+@checkbox-bg-hlight:             @bttn-bg-hlight;
 @checkbox-box-shadow:            inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
 @checkbox-border:                #8f8f8f;
 @checkbox-border-focus:          #019bd4;
@@ -143,7 +143,7 @@
 @grid-border:                    #d6d6d6;
 
 // Misc
-@colorbtn-backcolor-bg:          #586570;
+@colorbttn-backcolor-bg:          #586570;
 @iframe-border:                  @panel-border;
 
 // construct theme fixes
@@ -163,17 +163,17 @@
     }
 }
 .@{prefix}-colorbutton-grid {
-    .@{prefix}-colorbtn-trans div {
+    .@{prefix}-colorbttn-trans div {
         color: @panel-bg;
     }
-    .@{prefix}-custom-color-btn {
-        .@{prefix}-btn {
+    .@{prefix}-custom-color-bttn {
+        .@{prefix}-bttn {
             button {
                 color: @panel-bg;
             }
 
             &:hover button {
-                color: @btn-text;
+                color: @bttn-text;
             }
         }
     }

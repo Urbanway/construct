@@ -68,7 +68,7 @@
                     $this.find('input[name=urlPath]').val(response.newPageUrl);
                 }
                 $this.trigger('update.ipPages');
-                $this.find('.ipsSave').addClass('btn-default').removeClass('btn-primary');
+                $this.find('.ipsSave').addClass('bttn-default').removeClass('bttn-primary');
             }
         });
 
@@ -92,7 +92,7 @@
         });
 
         $this.find('input,select,textarea').off().on('change keydown input', function () {
-            $this.find('.ipsSave').removeClass('btn-default').addClass('btn-primary');
+            $this.find('.ipsSave').removeClass('bttn-default').addClass('bttn-primary');
         });
     };
 

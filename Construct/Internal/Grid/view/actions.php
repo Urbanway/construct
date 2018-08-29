@@ -4,7 +4,7 @@
             <?php if ($action['type'] == 'Button') { ?>
                 <button
                     type="button"
-                    class="btn btn-default ipsAction <?php echo escAttr($action['class']); ?>"
+                    class="bttn bttn-default ipsAction <?php echo escAttr($action['class']); ?>"
                     <?php if (!empty($action['data'])) { ?>
                         data="<?php echo json_encode($action['data']); ?>"
                     <?php } ?>
@@ -13,8 +13,8 @@
                 </button>
             <?php } ?>
             <?php if ($action['type'] == 'Select') { ?>
-                <div class="btn-group <?php echo escAttr($action['class']); ?>">
-                    <button class="btn btn-default select-toggle
+                <div class="bttn-group <?php echo escAttr($action['class']); ?>">
+                    <button class="bttn bttn-default select-toggle
 menubar" type="button" data-toggle="dropdown" aria-expanded="true">
                         <?php echo esc($action['label']); ?>
                         <span class="caret"></span>

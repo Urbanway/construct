@@ -7,10 +7,10 @@
 </div>
 <div class="_actions clearfix">
     <?php if ($plugin['active']) { ?>
-        <button class="ipsDeactivate btn btn-default" type="button" role="button"><?php _e('Deactivate', 'Construct-admin'); ?></button>
+        <button class="ipsDeactivate bttn bttn-default" type="button" role="button"><?php _e('Deactivate', 'Construct-admin'); ?></button>
     <?php } else { ?>
-        <button class="ipsDelete btn btn-danger pull-right" type="button" role="button"><?php _e('Delete', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
-        <button class="ipsActivate btn btn-new" type="button" role="button"><?php _e('Activate', 'Construct-admin'); ?></button>
+        <button class="ipsDelete bttn bttn-danger pull-right" type="button" role="button"><?php _e('Delete', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
+        <button class="ipsActivate bttn bttn-new" type="button" role="button"><?php _e('Activate', 'Construct-admin'); ?></button>
     <?php } ?>
 </div>
 <p><?php echo esc($plugin['description']); ?></p>

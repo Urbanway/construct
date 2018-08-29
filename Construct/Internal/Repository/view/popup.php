@@ -18,8 +18,8 @@
                             <form class="_form ipsBrowserSearch" action="">
                                 <div class="input-group input-group-sm">
                                     <input type="text" class="form-control ipsTerm" placeholder="<?php _e('Search by filename', 'Construct-admin'); ?>">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default ipsSubmit" type="submit"><i class="fa fa-search"></i></button>
+                                    <span class="input-group-bttn">
+                                        <button class="bttn bttn-default ipsSubmit" type="submit"><i class="fa fa-search"></i></button>
                                     </span>
                                 </div>
                             </form>
@@ -37,9 +37,9 @@
                 <div class="_repositoryActions ipsRepositoryActions hidden">
                     <div class="_container">
                         <span class="_title"><?php _e('Selected:', 'Construct-admin'); ?> <strong class="ipsSelectionCount"></strong></span>
-                        <button class="btn btn-primary btn-sm ipsSelectionConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
-                        <button class="btn btn-default btn-sm ipsSelectionCancel"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                        <button class="btn btn-danger btn-sm ipsSelectionDelete"><?php _e('Delete', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
+                        <button class="bttn bttn-primary bttn-sm ipsSelectionConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                        <button class="bttn bttn-default bttn-sm ipsSelectionCancel"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                        <button class="bttn bttn-danger bttn-sm ipsSelectionDelete"><?php _e('Delete', 'Construct-admin'); ?><i class="fa fa-fw fa-trash-o"></i></button>
                     </div>
                 </div>
                 <?php // hidden templates for dynamic elements ?>

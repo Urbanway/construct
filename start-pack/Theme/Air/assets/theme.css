@@ -688,7 +688,7 @@ select[multiple].ipModuleForm .form-group-lg .form-control {
     vertical-align: middle;
   }
   .ipModuleForm .form-inline .input-group .input-group-addon,
-  .ipModuleForm .form-inline .input-group .input-group-btn,
+  .ipModuleForm .form-inline .input-group .input-group-bttn,
   .ipModuleForm .form-inline .input-group .form-control {
     width: auto;
   }
@@ -774,7 +774,7 @@ select[multiple].ipModuleForm .form-group-lg .form-control {
 }
 .ipModuleForm .input-group-lg > .form-control,
 .ipModuleForm .input-group-lg > .input-group-addon,
-.ipModuleForm .input-group-lg > .input-group-btn > .btn {
+.ipModuleForm .input-group-lg > .input-group-bttn > .bttn {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -783,21 +783,21 @@ select[multiple].ipModuleForm .form-group-lg .form-control {
 }
 select.ipModuleForm .input-group-lg > .form-control,
 select.ipModuleForm .input-group-lg > .input-group-addon,
-select.ipModuleForm .input-group-lg > .input-group-btn > .btn {
+select.ipModuleForm .input-group-lg > .input-group-bttn > .bttn {
   height: 46px;
   line-height: 46px;
 }
 textarea.ipModuleForm .input-group-lg > .form-control,
 textarea.ipModuleForm .input-group-lg > .input-group-addon,
-textarea.ipModuleForm .input-group-lg > .input-group-btn > .btn,
+textarea.ipModuleForm .input-group-lg > .input-group-bttn > .bttn,
 select[multiple].ipModuleForm .input-group-lg > .form-control,
 select[multiple].ipModuleForm .input-group-lg > .input-group-addon,
-select[multiple].ipModuleForm .input-group-lg > .input-group-btn > .btn {
+select[multiple].ipModuleForm .input-group-lg > .input-group-bttn > .bttn {
   height: auto;
 }
 .ipModuleForm .input-group-sm > .form-control,
 .ipModuleForm .input-group-sm > .input-group-addon,
-.ipModuleForm .input-group-sm > .input-group-btn > .btn {
+.ipModuleForm .input-group-sm > .input-group-bttn > .bttn {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -806,30 +806,30 @@ select[multiple].ipModuleForm .input-group-lg > .input-group-btn > .btn {
 }
 select.ipModuleForm .input-group-sm > .form-control,
 select.ipModuleForm .input-group-sm > .input-group-addon,
-select.ipModuleForm .input-group-sm > .input-group-btn > .btn {
+select.ipModuleForm .input-group-sm > .input-group-bttn > .bttn {
   height: 30px;
   line-height: 30px;
 }
 textarea.ipModuleForm .input-group-sm > .form-control,
 textarea.ipModuleForm .input-group-sm > .input-group-addon,
-textarea.ipModuleForm .input-group-sm > .input-group-btn > .btn,
+textarea.ipModuleForm .input-group-sm > .input-group-bttn > .bttn,
 select[multiple].ipModuleForm .input-group-sm > .form-control,
 select[multiple].ipModuleForm .input-group-sm > .input-group-addon,
-select[multiple].ipModuleForm .input-group-sm > .input-group-btn > .btn {
+select[multiple].ipModuleForm .input-group-sm > .input-group-bttn > .bttn {
   height: auto;
 }
 .ipModuleForm .input-group-addon,
-.ipModuleForm .input-group-btn,
+.ipModuleForm .input-group-bttn,
 .ipModuleForm .input-group .form-control {
   display: table-cell;
 }
 .ipModuleForm .input-group-addon:not(:first-child):not(:last-child),
-.ipModuleForm .input-group-btn:not(:first-child):not(:last-child),
+.ipModuleForm .input-group-bttn:not(:first-child):not(:last-child),
 .ipModuleForm .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 .ipModuleForm .input-group-addon,
-.ipModuleForm .input-group-btn {
+.ipModuleForm .input-group-bttn {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle;
@@ -861,13 +861,13 @@ select[multiple].ipModuleForm .input-group-sm > .input-group-btn > .btn {
 }
 .ipModuleForm .input-group .form-control:first-child,
 .ipModuleForm .input-group-addon:first-child,
-.ipModuleForm .input-group-btn:first-child > .btn,
-.ipModuleForm .input-group-btn:first-child > .btn-group > .btn,
-.ipModuleForm .input-group-btn:first-child > .select-toggle
+.ipModuleForm .input-group-bttn:first-child > .bttn,
+.ipModuleForm .input-group-bttn:first-child > .bttn-group > .bttn,
+.ipModuleForm .input-group-bttn:first-child > .select-toggle
 menubar,
-.ipModuleForm .input-group-btn:last-child > .btn:not(:last-child):not(.select-toggle
+.ipModuleForm .input-group-bttn:last-child > .bttn:not(:last-child):not(.select-toggle
 menubar),
-.ipModuleForm .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+.ipModuleForm .input-group-bttn:last-child > .bttn-group:not(:last-child) > .bttn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -876,40 +876,40 @@ menubar),
 }
 .ipModuleForm .input-group .form-control:last-child,
 .ipModuleForm .input-group-addon:last-child,
-.ipModuleForm .input-group-btn:last-child > .btn,
-.ipModuleForm .input-group-btn:last-child > .btn-group > .btn,
-.ipModuleForm .input-group-btn:last-child > .select-toggle
+.ipModuleForm .input-group-bttn:last-child > .bttn,
+.ipModuleForm .input-group-bttn:last-child > .bttn-group > .bttn,
+.ipModuleForm .input-group-bttn:last-child > .select-toggle
 menubar,
-.ipModuleForm .input-group-btn:first-child > .btn:not(:first-child),
-.ipModuleForm .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+.ipModuleForm .input-group-bttn:first-child > .bttn:not(:first-child),
+.ipModuleForm .input-group-bttn:first-child > .bttn-group:not(:first-child) > .bttn {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 .ipModuleForm .input-group-addon:last-child {
   border-left: 0;
 }
-.ipModuleForm .input-group-btn {
+.ipModuleForm .input-group-bttn {
   position: relative;
   font-size: 0;
   white-space: nowrap;
 }
-.ipModuleForm .input-group-btn > .btn {
+.ipModuleForm .input-group-bttn > .bttn {
   position: relative;
 }
-.ipModuleForm .input-group-btn > .btn + .btn {
+.ipModuleForm .input-group-bttn > .bttn + .bttn {
   margin-left: -1px;
 }
-.ipModuleForm .input-group-btn > .btn:hover,
-.ipModuleForm .input-group-btn > .btn:focus,
-.ipModuleForm .input-group-btn > .btn:active {
+.ipModuleForm .input-group-bttn > .bttn:hover,
+.ipModuleForm .input-group-bttn > .bttn:focus,
+.ipModuleForm .input-group-bttn > .bttn:active {
   z-index: 2;
 }
-.ipModuleForm .input-group-btn:first-child > .btn,
-.ipModuleForm .input-group-btn:first-child > .btn-group {
+.ipModuleForm .input-group-bttn:first-child > .bttn,
+.ipModuleForm .input-group-bttn:first-child > .bttn-group {
   margin-right: -1px;
 }
-.ipModuleForm .input-group-btn:last-child > .btn,
-.ipModuleForm .input-group-btn:last-child > .btn-group {
+.ipModuleForm .input-group-bttn:last-child > .bttn,
+.ipModuleForm .input-group-bttn:last-child > .bttn-group {
   margin-left: -1px;
 }
 @-webkit-keyframes progress-bar-stripes {
@@ -1065,7 +1065,7 @@ menubar,
   color: #b80000;
   font-size: 12px;
 }
-.ipModuleForm .btn {
+.ipModuleForm .bttn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -1084,7 +1084,7 @@ menubar,
   -ms-user-select: none;
   user-select: none;
 }
-.ipModuleForm .btn-default {
+.ipModuleForm .bttn-default {
   background: #019bd4;
   border: none;
   border-radius: 3px;
@@ -1095,7 +1095,7 @@ menubar,
   margin: 0;
   padding: 0.5em 1em;
 }
-.ipModuleForm .btn-default:hover {
+.ipModuleForm .bttn-default:hover {
   box-shadow: 0 0 0 1px #019bd4 inset;
   background: #01516e;
   text-decoration: inherit;
@@ -1119,7 +1119,7 @@ menubar,
     vertical-align: middle;
   }
   .ipModuleForm.form-inline .input-group .input-group-addon,
-  .ipModuleForm.form-inline .input-group .input-group-btn,
+  .ipModuleForm.form-inline .input-group .input-group-bttn,
   .ipModuleForm.form-inline .input-group .form-control {
     width: auto;
   }
