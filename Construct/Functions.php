@@ -1004,14 +1004,15 @@ function ipPage($pageId)
  * After this function is executed, you can safely remove the source file.
  *
  * @param string $file absolute path to file in tmp directory.
+ * @param null|string $destination file destination in repository.
  * @param null|string $desiredName desired file name in repository.
  * @return string relative file name in repository.
  * @throws \Construct\Exception
  */
-function ipRepositoryAddFile($file, $desiredName = null)
+function ipRepositoryAddFile($file, $destination = null, $desiredName = null)
 {
     $repositoryModel = \Construct\Internal\Repository\Model::instance();
-    return $repositoryModel->addFile($file, $desiredName);
+    return $repositoryModel->addFile($file, $destination, $desiredName);
 }
 
 /**
