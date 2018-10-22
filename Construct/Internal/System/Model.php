@@ -56,7 +56,7 @@ class Model
      */
     public function getconstructAPIUrl()
     {
-        return ipConfig()->get('serviceUrl', 'http://service.impresspages.org/');
+        return ipConfig()->get('serviceUrl', 'http://update.construct.uw/');
     }
 
     /**
@@ -87,6 +87,7 @@ class Model
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         $answer = curl_exec($ch);
+        print_r($answer);
         $notices = json_decode($answer);
 
         if (!is_array($notices)) { // json decode error or wrong answer
