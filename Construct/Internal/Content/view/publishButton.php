@@ -28,8 +28,7 @@ if (!$isVisible && ipIsManagementState()) {
 ?>
 <div class="ipModuleContentPublishButton bttn-group">
     <button type="button" class="bttn <?php echo $buttonClass ?> menubar-bttn <?php echo $buttonAction ?>"><?php echo esc($buttonText) ?></button>
-    <button type="button" class="bttn <?php echo $revisionClass ?> menubar-bttn select-toggle
-menubar ipsContentRevisions" data-toggle="dropdown"><i class="fa fa-fw fa-caret-down"></i></button>
+    <button type="button" class="bttn <?php echo $revisionClass ?> menubar-bttn select-toggle ipsContentRevisions" data-toggle="dropdown"><i class="fa fa-fw fa-caret-down"></i></button>
     <ul class="_revisions dropdown-menu" role="menu">
         <li class="_button"><button type="button" class="bttn <?php echo $button2Class ?>  bttn-block <?php echo $button2Action ?>"><?php echo esc($button2Text) ?></button></li>
         <li class="divider"></li>

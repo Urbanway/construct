@@ -5,15 +5,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <div class="_menu hidden ipsAdminMenuBlock">
-            <div class="_menuHeader">
-                <button type="button" class="_toggle menubar-toggle">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <p class="menubar-text"><?php _e('Menu', 'Construct-admin'); ?></p>
-            </div>
+        <div class="_menu  invisible ipsAdminMenuBlock">
+             
             <div class="_menuContainer ipsAdminMenuBlockContainer">
                 <navigation>
                     <?php
