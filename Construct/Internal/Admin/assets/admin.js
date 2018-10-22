@@ -20,8 +20,9 @@ var ipAdmin = new function () {
         $adminMenu = $('.ipsAdminMenuBlock');
         $adminMenuContainer = $('.ipsAdminMenuBlockContainer');
 
-        $('.ipsAdminMenu').on('mouseenter', function (e) {
+       $('body').on('click','.ipsAdminMenu', function (e) {
             showAdminMenu();
+             $('.ipsAdminMenu').addClass('open');
         });
 
         $('.ipsAdminLogout').on('click', function (e) {
@@ -29,14 +30,17 @@ var ipAdmin = new function () {
             logout();
         });
 
-        $adminMenu.on('mouseleave', function (e) {
+         $('body').on('click','.ipsAdminMenu.open', function (e) {
+            
             hideAdminMenu();
-        });
+             $('.ipsAdminMenu').removeClass('open');
+              $adminMenu.addClass('invisible');
+       });
 
 
 
         fixLayout();
-        onResize();
+       onResize();
 
         if (!ip.isManagementState) {
             $('.ipsContentPublish').on('click', function (e) {
@@ -52,12 +56,12 @@ var ipAdmin = new function () {
 
     var showAdminMenu = function () {
         $currentItem.addClass('hidden');
-        $adminMenu.removeClass('hidden');
+        $adminMenu.removeClass('invisible');
     };
 
     var hideAdminMenu = function () {
         $currentItem.removeClass('hidden');
-        $adminMenu.addClass('hidden');
+        $adminMenu.addClass('invisible');
         $adminMenu.focus(); //makes click outside adminMenu work as roll out.
     };
 
@@ -116,14 +120,18 @@ var ipAdmin = new function () {
     var onResize = function () {
         // Admin menu height
         var containerHeight = $(window).height() - $menubar.outerHeight();
-        $adminMenuContainer.height(containerHeight);
+
+        if ($adminMenu.height() > containerHeight) {
+            $adminMenuContainer.height(containerHeight);
+        }
+        
 
         // elements with 'ipsAdminAutoHeight' CSS class
         var $container = $(window);
         var $elements = $('.ipsAdminAutoHeight');
         var containerHeight = parseInt($container.outerHeight());
         var menubarHeight = parseInt($('.ipsAdminNavbarContainer').outerHeight());
-        if (menubarHeight > 0) {
+        if (menubarHeight > $adminMenu.height()) {
             containerHeight -= menubarHeight; // leaving place for menubar
         }
         $elements.css('min-height', containerHeight);
