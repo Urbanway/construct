@@ -1075,12 +1075,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #45BFE6;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #1a9bc4;
   text-decoration: underline;
 }
 a:focus {
@@ -1126,7 +1126,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #383E47;
 }
 .sr-only {
   position: absolute;
@@ -1313,10 +1313,10 @@ mark,
   color: #777777;
 }
 .text-primary {
-  color: #337ab7;
+  color: #45BFE6;
 }
 a.text-primary:hover {
-  color: #286090;
+  color: #1daddb;
 }
 .text-success {
   color: #3c763d;
@@ -1344,10 +1344,10 @@ a.text-danger:hover {
 }
 .bg-primary {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #45BFE6;
 }
 a.bg-primary:hover {
-  background-color: #286090;
+  background-color: #1daddb;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -1444,7 +1444,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #383E47;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1468,7 +1468,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #383E47;
   border-left: 0;
   text-align: right;
 }
@@ -2640,7 +2640,7 @@ output {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: #eeeeee;
+  background-color: #383E47;
   opacity: 1;
 }
 textarea.form-control {
@@ -3363,7 +3363,7 @@ fieldset[disabled] .bttn-danger.active {
   background-color: #fff;
 }
 .bttn-link {
-  color: #337ab7;
+  color: #45BFE6;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3384,7 +3384,7 @@ fieldset[disabled] .bttn-link {
 }
 .bttn-link:hover,
 .bttn-link:focus {
-  color: #23527c;
+  color: #1a9bc4;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3531,7 +3531,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #337ab7;
+  background-color: #45BFE6;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3676,8 +3676,9 @@ tbody.collapse.in {
   outline: 0;
 }
 .bttn-group > .bttn + .select-toggle {
-  padding-left: 8px;
+  padding-left: 0px;
   padding-right: 8px;
+  border: 0;
 }
 .bttn-group > .bttn-lg + .select-toggle {
   padding-left: 12px;
@@ -3854,11 +3855,10 @@ select[multiple].input-group-sm > .input-group-bttn > .bttn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #ffffff;
   text-align: center;
-  background-color: #eeeeee;
-  border: 1px solid #a3a4af;
-  border-radius: 4px;
+  background-color: #383E47;
+  border-radius: 4px 0 0 4px;
 }
 .input-group-addon.input-sm {
   padding: 5px 10px;
@@ -3942,7 +3942,7 @@ menubar),
 .navigation > li > a:hover,
 .navigation > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #383E47;
 }
 .navigation > li.disabled > a {
   color: #777777;
@@ -3957,8 +3957,8 @@ menubar),
 .navigation .open > a,
 .navigation .open > a:hover,
 .navigation .open > a:focus {
-  background-color: #eeeeee;
-  border-color: #337ab7;
+  background-color: #383E47;
+  border-color: #45BFE6;
 }
 .navigation .navigation-divider {
   height: 1px;
@@ -3983,7 +3983,7 @@ menubar),
   border-radius: 4px 4px 0 0;
 }
 .navigation-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #ddd;
+  border-color: #383E47 #383E47 #ddd;
 }
 .navigation-tabs > li.active > a,
 .navigation-tabs > li.active > a:hover,
@@ -4051,7 +4051,7 @@ menubar),
 .navigation-pills > li.active > a:hover,
 .navigation-pills > li.active > a:focus {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #45BFE6;
 }
 .navigation-stacked > li {
   float: none;
@@ -4257,6 +4257,7 @@ menubar),
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  transition: 0.5s;
 }
 .menubar-toggle:focus {
   outline: 0;
@@ -4317,6 +4318,9 @@ menubar),
     padding-top: 10px;
     padding-bottom: 10px;
   }
+}
+.menubar-right {
+  border-left: 1px solid;
 }
 .menubar-form {
   margin-left: -20px;
@@ -4414,6 +4418,12 @@ menubar),
 .menubar-bttn {
   margin-top: 3px;
   margin-bottom: 3px;
+  color: white;
+  border: 0px solid;
+}
+.menubar-bttn:hover,
+.menubar-bttn:focus {
+  color: #45BFE6;
 }
 .menubar-bttn.bttn-sm {
   margin-top: 5px;
@@ -4561,6 +4571,8 @@ fieldset[disabled] .menubar-default .bttn-link:focus {
 }
 .menubar-inverse .menubar-navigation > li > a {
   color: #9d9d9d;
+  border: 0;
+  border-left: 1px solid #2b3039;
 }
 .menubar-inverse .menubar-navigation > li > a:hover,
 .menubar-inverse .menubar-navigation > li > a:focus {
@@ -4571,7 +4583,7 @@ fieldset[disabled] .menubar-default .bttn-link:focus {
 .menubar-inverse .menubar-navigation > .active > a:hover,
 .menubar-inverse .menubar-navigation > .active > a:focus {
   color: #fff;
-  background-color: #010203;
+  background-color: #2b3039;
 }
 .menubar-inverse .menubar-navigation > .disabled > a,
 .menubar-inverse .menubar-navigation > .disabled > a:hover,
@@ -4646,6 +4658,59 @@ fieldset[disabled] .menubar-inverse .bttn-link:hover,
 fieldset[disabled] .menubar-inverse .bttn-link:focus {
   color: #444;
 }
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+.ipModuleDesign {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
 .breadcrumb {
   padding: 8px 15px;
   margin-bottom: 20px;
@@ -4680,7 +4745,7 @@ fieldset[disabled] .menubar-inverse .bttn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #337ab7;
+  color: #45BFE6;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -4700,8 +4765,8 @@ fieldset[disabled] .menubar-inverse .bttn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #23527c;
-  background-color: #eeeeee;
+  color: #1a9bc4;
+  background-color: #383E47;
   border-color: #ddd;
 }
 .pagination > .active > a,
@@ -4712,8 +4777,8 @@ fieldset[disabled] .menubar-inverse .bttn-link:focus {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #45BFE6;
+  border-color: #45BFE6;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -4777,7 +4842,7 @@ fieldset[disabled] .menubar-inverse .bttn-link:focus {
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #383E47;
 }
 .pager .next > a,
 .pager .next > span {
@@ -4828,11 +4893,11 @@ a.label:focus {
   background-color: #5e5e5e;
 }
 .label-primary {
-  background-color: #337ab7;
+  background-color: #45BFE6;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #286090;
+  background-color: #1daddb;
 }
 .label-success {
   background-color: #5cb85c;
@@ -4895,7 +4960,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .navigation-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #45BFE6;
   background-color: #fff;
 }
 .list-group-item > .badge {
@@ -4911,7 +4976,7 @@ a.badge:focus {
   padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #383E47;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4923,7 +4988,7 @@ a.badge:focus {
   font-weight: 200;
 }
 .jumbotron > hr {
-  border-top-color: #d5d5d5;
+  border-top-color: #22252a;
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
@@ -4966,7 +5031,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #45BFE6;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -5080,7 +5145,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: #fff;
   text-align: center;
-  background-color: #337ab7;
+  background-color: #45BFE6;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -5213,7 +5278,7 @@ a.list-group-item:focus {
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
 .list-group-item.disabled:focus {
-  background-color: #eeeeee;
+  background-color: #383E47;
   color: #777777;
   cursor: not-allowed;
 }
@@ -5232,8 +5297,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #45BFE6;
+  border-color: #45BFE6;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -5249,7 +5314,7 @@ a.list-group-item:focus {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #c7ddef;
+  color: #f9fdfe;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -5597,22 +5662,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #ddd;
 }
 .panel-primary {
-  border-color: #337ab7;
+  border-color: #45BFE6;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #45BFE6;
+  border-color: #45BFE6;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #337ab7;
+  border-top-color: #45BFE6;
 }
 .panel-primary > .panel-heading .badge {
-  color: #337ab7;
+  color: #45BFE6;
   background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #337ab7;
+  border-bottom-color: #45BFE6;
 }
 .panel-success {
   border-color: #d6e9c6;
@@ -6697,7 +6762,7 @@ button.close {
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
   color: #000;
-  background: #eeeeee;
+  background: #383E47;
 }
 .bootstrap-switch .bootstrap-switch-label {
   text-align: center;
@@ -9070,6 +9135,10 @@ th {
 }
 .page-header h1 {
   margin-top: 0;
+  font-weight: normal;
+  font-size: 37px;
+  color: #484F59;
+  letter-spacing: -0.2px;
 }
 .ipModuleUploadWindow {
   background: url(data:image/gif;base64,R0lGODlhAgACAIAAANXV1fn5+SH5BAAAAAAALAAAAAACAAIAAAIDDBAFADs=);
@@ -9233,19 +9302,20 @@ th {
   text-decoration: none;
 }
 .ipAdminSubmenu ul .active a {
-  background-color: #8F96A8;
-  color: #000;
+  background-color: #383e47;
+  color: #FFF;
   font-weight: bold;
 }
 .ipAdminContentWrapper {
-  background-color: #8F96A8;
-  margin-left: 20px;
+  background-color: #FFF;
+  margin-left: 0px;
   margin-right: 60px;
   padding: 20px 40px 40px;
   position: relative;
 }
 .ipAdminContentWrapper._hasSubmenu {
   margin-left: 200px;
+  background-color: aliceblue;
 }
 @media (max-width: 1000px) {
   .ipAdminContentWrapper {
@@ -9285,8 +9355,8 @@ th {
   text-decoration: none;
 }
 .ipModuleAdministrators ._menu ul .active a {
-  background-color: #8F96A8;
-  color: #FFF;
+  background-color: #f0f8ff;
+  color: #383e47;
   font-weight: bold;
 }
 .ipModuleAdministrators .checkbox .bootstrap-switch {
@@ -9315,14 +9385,14 @@ th {
 .ipAdminPanel ._disable p {
   background-color: #2B3039;
   box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.7);
-  color: #000;
+  color: #CCC;
   display: inline-block;
   font-size: 14px;
   margin-top: 28px;
   padding: 10px;
 }
 .ipAdminPanel ._disable p a {
-  color: #000;
+  color: #CCC;
   text-decoration: underline;
 }
 .ipAdminPanel ._widgetCategories {
@@ -9380,23 +9450,24 @@ th {
   clear: both;
 }
 .ipAdminPanel ._widgets ._scrollButton {
-  background: #2B3039 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAARCAYAAACfB/8pAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVRJREFUeNrUlrF1hDAMhm0m8AgZgWwQJrijpuEa6jBBRrj63OCGmtsgI4QRGIENHGEbkI1J0lnRe4L37Ob/niTr51prFg3JX+BbQyrW6ImljB5pqeJashMIAd8B8gOyY+mjc1oGgBJ/A7EQn5A5oxe50RaByX6BmCFbAgCt03IKk0VKiCEKmI8xOUZlNBQBTBcHkXy5uKK7GwkIH+aGTq5Qlc4HsRB1APEkNyGV0YRh6hWG6wd7h/89gFCMcvS8DlqrXSpyQQdP8hC2Mspo3eOygIxe30n+Rh6kNxrxPI/cbHbJB3RB57WKQ+RuRYitiypdZttc7JWxu0Ty/B9AbC8Z37xWfBm+JvdZvt/6CiAKqMbs75FGz27pTKgygwNMDbF6v1XLhCGOm93ClD9t0ISmEXdKiSHiprE52AFBAER4D1F1fIjiNn6HUYRMozqDWOJbgAEAo+eCJacSAoMAAAAASUVORK5CYII=) no-repeat;
   display: block;
   height: 100%;
   position: absolute;
   width: 26px;
   z-index: 9;
+  font-size: 46px;
+  color: white;
 }
 .ipAdminPanel ._widgets ._scrollButton._left {
-  background-position: 8px center;
   left: 6px;
+  top: -10px;
 }
 .ipAdminPanel ._widgets ._scrollButton._right {
-  background-position: -32px center;
   right: 6px;
+  top: -10px;
 }
 .ipAdminPanel ._widgets ._scrollButton:hover {
-  background-color: #e6e6e6;
+  color: #43BFE6;
 }
 .ipAdminPanel ._widgets ._scrollButton:active {
   box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.15);
@@ -9434,7 +9505,7 @@ th {
   border-radius: 5px;
   display: block;
   height: 35px;
-  box-shadow: 0 0 0 2px #141923;
+  box-shadow: 0 0 0 2px #CCC;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -9444,7 +9515,7 @@ th {
   vertical-align: middle;
 }
 .ipAdminPanel ._widgets li a:hover {
-  box-shadow: 0 0 0 3px #e0e0e0;
+  box-shadow: 0 0 0 3px #43BFE6;
 }
 .ipAdminPanel ._widgets li a:hover ._title span {
   background-color: #dedede;
@@ -9500,9 +9571,24 @@ th {
 .ipModuleContentPublishButton ._revisions {
   max-height: 280px;
   overflow: auto;
+  background: #141923;
+  color: white;
 }
 .ipModuleContentPublishButton ._revisions ._button {
   padding: 0 20px;
+}
+.ipModuleContentPublishButton ._revisions li a {
+  color: #ccc;
+}
+.ipModuleContentPublishButton ._revisions li.active a {
+  color: #FFF;
+}
+.ipModuleContentPublishButton ._revisions ._button button {
+  padding: 5px 10px;
+  border-radius: 50px;
+  background: #45BFE6;
+  border: 0;
+  color: white;
 }
 .ipModuleContentFormModal .navigation-tabs {
   margin-bottom: 20px;
@@ -10915,7 +11001,7 @@ fieldset[disabled] .ipAdminPages ._menus .bttn-new.active {
   float: left;
   height: 100%;
   overflow: auto;
-  padding: 20px;
+  padding: 0;
 }
 .ipModulePlugins ._container ._actions {
   min-height: 40px;
@@ -10930,7 +11016,7 @@ fieldset[disabled] .ipAdminPages ._menus .bttn-new.active {
   border-top: 1px solid #c9ccdd;
 }
 .ipModulePlugins ._plugin {
-  color: #46495e;
+  color: #CCC;
   display: block;
   padding: 20px;
 }
@@ -10945,11 +11031,11 @@ fieldset[disabled] .ipAdminPages ._menus .bttn-new.active {
   filter: alpha(opacity=50);
 }
 .ipModulePlugins ._plugin.active {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #383E47;
+  border-color: #383E47;
   border-style: solid;
   border-width: 1px 0;
-  color: #2f313f;
+  color: #fff;
   margin: -1px -20px -1px 0;
   opacity: 1;
   filter: alpha(opacity=100);
@@ -10957,7 +11043,7 @@ fieldset[disabled] .ipAdminPages ._menus .bttn-new.active {
   z-index: 1;
 }
 .ipModulePlugins ._plugin.active ._heading {
-  color: #81aa2b;
+  color: #FFF;
 }
 .ipModulePlugins ._plugin.active ._name {
   font-weight: bold;
@@ -10979,13 +11065,17 @@ fieldset[disabled] .ipAdminPages ._menus .bttn-new.active {
   margin-top: 10px;
 }
 .ipModulePlugins ._properties {
-  background-color: #fff;
+  background-color: #383E47;
   padding: 20px 40px 40px;
   width: 680px;
+  color: #fff;
 }
 .ipModulePlugins ._properties ._actions {
   margin-bottom: 10px;
   margin-top: -10px;
+}
+.ipModulePlugins ._properties .page-header h1 {
+  color: #fff;
 }
 .ipModulePlugins ._properties ._details {
   list-style: none;

@@ -34,8 +34,7 @@ var ipAdmin = new function () {
             
             hideAdminMenu();
              $('.ipsAdminMenu').removeClass('open');
-              $adminMenu.addClass('invisible');
-       });
+        });
 
 
 
@@ -55,15 +54,16 @@ var ipAdmin = new function () {
     };
 
     var showAdminMenu = function () {
-        $currentItem.addClass('hidden');
-        $adminMenu.removeClass('invisible');
+           document.getElementById("offside").style.width = "250px";
+           document.getElementById("toggler").style.marginLeft = "250px";
+ //$currentItem.addClass('hidden');
+     //   $adminMenu.removeClass('invisible');
     };
 
     var hideAdminMenu = function () {
-        $currentItem.removeClass('hidden');
-        $adminMenu.addClass('invisible');
-        $adminMenu.focus(); //makes click outside adminMenu work as roll out.
-    };
+            document.getElementById("offside").style.width = "0px";
+           document.getElementById("toggler").style.marginLeft = "0px";
+   };
 
     var fixLayout = function () {
         $container.height($menubar.outerHeight()); // setting the height to container

@@ -52,8 +52,8 @@
             </div>
         <div class="_widgets ipsWidgetList">
 
-            <a href="#" class="_scrollButton _left ipsLeft"></a>
-            <a href="#" class="_scrollButton _right ipsRight"></a>
+            <a href="#" class="_scrollButton _left ipsLeft"><i class="fa fa-angle-left"></i></a>
+            <a href="#" class="_scrollButton _right ipsRight"><i class="fa fa-angle-right"></i></a>
             <div class="_container ipsAdminPanelWidgetsContainer">
                 <?php $scrollWidth = count($widgets)*(55 + 30 + 2*3); // to keep all elements on one line ?>
                 <ul<?php echo ' style="width: '.$scrollWidth.'px;"'; ?>>

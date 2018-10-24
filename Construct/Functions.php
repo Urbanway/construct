@@ -517,7 +517,7 @@ function ipFile($path)
     if (
         strpos($path, 'Theme/') === 0 ||
         strpos($path, 'file/') === 0 ||
-        $path === ''
+         $path === ''
     ) {
         return $ipFile_baseDir . '/' . $path;
     }

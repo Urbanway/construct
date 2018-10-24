@@ -9,7 +9,7 @@
         float: left;
         height: 100%;
         overflow: auto;
-        padding: (@grid-gutter-width / 2);
+        padding: 0;
 
         ._actions {
             min-height: @grid-gutter-width;
@@ -28,7 +28,7 @@
     }
 
     ._plugin {
-        color: #46495e; // make variable
+        color: #CCC; // make variable
         display: block;
         padding: (@grid-gutter-width / 2);
 
@@ -42,18 +42,18 @@
             .opacity(.5);
         }
         &.active {
-            background-color: #fff; // todox: make variable
-            border-color: #fff; // todox: make variable
+            background-color:#383E47; // todox: make variable
+            border-color: #383E47; // todox: make variable
             border-style: solid;
             border-width: 1px 0;
-            color: #2f313f; // todox: make variable
+            color: #fff; // todox: make variable
             margin: -1px -20px -1px 0; // expanding to hover other borders and to touch to properties
             .opacity(1); // in case this is disabled
             position: relative; // to be on top of other borders
             z-index: 1; // to be on top of other borders
 
             ._heading {
-                color: #81aa2b; // todox: make variable
+                color: #FFF; // todox: make variable
             }
             ._name {
                 font-weight: bold;
@@ -82,15 +82,15 @@
     }
 
     ._properties {
-        background-color: #fff; // todox: make variable
+        background-color: #383E47; // todox: make variable
         padding: (@grid-gutter-width / 2) @grid-gutter-width @grid-gutter-width;
         width: (@grid-gutter-width * 17);
-
+        color: #fff;
         ._actions {
             margin-bottom: (@grid-gutter-width / 4);
             margin-top: -(@grid-gutter-width / 4);
         }
-
+        .page-header h1 {color: #fff}
         ._details {
             list-style: none;
         }

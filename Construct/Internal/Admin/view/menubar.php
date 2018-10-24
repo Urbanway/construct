@@ -1,11 +1,11 @@
 <div class="ip ipsAdminNavbarContainer">
     <div class="ipAdminNavbar ipsAdminNavbar menubar menubar-default menubar-fixed-top menubar-inverse" role="navigationigation">
-        <button type="button" class="_toggle ipsAdminMenu menubar-toggle">
+        <button type="button" id="toggler" class="_toggle ipsAdminMenu menubar-toggle">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <div class="_menu  invisible ipsAdminMenuBlock">
+        <div id="offside" class="sidenav    ipsAdminMenuBlock">
              
             <div class="_menuContainer ipsAdminMenuBlockContainer">
                 <navigation>
@@ -34,17 +34,17 @@
                     </ul>
                 </navigation>
             </div>
-        </div>
-
-        <?php if ($curModTitle) { ?>
+        </div> 
+                
+          
+        <?php if ($curModTitle == "Plugins") { ?>
             <ul class="_active navigation menubar-navigation">
                 <li class="ipsItemCurrent">
-                    <a href="<?php echo esc($curModUrl); ?>">
-                        <?php if ($curModIcon) { ?>
-                            <i class="fa fa-fw <?php echo esc($curModIcon); ?>"></i>
-                        <?php } ?>
-                        <?php echo esc($curModTitle); ?>
+                    <a href="<?php echo ipActionUrl(array('aa' => $curModTitle.'.market')); ?>" class=""><i class="fa fa-plus"></i> 
+                    <?php _e('Add', 'Construct-admin'); ?>
+                    <?php echo $curModTitle ?>
                     </a>
+                     
                 </li>
             </ul>
         <?php } ?>
@@ -58,13 +58,13 @@
                     title="<?php echo empty($button['hint']) ? '' : escAttr($button['hint']); ?>"
                 >
                     <i class="fa <?php echo empty($button['faIcon']) ? '' : escAttr($button['faIcon']); ?>"></i>
-                    <?php echo empty($button['text']) ? '' : $button['text']; ?>
+                    <?php //echo empty($button['text']) ? '' : $button['text']; ?>
                 </a>
             </li>
             <?php } ?>
         </ul>
 
-        <div class="menubar-center">
+        <div class="_right navigation menubar-navigation menubar-right">
             <div class="menubar-center-container">
                 <?php foreach ($menubarCenterElements as $el) { echo $el; } ?>
             </div>

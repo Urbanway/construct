@@ -21,8 +21,17 @@
         max-height: (@grid-gutter-width * 7);
         overflow: auto;
 
-        ._button {
-            padding: 0 (@grid-gutter-width / 2);
+        background:  @menubar-inverse-bg;
+        color: white;
+        ._button{padding: 0 (@grid-gutter-width / 2);}
+        li a { color: #ccc; }
+        li.active a{color: #FFF;}
+        ._button button{
+            padding: 5px 10px;
+            border-radius: 50px;
+            background: #45BFE6;
+            border: 0;
+            color: white;
         }
     }
 }
