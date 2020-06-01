@@ -1,11 +1,11 @@
 <div class="ip">
     <div class="ipAdminWidgetToolbar hidden" id="ipWidgetImageMenu">
-        <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group">
-                <button class="btn btn-controls ipsEdit" role="button"><i class="fa fa-edit"></i></button>
-                <button class="btn btn-controls ipsLink" role="button"><i class="fa fa-link"></i></button>
-                <button class="btn btn-controls ipsSettings" role="button"><i class="fa fa-gears"></i></button>
-                <button class="btn btn-controls ipsActualSize" role="button"><i class="fa fa-refresh"></i></button>
+        <div class="bttn-toolbar" role="toolbar">
+            <div class="bttn-group">
+                <button class="bttn bttn-controls ipsEdit" role="button"><i class="fa fa-edit"></i></button>
+                <button class="bttn bttn-controls ipsLink" role="button"><i class="fa fa-link"></i></button>
+                <button class="bttn bttn-controls ipsSettings" role="button"><i class="fa fa-gears"></i></button>
+                <button class="bttn bttn-controls ipsActualSize" role="button"><i class="fa fa-refresh"></i></button>
             </div>
         </div>
     </div>
@@ -20,8 +20,8 @@
                     <div class="ipsEditScreen"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>
@@ -37,8 +37,8 @@
                     <?php echo $linkForm; ?>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>
@@ -54,8 +54,8 @@
                     <?php echo $settingsForm; ?>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@
         float: left;
         height: 100%;
         overflow: auto;
+
         padding: (@grid-gutter-width / 2);
 
         ._actions {
@@ -17,7 +18,7 @@
     }
 
     ._languages {
-        background-color: #2f313f; // todox: make variable
+        background-color: #141923; // todox: make variable
         padding-right: 0;
         width: (@grid-gutter-width * 1.5);
 
@@ -29,7 +30,7 @@
                 display: block;
                 padding: (@grid-gutter-width / 4);
                 overflow: hidden;
-
+                border-radius: 25px 0 0 25px;
                 &:hover {
                     color: #fff; // todox: make variable
                     text-decoration: none;
@@ -37,15 +38,15 @@
             }
 
             .active a {
-                background-color: #eaeaea; // todox: make variable
-                color: #000; // todox: make variable
+                background-color: #2B3039; // todox: make variable
+                color: #FFF; // todox: make variable
                 font-weight: bold;
             }
         }
     }
 
     ._menus {
-        background-color: #eaeaea; // todox: make variable
+        background: #2B3039;
         width: (@grid-gutter-width * 5);
 
         ul {
@@ -60,7 +61,7 @@
             }
 
             a {
-                color: @color-silder-dark4;
+                color: #fff;
                 display: block;
                 margin: 0 -(@grid-gutter-width / 2);
                 padding: (@grid-gutter-width / 4)  (@grid-gutter-width / 2);
@@ -72,24 +73,25 @@
             }
 
             .active a {
-                background-color: #f4f4f4; // todox: make variable
-                color: #000; // todox: make variable
-                font-weight: bold;
+                background-color: #383E47; // todox: make variable
+                color: #FFF; // todox: make variable
+                font-weight: 500;
             }
 
             ._control {
-                margin-top: -15px; // half .btn-sm
+                margin-top: -15px; // half .bttn-sm
                 position: absolute;
                 right: 0;
                 top: 50%;
                 visibility: hidden;
                 z-index: 1; // putting on top
+                background: #CED2DA;
             }
         }
     }
 
     ._pagesListing {
-        background-color: #f4f4f4; // todox: make variable
+        background-color: #383E47; // todox: make variable
         width: (@grid-gutter-width * 6);
 
 
@@ -136,7 +138,7 @@
     }
 
     ._properties {
-        background-color: #fff; // todox: make variable
+        background-color: #CED2DA; // todox: make variable
         padding: (@grid-gutter-width / 2) @grid-gutter-width @grid-gutter-width;
 
         ._actions {
@@ -146,7 +148,7 @@
     }
 
     ._languages, ._menus {
-        .btn-new {
+        .bttn-new {
             .button-variant(#fff; @color-silder-dark4; @color-silder-dark4);
         }
     }

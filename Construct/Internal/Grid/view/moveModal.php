@@ -12,8 +12,8 @@
                 ?>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin') ?></button>
-                <button type="button" class="ipsConfirm btn btn-primary"><?php _e('Move', 'Construct-admin') ?></button>
+                <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin') ?></button>
+                <button type="button" class="ipsConfirm bttn bttn-primary"><?php _e('Move', 'Construct-admin') ?></button>
             </div>
         </div>
     </div>

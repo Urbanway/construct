@@ -29,7 +29,7 @@ class Job
         //we will store all $data to the storage and assign a unique 32 character key
         //then we will redirect the user to the url with generated key.
         //this way we will have access to $data in payment selection window
-        //$_SESSION is not good fit in this case because it will fail if user navigates checkout process several times in different tabs
+        //$_SESSION is not good fit in this case because it will fail if user navigationigates checkout process several times in different tabs
         //and uses back / forward buttons of the browser.
 
         $key = Model::storePaymentData($data);
@@ -57,7 +57,7 @@ class Job
         //we will store all $data to the storage and assign a unique 32 character key
         //then we will redirect the user to the url with generated key.
         //this way we will have access to $data in payment selection window
-        //$_SESSION is not good fit in this case because it will fail if user navigates checkout process several times in different tabs
+        //$_SESSION is not good fit in this case because it will fail if user navigationigates checkout process several times in different tabs
         //and uses back / forward buttons of the browser.
 
         $key = Model::storePaymentData($data);

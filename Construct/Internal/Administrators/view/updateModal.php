@@ -9,8 +9,8 @@
                 <?php echo $updateForm; ?>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                <button type="button" class="ipsSave btn btn-primary"><?php _e('Save', 'Construct-admin'); ?></button>
+                <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                <button type="button" class="ipsSave bttn bttn-primary"><?php _e('Save', 'Construct-admin'); ?></button>
             </div>
         </div>
     </div>

@@ -19,7 +19,7 @@
                         $currentLanguage = isset($_SESSION['installationLanguage']) ? $_SESSION['installationLanguage'] : \Construct\Internal\Install\Helper::$defaultLanguageCode;
                     ?>
                     <div class="pull-right dropdown">
-                        <button type="button" class="btn btn-default select-toggle
+                        <button type="button" class="bttn bttn-default select-toggle
 menubar" data-toggle="dropdown">
                             <?php echo mb_strtoupper($currentLanguage); ?>
                             <span class="caret"></span>

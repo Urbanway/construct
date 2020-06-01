@@ -23,6 +23,6 @@
         <input type="text" maxlength="7" class="form-control" id="db_prefix" name="prefix" value="<?php echo htmlspecialchars($db['tablePrefix']); ?>">
     </div>
     <p class="text-right">
-        <button type="submit" class="btn btn-primary ipsDatabaseSubmit"><?php _e('Next', 'Install'); ?></button>
+        <button type="submit" class="bttn bttn-primary ipsDatabaseSubmit"><?php _e('Next', 'Install'); ?></button>
     </p>
 </form>

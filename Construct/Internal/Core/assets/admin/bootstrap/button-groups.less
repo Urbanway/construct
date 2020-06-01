@@ -1,234 +1,200 @@
 //
 // Button groups
 // --------------------------------------------------
-
 // Make the div behave like a button
-.btn-group,
-.btn-group-vertical {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle; // match .btn alignment given font-size hack above
-  > .btn {
+.bttn-group,
+.bttn-group-vertical {
     position: relative;
-    float: left;
-    // Bring the "active" button to the front
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      z-index: 2;
+    display: inline-block;
+    vertical-align: middle; // match .bttn alignment given font-size hack above
+    > .bttn {
+        position: relative;
+        float: left;
+        // Bring the "active" button to the front
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 2;
+        }
     }
-  }
 }
-
 // Prevent double borders when buttons are next to each other
-.btn-group {
-  .btn + .btn,
-  .btn + .btn-group,
-  .btn-group + .btn,
-  .btn-group + .btn-group {
-    margin-left: -1px;
-  }
+.bttn-group {
+    .bttn + .bttn,
+    .bttn + .bttn-group,
+    .bttn-group + .bttn,
+    .bttn-group + .bttn-group {
+        margin-left: -1px;
+    }
 }
-
 // Optional: Group multiple button groups together for a toolbar
-.btn-toolbar {
-  margin-left: -5px; // Offset the first child's margin
-  &:extend(.clearfix all);
-
-  .btn-group,
-  .input-group {
+.bttn-toolbar {
+    margin-left: -5px; // Offset the first child's margin
+    &:extend(.clearfix all);
+    .bttn-group,
+    .input-group {
+        float: left;
+    }
+    > .bttn,
+    > .bttn-group,
+    > .input-group {
+        margin-left: 5px;
+    }
+}
+.bttn-group > .bttn:not(:first-child):not(:last-child):not(.select-toggle) {
+    border-radius: 0;
+}
+// Set corners individual because sometimes a single button can be in a .bttn-group and we need :first-child and :last-child to both match
+.bttn-group > .bttn:first-child {
+    margin-left: 0;
+    &:not(:last-child):not(.select-toggle) {
+        .border-right-radius(0);
+    }
+}
+// Need .select-toggle since :last-child doesn't apply given a .select-menu immediately after it
+.bttn-group > .bttn:last-child:not(:first-child),
+.bttn-group > .select-toggle:not(:first-child) {
+    .border-left-radius(0);
+}
+// Custom edits for including bttn-groups within bttn-groups (useful for including select buttons within a bttn-group)
+.bttn-group > .bttn-group {
     float: left;
-  }
-  > .btn,
-  > .btn-group,
-  > .input-group {
-    margin-left: 5px;
-  }
 }
-
-.btn-group > .btn:not(:first-child):not(:last-child):not(.select-toggle
-menubar) {
-  border-radius: 0;
+.bttn-group > .bttn-group:not(:first-child):not(:last-child) > .bttn {
+    border-radius: 0;
 }
-
-// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
-.btn-group > .btn:first-child {
-  margin-left: 0;
-  &:not(:last-child):not(.select-toggle
-menubar) {
-    .border-right-radius(0);
-  }
+.bttn-group > .bttn-group:first-child:not(:last-child) {
+    > .bttn:last-child,
+    > .select-toggle {
+        .border-right-radius(0);
+    }
 }
-// Need .select-toggle
-menubar since :last-child doesn't apply given a .dropdown-menu immediately after it
-.btn-group > .btn:last-child:not(:first-child),
-.btn-group > .select-toggle
-menubar:not(:first-child) {
-  .border-left-radius(0);
+.bttn-group > .bttn-group:last-child:not(:first-child) > .bttn:first-child {
+    .border-left-radius(0);
 }
-
-// Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
-.btn-group > .btn-group {
-  float: left;
-}
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
-  border-radius: 0;
-}
-.btn-group > .btn-group:first-child:not(:last-child) {
-  > .btn:last-child,
-  > .select-toggle
-menubar {
-    .border-right-radius(0);
-  }
-}
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
-  .border-left-radius(0);
-}
-
 // On active and open, don't show outline
-.btn-group .select-toggle
-menubar:active,
-.btn-group.open .select-toggle
-menubar {
-  outline: 0;
+.bttn-group .select-toggle:active,
+.bttn-group.open .select-toggle {
+    outline: 0;
 }
-
-
 // Sizing
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
-
-.btn-group-xs > .btn { &:extend(.btn-xs); }
-.btn-group-sm > .btn { &:extend(.btn-sm); }
-.btn-group-lg > .btn { &:extend(.btn-lg); }
-
-
-// Split button dropdowns
+.bttn-group-xs > .bttn {
+    &:extend(.bttn-xs);
+}
+.bttn-group-sm > .bttn {
+    &:extend(.bttn-sm);
+}
+.bttn-group-lg > .bttn {
+    &:extend(.bttn-lg);
+}
+// Split button selects
 // ----------------------
-
 // Give the line between buttons some depth
-.btn-group > .btn + .select-toggle
-menubar {
-  padding-left: 8px;
-  padding-right: 8px;
+.bttn-group > .bttn + .select-toggle {
+    padding-left: 0px;
+    padding-right: 8px;
+    border:0;
 }
-.btn-group > .btn-lg + .select-toggle
-menubar {
-  padding-left: 12px;
-  padding-right: 12px;
+.bttn-group > .bttn-lg + .select-toggle {
+    padding-left: 12px;
+    padding-right: 12px;
 }
-
 // The clickable button for toggling the menu
 // Remove the gradient and set the same inset shadow as the :active state
-.btn-group.open .select-toggle
-menubar {
-  .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-
-  // Show no shadow for `.btn-link` since it has no other button styles.
-  &.btn-link {
-    .box-shadow(none);
-  }
+.bttn-group.open .select-toggle {
+    .box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    // Show no shadow for `.bttn-link` since it has no other button styles.
+    &.bttn-link {
+        .box-shadow(none);
+    }
 }
-
-
 // Reposition the caret
-.btn .caret {
-  margin-left: 0;
+.bttn .caret {
+    margin-left: 0;
 }
 // Carets in other button sizes
-.btn-lg .caret {
-  border-width: @caret-width-large @caret-width-large 0;
-  border-bottom-width: 0;
+.bttn-lg .caret {
+    border-width: @caret-width-large @caret-width-large 0;
+    border-bottom-width: 0;
 }
 // Upside down carets for .dropup
-.dropup .btn-lg .caret {
-  border-width: 0 @caret-width-large @caret-width-large;
+.dropup .bttn-lg .caret {
+    border-width: 0 @caret-width-large @caret-width-large;
 }
-
-
 // Vertical button groups
 // ----------------------
-
-.btn-group-vertical {
-  > .btn,
-  > .btn-group,
-  > .btn-group > .btn {
-    display: block;
-    float: none;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  // Clear floats so dropdown menus can be properly placed
-  > .btn-group {
-    &:extend(.clearfix all);
-    > .btn {
-      float: none;
+.bttn-group-vertical {
+    > .bttn,
+    > .bttn-group,
+    > .bttn-group > .bttn {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
     }
-  }
-
-  > .btn + .btn,
-  > .btn + .btn-group,
-  > .btn-group + .btn,
-  > .btn-group + .btn-group {
-    margin-top: -1px;
-    margin-left: 0;
-  }
+    // Clear floats so select menus can be properly placed
+    > .bttn-group {
+        &:extend(.clearfix all);
+        > .bttn {
+            float: none;
+        }
+    }
+    > .bttn + .bttn,
+    > .bttn + .bttn-group,
+    > .bttn-group + .bttn,
+    > .bttn-group + .bttn-group {
+        margin-top: -1px;
+        margin-left: 0;
+    }
 }
-
-.btn-group-vertical > .btn {
-  &:not(:first-child):not(:last-child) {
+.bttn-group-vertical > .bttn {
+    &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+    &:first-child:not(:last-child) {
+        border-top-right-radius: @border-radius-base;
+        .border-bottom-radius(0);
+    }
+    &:last-child:not(:first-child) {
+        border-bottom-left-radius: @border-radius-base;
+        .border-top-radius(0);
+    }
+}
+.bttn-group-vertical > .bttn-group:not(:first-child):not(:last-child) > .bttn {
     border-radius: 0;
-  }
-  &:first-child:not(:last-child) {
-    border-top-right-radius: @border-radius-base;
-    .border-bottom-radius(0);
-  }
-  &:last-child:not(:first-child) {
-    border-bottom-left-radius: @border-radius-base;
+}
+.bttn-group-vertical > .bttn-group:first-child:not(:last-child) {
+    > .bttn:last-child,
+    > .select-toggle {
+        .border-bottom-radius(0);
+    }
+}
+.bttn-group-vertical > .bttn-group:last-child:not(:first-child) > .bttn:first-child {
     .border-top-radius(0);
-  }
 }
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
-  border-radius: 0;
-}
-.btn-group-vertical > .btn-group:first-child:not(:last-child) {
-  > .btn:last-child,
-  > .select-toggle
-menubar {
-    .border-bottom-radius(0);
-  }
-}
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
-  .border-top-radius(0);
-}
-
-
 // Justified button groups
 // ----------------------
-
-.btn-group-justified {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  > .btn,
-  > .btn-group {
-    float: none;
-    display: table-cell;
-    width: 1%;
-  }
-  > .btn-group .btn {
+.bttn-group-justified {
+    display: table;
     width: 100%;
-  }
-
-  > .btn-group .dropdown-menu {
-    left: auto;
-  }
+    table-layout: fixed;
+    border-collapse: separate;
+    > .bttn,
+    > .bttn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+    }
+    > .bttn-group .bttn {
+        width: 100%;
+    }
+    > .bttn-group .select-menu {
+        left: auto;
+    }
 }
-
-
 // Checkbox and radio options
 //
 // In order to support the browser's form validation feedback, powered by the
@@ -240,15 +206,14 @@ menubar {
 //
 // See https://github.com/twbs/bootstrap/pull/12794 and
 // https://github.com/twbs/bootstrap/pull/14559 for more information.
-
 [data-toggle="buttons"] {
-  > .btn,
-  > .btn-group > .btn {
-    input[type="radio"],
-    input[type="checkbox"] {
-      position: absolute;
-      clip: rect(0,0,0,0);
-      pointer-events: none;
+    > .bttn,
+    > .bttn-group > .bttn {
+        input[type="radio"],
+        input[type="checkbox"] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+            pointer-events: none;
+        }
     }
-  }
 }

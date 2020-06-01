@@ -9,10 +9,10 @@
                     <?php echo $form->render(); ?>
                 </div>
                 <div class="modal-footer ipsActions">
-                    <a href="#" class="btn btn-success btn-sm ipsSave"><?php _e('Save', 'Construct-admin'); ?></a>
-                    <a href="#" class="btn btn-default btn-sm ipsReloadButton hidden "><?php _e('Reload preview', 'Construct-admin'); ?></a>
-                    <a href="#" class="btn btn-default btn-sm ipsDefault"><?php _e('Preview defaults', 'Construct-admin'); ?></a>
-                    <a href="#" class="btn btn-default btn-sm ipsCancel"><?php _e('Cancel', 'Construct-admin'); ?></a>
+                    <a href="#" class="bttn bttn-success bttn-sm ipsSave"><?php _e('Save', 'Construct-admin'); ?></a>
+                    <a href="#" class="bttn bttn-default bttn-sm ipsReloadButton hidden "><?php _e('Reload preview', 'Construct-admin'); ?></a>
+                    <a href="#" class="bttn bttn-default bttn-sm ipsDefault"><?php _e('Preview defaults', 'Construct-admin'); ?></a>
+                    <a href="#" class="bttn bttn-default bttn-sm ipsCancel"><?php _e('Cancel', 'Construct-admin'); ?></a>
                 </div>
             </div>
         </div>

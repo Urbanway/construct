@@ -11,8 +11,8 @@
                     <?php echo $form->render() ?>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel', 'Construct-admin') ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php echo __('Confirm', 'Construct-admin') ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php echo __('Cancel', 'Construct-admin') ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php echo __('Confirm', 'Construct-admin') ?></button>
                 </div>
             </div>
         </div>

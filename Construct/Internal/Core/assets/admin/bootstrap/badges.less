@@ -24,12 +24,12 @@
   }
 
   // Quick fix for badges in buttons
-  .btn & {
+  .bttn & {
     position: relative;
     top: -1px;
   }
   
-  .btn-xs & {
+  .bttn-xs & {
     top: 0;
     padding: 1px 5px;
   }
@@ -44,9 +44,9 @@
     }
   }
 
-  // Account for badges in navs
+  // Account for badges in navigations
   .list-group-item.active > &,
-  .nav-pills > .active > a > & {
+  .navigation-pills > .active > a > & {
     color: @badge-active-color;
     background-color: @badge-active-bg;
   }
@@ -59,7 +59,7 @@
     margin-right: 5px;
   }
   
-  .nav-pills > li > a > & {
+  .navigation-pills > li > a > & {
     margin-left: 3px;
   }
 }

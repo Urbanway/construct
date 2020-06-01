@@ -1,9 +1,7 @@
 <div class="ipModulePlugins ipsModulePlugins" ng-app="Plugins" ng-controller="ipPlugins">
     <div class="_outer ipsModulePluginsContainer">
         <div class="_container _plugins ipsPlugins" ng-cloak>
-            <div class="_actions">
-                <a href="<?php echo ipActionUrl(array('aa' => 'Plugins.market')); ?>" class="btn btn-new"><i class="fa fa-plus"></i> <?php _e('Add', 'Construct-admin'); ?></a>
-            </div>
+           
             <ul>
                 <li ng-repeat="plugin in pluginList">
                     <a href="" ng-click="setPluginHash(plugin)" class="_plugin ipsPlugin" ng-class="{active: plugin == selectedPlugin, disabled: !plugin.active}">

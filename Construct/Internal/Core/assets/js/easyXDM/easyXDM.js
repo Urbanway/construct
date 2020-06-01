@@ -615,7 +615,7 @@ function prepareTransportStack(config){
             else if (config.remoteHelper) {
                 /*
                  * This is supported in all browsers that retains the value of window.name when
-                 * navigating from one domain to another, and where parent.frames[foo] can be used
+                 * navigationigating from one domain to another, and where parent.frames[foo] can be used
                  * to get access to a frame from the same domain
                  */
                 protocol = "2";

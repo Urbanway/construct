@@ -10,8 +10,8 @@
                     <textarea name="html" class="form-control" rows="10"></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>

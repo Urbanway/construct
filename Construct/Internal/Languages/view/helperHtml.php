@@ -9,8 +9,8 @@
                 <?php echo $addForm ?>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin') ?></button>
-                <button type="button" class="ipsAdd btn btn-primary"><?php _e('Add', 'Construct-admin') ?></button>
+                <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin') ?></button>
+                <button type="button" class="ipsAdd bttn bttn-primary"><?php _e('Add', 'Construct-admin') ?></button>
             </div>
         </div>
     </div>

@@ -41,7 +41,7 @@ class Revision
 
     public static function getPublishedRevision($pageId)
     {
-        assert('$pageId > 0');
+        assert($pageId > 0);
         //ordering by id is required because sometimes two revisions might be created at excatly the same time
         $revisionTable = ipTable('revision');
         $sql = "
@@ -72,7 +72,7 @@ class Revision
     public static function createRevision($pageId, $published)
     {
 
-        assert('$pageId > 0');
+        assert($pageId > 0);
 
         $revision = array(
             'pageId' => $pageId,

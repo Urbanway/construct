@@ -1,7 +1,7 @@
 <?php // @Layout name: Main ?>
 <?php echo ipView('_header.php')->render(); ?>
-    <div class="sidenav col_12 col_md_12 col_lg_3 left">
-        <nav<?php if (ipGetThemeOption('collapseSidebarMenu') == 'yes') { echo ' class="collapse"'; }?>>
+    <div class="sidenavigation col_12 col_md_12 col_lg_3 left">
+        <navigation<?php if (ipGetThemeOption('collapseSidebarMenu') == 'yes') { echo ' class="collapse"'; }?>>
             <?php
                 // generate 2 - 7 levels submenu
                 // please note that it is possible to generate second level only if first level item is in breadcrumb
@@ -14,7 +14,7 @@
 
                 echo ipSlot('menu', 'menu2');
             ?>
-        </nav>
+        </navigation>
     </div>
     <div class="main col_12 col_md_12 col_lg_8 right">
         <?php echo ipSlot('breadcrumb'); ?>

@@ -1,7 +1,7 @@
 // draggable widgets and controls
 .ipAdminPanel {
-    background-color: @color-silver;
-    border-bottom: 1px solid @color-silver-dark;
+    background-color: #2B3039;
+    border-bottom: 1px solid #141923;
     left: 0;
     padding: (@grid-gutter-width / 2) 0 (@grid-gutter-width / 4);
     position: fixed;
@@ -19,16 +19,16 @@
         z-index: 11;
 
         p {
-            background-color: #ffa400;
+            background-color: #2B3039;
             box-shadow: 0 1px 0 1px rgba(0, 0, 0, .7);
-            color: #000;
+            color: #CCC;
             display: inline-block;
             font-size: 14px;
             margin-top: 28px;
             padding: 10px;
 
             a {
-                color: #000;
+                color: #CCC;
                 text-decoration: underline;
             }
         }
@@ -38,25 +38,24 @@
         height: 100%;
         float: left;
         position: absolute;
-        background-color: #eaeaea;
+        background-color:#2B3039;
         z-index: 1;
         bottom: 0;
+      
     }
 
     ._widgetTabSwitches {
-        padding: 0 25px 0 0;
+        padding: 0;
         list-style: none;
         margin: 0;
         display: inline-block;
         vertical-align: top;
 
-        &:first-child {
-            padding: 0 25px;
-        }
+        
 
         ._widgetTabSwitch {
             margin: 8px 0;
-
+            width:90px;
             &:hover {
                 a {
                     text-decoration: none;
@@ -73,10 +72,10 @@
 
             &._active {
                 a {
-                    background: #fff;
-                    color: #000;
+                    background: #2B3039;
+                    color: #141923;
                     padding: 2px 6px;
-                    border: 1px solid #c2c2c2;
+                    border: 1px solid #141923;
                 }
             }
         }
@@ -87,24 +86,25 @@
         position: relative;
 
         ._scrollButton {
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAARCAYAAACfB/8pAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVRJREFUeNrUlrF1hDAMhm0m8AgZgWwQJrijpuEa6jBBRrj63OCGmtsgI4QRGIENHGEbkI1J0lnRe4L37Ob/niTr51prFg3JX+BbQyrW6ImljB5pqeJashMIAd8B8gOyY+mjc1oGgBJ/A7EQn5A5oxe50RaByX6BmCFbAgCt03IKk0VKiCEKmI8xOUZlNBQBTBcHkXy5uKK7GwkIH+aGTq5Qlc4HsRB1APEkNyGV0YRh6hWG6wd7h/89gFCMcvS8DlqrXSpyQQdP8hC2Mspo3eOygIxe30n+Rh6kNxrxPI/cbHbJB3RB57WKQ+RuRYitiypdZttc7JWxu0Ty/B9AbC8Z37xWfBm+JvdZvt/6CiAKqMbs75FGz27pTKgygwNMDbF6v1XLhCGOm93ClD9t0ISmEXdKiSHiprE52AFBAER4D1F1fIjiNn6HUYRMozqDWOJbgAEAo+eCJacSAoMAAAAASUVORK5CYII=) no-repeat; // source: img/icons_scroll.png
             display: block;
             height: 100%;
             position: absolute;
             width: 26px;
             z-index: 9;
-
+            font-size: 46px;
+            color:white;
             &._left {
-                background-position: 8px center;
                 left: 6px;
+                top:-10px
             }
             &._right {
-                background-position: -32px center;
                 right: 6px;
+                top:-10px
+
             }
 
             &:hover {
-                background-color: #e6e6e6;
+                color: #43BFE6
             }
             &:active {
                 box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.15);
@@ -115,7 +115,7 @@
             margin: 0 @grid-gutter-width;
 
             &:before, &:after {
-                background-color: @color-silver;
+                background-color: #2B3039;
                 content: " ";
                 display: block;
                 height: 100%;
@@ -141,11 +141,11 @@
             padding: 0 3px; // space for box-shadow
 
             a {
-                background-color: #fff; // todox: use variables
+                background-color:#2b3039; // todox: use variables
                 border-radius: @panel-widget-radius;
                 display: block;
                 height: @panel-widget-height;
-                box-shadow: 0 0 0 2px #e4e4e4; // todox: use variables
+                box-shadow: 0 0 0 2px #CCC; // todox: use variables
                 position: relative;
                 text-align: center;
                 text-decoration: none;
@@ -156,7 +156,7 @@
                 }
 
                 &:hover {
-                    box-shadow: 0 0 0 3px #e0e0e0; // todox: use variables
+                    box-shadow: 0 0 0 3px #43BFE6; // todox: use variables
 
                     ._title span {
                         background-color: #dedede; // todox: use variables

@@ -12,12 +12,12 @@
 // --------------------------------------------------
 
 // Common styles
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
+.bttn-default,
+.bttn-primary,
+.bttn-success,
+.bttn-info,
+.bttn-warning,
+.bttn-danger {
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
   .box-shadow(@shadow);
@@ -34,34 +34,34 @@
 }
 
 // Mixin for generating new styles
-.btn-styles(@btn-color: #555) {
-  #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
+.bttn-styles(@bttn-color: #555) {
+  #gradient > .vertical(@start-color: @bttn-color; @end-color: darken(@bttn-color, 12%));
   .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners; see https://github.com/twbs/bootstrap/issues/10620
   background-repeat: repeat-x;
-  border-color: darken(@btn-color, 14%);
+  border-color: darken(@bttn-color, 14%);
 
   &:hover,
   &:focus  {
-    background-color: darken(@btn-color, 12%);
+    background-color: darken(@bttn-color, 12%);
     background-position: 0 -15px;
   }
 
   &:active,
   &.active {
-    background-color: darken(@btn-color, 12%);
-    border-color: darken(@btn-color, 14%);
+    background-color: darken(@bttn-color, 12%);
+    border-color: darken(@bttn-color, 14%);
   }
 
   &.disabled,
   &:disabled,
   &[disabled] {
-    background-color: darken(@btn-color, 12%);
+    background-color: darken(@bttn-color, 12%);
     background-image: none;
   }
 }
 
 // Common styles
-.btn {
+.bttn {
   // Remove the gradient for the pressed/active state
   &:active,
   &.active {
@@ -70,12 +70,12 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
-.btn-primary { .btn-styles(@btn-primary-bg); }
-.btn-success { .btn-styles(@btn-success-bg); }
-.btn-info    { .btn-styles(@btn-info-bg); }
-.btn-warning { .btn-styles(@btn-warning-bg); }
-.btn-danger  { .btn-styles(@btn-danger-bg); }
+.bttn-default { .bttn-styles(@bttn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+.bttn-primary { .bttn-styles(@bttn-primary-bg); }
+.bttn-success { .bttn-styles(@bttn-success-bg); }
+.bttn-info    { .bttn-styles(@bttn-info-bg); }
+.bttn-warning { .bttn-styles(@bttn-warning-bg); }
+.bttn-danger  { .bttn-styles(@bttn-danger-bg); }
 
 
 //
@@ -117,14 +117,14 @@
   @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
   .box-shadow(@shadow);
 
-  .menubar-nav > .open > a,
-  .menubar-nav > .active > a {
+  .menubar-navigation > .open > a,
+  .menubar-navigation > .active > a {
     #gradient > .vertical(@start-color: darken(@menubar-default-link-active-bg, 5%); @end-color: darken(@menubar-default-link-active-bg, 2%));
     .box-shadow(inset 0 3px 9px rgba(0,0,0,.075));
   }
 }
 .menubar-brand,
-.menubar-nav > li > a {
+.menubar-navigation > li > a {
   text-shadow: 0 1px 0 rgba(255,255,255,.25);
 }
 
@@ -133,14 +133,14 @@
   #gradient > .vertical(@start-color: lighten(@menubar-inverse-bg, 10%); @end-color: @menubar-inverse-bg);
   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered; see https://github.com/twbs/bootstrap/issues/10257
 
-  .menubar-nav > .open > a,
-  .menubar-nav > .active > a {
+  .menubar-navigation > .open > a,
+  .menubar-navigation > .active > a {
     #gradient > .vertical(@start-color: @menubar-inverse-link-active-bg; @end-color: lighten(@menubar-inverse-link-active-bg, 2.5%));
     .box-shadow(inset 0 3px 9px rgba(0,0,0,.25));
   }
 
   .menubar-brand,
-  .menubar-nav > li > a {
+  .menubar-navigation > li > a {
     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   }
 }
@@ -154,7 +154,7 @@
 
 // Fix active state of dropdown items in collapsed mode
 @media (max-width: @grid-float-breakpoint-max) {
-  .menubar .menubar-nav .open .dropdown-menu > .active > a {
+  .menubar .menubar-navigation .open .dropdown-menu > .active > a {
     &,
     &:hover,
     &:focus {

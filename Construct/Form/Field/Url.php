@@ -26,8 +26,8 @@ class Url extends Field
 
         if ($environment == \Construct\Form::ENVIRONMENT_ADMIN) {
             $browseButton = '
-    <span class="input-group-btn">
-        <button class="ipsBrowse btn btn-default" type="button">' . __('Browse', 'Construct-admin') . '</button>
+    <span class="input-group-bttn">
+        <button class="ipsBrowse bttn bttn-default" type="button">' . __('Browse', 'Construct-admin') . '</button>
     </span>
             ';
         }

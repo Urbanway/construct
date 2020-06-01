@@ -1,1 +1,1 @@
-<button type="button" class="btn <?php echo $disabled ? 'disabled' : 'ipsDrag ipsSetPosition' ?> btn-default" title="<?php _e('Drag', 'Construct-admin'); ?>"><i class="fa fa-arrows"></i></button>
+<button type="button" class="bttn <?php echo $disabled ? 'disabled' : 'ipsDrag ipsSetPosition' ?> bttn-default" title="<?php _e('Drag', 'Construct-admin'); ?>"><i class="fa fa-arrows"></i></button>

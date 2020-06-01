@@ -201,7 +201,7 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   border-radius: @border-radius-base;
-
+   transition: 0.5s;
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.
   &:focus {
@@ -225,12 +225,12 @@
 }
 
 
-// Navbar nav links
+// Navbar navigation links
 //
-// Builds on top of the `.nav` components with its own modifier class to make
-// the nav the full height of the horizontal nav (above 768px).
+// Builds on top of the `.navigation` components with its own modifier class to make
+// the navigation the full height of the horizontal navigation (above 768px).
 
-.menubar-nav {
+.menubar-navigation {
   margin: (@menubar-padding-vertical / 2) -@menubar-padding-horizontal;
 
   > li > a {
@@ -263,7 +263,7 @@
     }
   }
 
-  // Uncollapse the nav
+  // Uncollapse the navigation
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     margin: 0;
@@ -278,7 +278,10 @@
   }
 }
 
+.menubar-right {
+      border-left: 1px solid;
 
+}
 // Navbar form
 //
 // Extension of the `.form-inline` with some extra flavor for optimum display in
@@ -325,12 +328,12 @@
 // Dropdown menus
 
 // Menu position and menu carets
-.menubar-nav > li > .dropdown-menu {
+.menubar-navigation > li > .dropdown-menu {
   margin-top: 0;
   .border-top-radius(0);
 }
 // Menu position and menu caret support for dropups via extra dropup class
-.menubar-fixed-bottom .menubar-nav > li > .dropdown-menu {
+.menubar-fixed-bottom .menubar-navigation > li > .dropdown-menu {
   margin-bottom: 0;
   .border-top-radius(@menubar-border-radius);
   .border-bottom-radius(0);
@@ -341,13 +344,19 @@
 //
 // Vertically center a button within a menubar (when *not* in a form).
 
-.menubar-btn {
+.menubar-bttn {
   .menubar-vertical-align(@input-height-base);
-
-  &.btn-sm {
+  color: white;
+  border: 0px solid;
+  &:hover , &:focus{
+   color: #45BFE6;
+     
+ 
+  }
+  &.bttn-sm {
     .menubar-vertical-align(@input-height-small);
   }
-  &.btn-xs {
+  &.bttn-xs {
     .menubar-vertical-align(22);
   }
 }
@@ -381,7 +390,6 @@
   .menubar-right {
     .pull-right();
     margin-right: -@menubar-padding-horizontal;
-
     ~ .menubar-right {
       margin-right: 0;
     }
@@ -410,7 +418,7 @@
     color: @menubar-default-color;
   }
 
-  .menubar-nav {
+  .menubar-navigation {
     > li > a {
       color: @menubar-default-link-color;
 
@@ -455,7 +463,7 @@
   }
 
   // Dropdown menu items
-  .menubar-nav {
+  .menubar-navigation {
     // Remove background color from open dropdown
     > .open > a {
       &,
@@ -500,7 +508,7 @@
 
   // Links in menubars
   //
-  // Add a class to ensure links outside the menubar nav are colored correctly.
+  // Add a class to ensure links outside the menubar navigation are colored correctly.
 
   .menubar-link {
     color: @menubar-default-link-color;
@@ -509,7 +517,7 @@
     }
   }
 
-  .btn-link {
+  .bttn-link {
     color: @menubar-default-link-color;
     &:hover,
     &:focus {
@@ -524,7 +532,7 @@
     }
   }
 }
-
+ 
 // Inverse menubar
 
 .menubar-inverse {
@@ -544,10 +552,11 @@
     color: @menubar-inverse-color;
   }
 
-  .menubar-nav {
+  .menubar-navigation {
     > li > a {
       color: @menubar-inverse-link-color;
-
+      border:0;
+      border-left: 1px solid #2b3039;
       &:hover,
       &:focus {
         color: @menubar-inverse-link-hover-color;
@@ -559,7 +568,7 @@
       &:hover,
       &:focus {
         color: @menubar-inverse-link-active-color;
-        background-color: @menubar-inverse-link-active-bg;
+        background-color:#2b3039;
       }
     }
     > .disabled > a {
@@ -572,7 +581,7 @@
     }
   }
 
-  // Darken the responsive nav toggle
+  // Darken the responsive navigation toggle
   .menubar-toggle {
     border-color: @menubar-inverse-toggle-border-color;
     &:hover,
@@ -590,7 +599,7 @@
   }
 
   // Dropdowns
-  .menubar-nav {
+  .menubar-navigation {
     > .open > a {
       &,
       &:hover,
@@ -644,7 +653,7 @@
     }
   }
 
-  .btn-link {
+  .bttn-link {
     color: @menubar-inverse-link-color;
     &:hover,
     &:focus {
@@ -658,4 +667,52 @@
       }
     }
   }
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+     color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+.ipModuleDesign {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }

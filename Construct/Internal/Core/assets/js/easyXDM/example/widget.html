@@ -16,13 +16,13 @@
                     swf: "../easyxdm.swf",
                     initialize: function(widget, widgetManager){
                         // Set up the widget
-                        var _container, _btnPublish;
+                        var _container, _bttnPublish;
                         
                         // Render the UI
                         _container = document.body.appendChild(document.createElement("div"));
-                        _btnPublish = _container.appendChild(document.createElement("button"));
-                        _btnPublish.innerHTML = "Publish";
-                        easyXDM.DomHelper.on(_btnPublish, "click", function(){
+                        _bttnPublish = _container.appendChild(document.createElement("button"));
+                        _bttnPublish.innerHTML = "Publish";
+                        easyXDM.DomHelper.on(_bttnPublish, "click", function(){
                             widget.publish("testtopic", {
                                 latitude: 1,
                                 longitude: 2

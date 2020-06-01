@@ -1,9 +1,10 @@
 // Bootstrap
 // overriding defaults
 @menubar-height: @grid-gutter-width;
-@menubar-inverse-bg: #000;
+@menubar-inverse-bg: #141923;
 @grid-gutter-width: 40px; // main spacing definition
 @grid-float-breakpoint: 1px; // mostly used for nabvar and we don't want it to change behaviour
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @font-size-base: 14px;
 @font-size-large: floor(@font-size-base * 1.15); // ~16px
@@ -18,17 +19,18 @@
 @font-size-h6: @font-size-h4;
 
 @headings-font-weight: bold;
+@font-family-base: Roboto,"Helvetica Neue", Helvetica, Arial, sans-serif;;
 
-@btn-default-color: #000;
-@btn-default-bg: #e7e7e7;
-@btn-default-border: #e7e7e7;
-@btn-primary-color: #fff;
-@btn-primary-bg: #66a000;
-@btn-primary-border: #66a000;
+@bttn-default-color: #000;
+@bttn-default-bg: #e7e7e7;
+@bttn-default-border: #e7e7e7;
+@bttn-primary-color: #fff;
+@bttn-primary-bg: #66a000;
+@bttn-primary-border: #66a000;
 
 @page-header-border-color: #a3a4af;
 
-@input-border-radius: 0;
+@input-border-radius: 5px;
 @input-border: #a3a4af;
 @input-color-placeholder: #97989f;
 
@@ -38,12 +40,12 @@
 @list-group-success-border:    @list-group-success-bg;
 
 // adding new button type
-@btn-controls-color: #e2e2e2;
-@btn-controls-bg: #46495e;
-@btn-controls-border: #fff;
-@btn-new-color: #fff;
-@btn-new-bg: #019bd4;
-@btn-new-border: #019bd4;
+@bttn-controls-color: #e2e2e2;
+@bttn-controls-bg: #383E47;
+@bttn-controls-border: #fff;
+@bttn-new-color: #fff;
+@bttn-new-bg: #019bd4;
+@bttn-new-border: #019bd4;
 
 // Bootstrap addons
 @bootstrap-switch-border-radius: @grid-gutter-width;
@@ -63,26 +65,26 @@
 @color-silver7: #d3d3d3;
 @color-silver-dark: #c6c7cc;
 @color-silver-dark2: #4d4d4d;
-@color-silver-dark3: #2f313f;
-@color-silder-dark4: #46495e;
+@color-silver-dark3: #141923;
+@color-silder-dark4: #383E47;
 @color-silver-dark5: #97989f;
 @color-silver-light: #f9f9f9;
 @color-silver-light2: #ebebeb;
 @color-orange: #fd9827;
-@color-blue: #019bd4;
+@color-blue: #45BFE6;
 @color-blue2: #018bbe;
 @color-blue-light: #7ecefd;
 @admin-widgetControls-zIndex: (@zindex-menubar-fixed - 10); // todox: naming convention (remove 'admin-' ?)
-@admin-widgetControls-height: 22px; // .btn-xs height
+@admin-widgetControls-height: 22px; // .bttn-xs height
 
-@panel-widget-height: 55px;
+@panel-widget-height: 35px;
 @panel-widget-width: @panel-widget-height;
 @panel-widget-radius: 5px;
 @panel-widget-space: 30px;
 
 @admin-submenu-active-color: #000;
-@admin-submenu-active-bg: #fff;
-@admin-container-bg: #fff;
+@admin-submenu-active-bg: #8F96A8;
+@admin-container-bg: #FFF;
 
 @upload-progress-title-font-size: @font-size-xsmall;
 @upload-progress-title-color: #000;

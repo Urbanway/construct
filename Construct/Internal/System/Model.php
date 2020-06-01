@@ -56,7 +56,7 @@ class Model
      */
     public function getconstructAPIUrl()
     {
-        return ipConfig()->get('serviceUrl', 'http://service.impresspages.org/');
+        return ipConfig()->get('serviceUrl', 'http://update.construct.uw/');
     }
 
     /**

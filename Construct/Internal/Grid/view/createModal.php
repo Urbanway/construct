@@ -12,7 +12,7 @@
             </div>
             <div class="modal-body ipsBody">
                 <?php if (count($createForm->getFieldsets()) > 1) { ?>
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="navigation navigation-tabs" role="tablist">
                         <?php foreach($createForm->getFieldsets() as $key => $fieldset) { ?>
                             <li class="<?php echo $key == 0 ? 'active' : '' ?>"><a href="#<?php echo escAttr($fieldset->getAttribute('id')) ?>" role="tab" data-toggle="tab"><?php echo esc($fieldset->getLabel()) ?></a></li>
                             <?php $fieldset->setLabel(' '); ?>
@@ -22,8 +22,8 @@
                 <?php echo $createForm ?>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin') ?></button>
-                <button type="button" class="ipsConfirm btn btn-primary"><?php _e('Save', 'Construct-admin') ?></button>
+                <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin') ?></button>
+                <button type="button" class="ipsConfirm bttn bttn-primary"><?php _e('Save', 'Construct-admin') ?></button>
             </div>
         </div>
     </div>

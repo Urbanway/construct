@@ -108,11 +108,12 @@ class Model
     /**
      * Add file to the repository.
      * @param string $file absolute path to file in tmp directory
+     * @param null|string $destination file destination in repository.
      * @param null|string $desiredName desired file name in repository.
      * @return string relative file name in repository
      * @throws \Construct\Exception
      */
-    public function addFile($file, $desiredName)
+    public function addFile($file, $destination, $desiredName)
     {
         if (!is_file($file)) {
             throw new \Construct\Exception("File doesn't exist");
@@ -122,7 +123,9 @@ class Model
             throw new \Construct\Exception("Requested file (" . $file . ") is already in the repository");
         }
 
-        $destination = ipFile('file/repository/');
+        if($destination === null){
+          $destination = ipFile('file/repository/');
+        }
 
         if ($desiredName === null) {
             $desiredName = basename($file); //to avoid any tricks with relative paths, etc.

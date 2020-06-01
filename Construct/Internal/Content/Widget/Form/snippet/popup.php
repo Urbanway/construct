@@ -7,7 +7,7 @@
                     <h4 class="modal-title"><?php _e('Form options', 'Construct-admin'); ?></h4>
                 </div>
                 <div class="modal-body">
-                    <ul class="nav nav-tabs ipsTabs">
+                    <ul class="navigation navigation-tabs ipsTabs">
                         <li class="active"><a href="#ipWidgetFormPopup-fields" data-toggle="tab"><?php _e('Fields', 'Construct-admin'); ?></a></li>
                         <li><a href="#ipWidgetFormPopup-options" data-toggle="tab"><?php _e('Options', 'Construct-admin'); ?></a></li>
                     </ul>
@@ -18,8 +18,8 @@
                             <div class="hidden">
                                 <div class="ipsFieldTemplate form-group">
                                     <div class="input-group">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-default ipsFieldMove" type="button" title="<?php _e('Drag', 'Construct-admin'); ?>"><i class="fa fa-arrows"></i></button>
+                                        <div class="input-group-bttn">
+                                            <button class="bttn bttn-default ipsFieldMove" type="button" title="<?php _e('Drag', 'Construct-admin'); ?>"><i class="fa fa-arrows"></i></button>
                                         </div>
                                         <input type="text" class="form-control ipsFieldLabel" name="label" value="" />
                                         <div class="input-group-addon">
@@ -29,16 +29,16 @@
                                                 <?php } ?>
                                             </select>
                                         </div>
-                                        <div class="input-group-btn">
-                                            <button href="#" class="btn btn-default hidden ipsFieldRequired" title="<?php _e('Required', 'Construct-admin'); ?>"><?php _e('Required', 'Construct-admin'); ?></button>
-                                            <button href="#" class="btn btn-default ipsFieldOptional" title="<?php _e('Optional', 'Construct-admin'); ?>"><?php _e('Optional', 'Construct-admin'); ?></button>
-                                            <button href="#" class="btn btn-default ipsFieldOptions" title="<?php _e('Options', 'Construct-admin'); ?>"><i class="fa fa-cogs"></i></button>
-                                            <button class="btn btn-danger ipsFieldRemove" type="button" title="<?php _e('Delete', 'Construct-admin'); ?>"><i class="fa fa-trash-o"></i></button>
+                                        <div class="input-group-bttn">
+                                            <button href="#" class="bttn bttn-default hidden ipsFieldRequired" title="<?php _e('Required', 'Construct-admin'); ?>"><?php _e('Required', 'Construct-admin'); ?></button>
+                                            <button href="#" class="bttn bttn-default ipsFieldOptional" title="<?php _e('Optional', 'Construct-admin'); ?>"><?php _e('Optional', 'Construct-admin'); ?></button>
+                                            <button href="#" class="bttn bttn-default ipsFieldOptions" title="<?php _e('Options', 'Construct-admin'); ?>"><i class="fa fa-cogs"></i></button>
+                                            <button class="bttn bttn-danger ipsFieldRemove" type="button" title="<?php _e('Delete', 'Construct-admin'); ?>"><i class="fa fa-trash-o"></i></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-new ipsFieldAdd"><?php _e('Add new', 'Construct-admin'); ?></button>
+                            <button type="button" class="bttn bttn-new ipsFieldAdd"><?php _e('Add new', 'Construct-admin'); ?></button>
                         </div>
 
                         <div class="tab-pane" id="ipWidgetFormPopup-options">
@@ -47,8 +47,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>
@@ -63,8 +63,8 @@
                 <div class="modal-body">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
-                    <button type="button" class="btn btn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-default" data-dismiss="modal"><?php _e('Cancel', 'Construct-admin'); ?></button>
+                    <button type="button" class="bttn bttn-primary ipsConfirm"><?php _e('Confirm', 'Construct-admin'); ?></button>
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@
 		</div>
 	</fieldset>
 	<div id="template_container">
-		<legend>Add Form Fields  <a href="#" onclick="Add(this)" class="btn btn-primary pull-right"> Add new field</a></legend>
+		<legend>Add Form Fields  <a href="#" onclick="Add(this)" class="bttn bttn-primary pull-right"> Add new field</a></legend>
 		<fieldset id="template">
 			<div class="form-group type-text">
 				
@@ -48,6 +48,6 @@
 		</fieldset>
 	</div>
 	<div class="form-group type-submit">
- 		<button id="create" class="btn btn-default " name="create" type="submit">Create</button>     
+ 		<button id="create" class="bttn bttn-default " name="create" type="submit">Create</button>     
 	</div>
 </form>

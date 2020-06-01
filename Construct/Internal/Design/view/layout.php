@@ -8,10 +8,10 @@
 
         <div class="_actions">
             <?php if ($showConfiguration){ ?>
-                <a href="#" class="btn btn-primary ipsOpenOptions"><?php _e('Options', 'Construct-admin'); ?></a>
+                <a href="#" class="bttn bttn-primary ipsOpenOptions"><?php _e('Options', 'Construct-admin'); ?></a>
                 <br/><br/>
             <?php } ?>
-            <a href="<?php echo $contentManagementUrl ?>" class="btn btn-primary"><?php echo esc($contentManagementText); ?></a>
+            <a href="<?php echo $contentManagementUrl ?>" class="bttn bttn-primary"><?php echo esc($contentManagementText); ?></a>
         </div>
         <h2 class="clearfix">
             <i class="fa fa-check"></i>
@@ -31,7 +31,7 @@
                     <?php } ?>
                     <dd>
                         <?php echo esc(!empty($plugin['title']) ? $plugin['title'] : $plugin['name']); ?>
-                        <a href="#" class="btn btn-xs btn-primary ipsInstallPlugin" data-pluginname="<?php echo esc($plugin['name']) ?>"><?php _e('Install', 'Construct-admin'); ?></a>
+                        <a href="#" class="bttn bttn-xs bttn-primary ipsInstallPlugin" data-pluginname="<?php echo esc($plugin['name']) ?>"><?php _e('Install', 'Construct-admin'); ?></a>
                     </dd>
                 <?php } ?>
             </dl>
@@ -43,7 +43,7 @@
             <div class="_wrapper">
                 <span class="_title"><?php _e('Marketplace', 'Construct-admin'); ?></span>
                 <span class="_notice"><?php _e('Want a new look? Search for a new theme.', 'Construct-admin'); ?></span>
-                <a href="" class="btn btn-success ipsOpenMarket"><?php _e('Browse themes', 'Construct-admin'); ?></a>
+                <a href="" class="bttn bttn-success ipsOpenMarket"><?php _e('Browse themes', 'Construct-admin'); ?></a>
             </div>
         </div>
         <div class="_localThemes">
@@ -66,7 +66,7 @@
                                 <small>(<?php echo esc($localTheme->getVersion()); ?>)</small>
                             </span>
                             <div class="_actions">
-                                <a href="#" class="btn btn-primary ipsInstallTheme" data-theme='<?php echo esc($localTheme->getName()) ?>'>
+                                <a href="#" class="bttn bttn-primary ipsInstallTheme" data-theme='<?php echo esc($localTheme->getName()) ?>'>
                                     <?php _e('Install', 'Construct-admin'); ?>
                                 </a>
                             </div>
@@ -79,12 +79,12 @@
 
     <div class="_popup ipsThemeMarketPopup hidden">
         <div class="_container" id="ipsModuleThemeMarketContainer" data-marketurl="<?php echo esc($marketUrl); ?>">
-            <button type="button" class="btn btn-default _back ipsThemeMarketPopupClose"><i class="fa fa-angle-double-left"></i> <?php _e('Back to Design', 'Construct-admin'); ?></button>
+            <button type="button" class="bttn bttn-default _back ipsThemeMarketPopupClose"><i class="fa fa-angle-double-left"></i> <?php _e('Back to Design', 'Construct-admin'); ?></button>
         </div>
     </div>
 
     <div class="_popup ipsPreview hidden">
-        <button type="button" class="btn btn-danger _close ipsPreviewClose" title="<?php _e('Close', 'Construct-admin'); ?>"><i class="fa fa-times"></i></button>
+        <button type="button" class="bttn bttn-danger _close ipsPreviewClose" title="<?php _e('Close', 'Construct-admin'); ?>"><i class="fa fa-times"></i></button>
         <iframe class="ipsFrame" src="" frameborder="0"></iframe>
     </div>
 </div>
