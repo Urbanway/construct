@@ -3,7 +3,7 @@
   "require": {
     "php": ">=5.5.0",
     "aura/router": "~2.3.1",
-    "phpmailer/phpmailer": "6.5.0",
+    "phpmailer/phpmailer": "6.5.1",
     "psr/log": "1.0.2",
     "laminas/laminas-i18n": "2.7.3",
     "laminas/laminas-servicemanager": "2.7.7",
